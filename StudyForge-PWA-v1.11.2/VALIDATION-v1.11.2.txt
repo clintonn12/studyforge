@@ -1,0 +1,21 @@
+StudyForge PWA v1.11.2 validation
+
+Installability repair:
+- Install StudyForge button remains visible even before beforeinstallprompt fires.
+- Added Check installability control.
+- Added direct diagnostics for file://, insecure HTTP, iframe/preview use, manifest failure, service-worker failure, service-worker readiness, installed state, and browser prompt readiness.
+- Added side-menu Install StudyForge shortcut.
+- Added Android/apple mobile app-capable metadata and apple-touch-icon.
+- Manifest explicitly sets prefer_related_applications=false and retains 192x192 + 512x512 icons.
+- Service worker cache bumped to v1.11.2 to avoid stale install shell.
+
+Static validation:
+- All embedded JavaScript script blocks pass node --check.
+- sw.js passes node --check.
+- manifest.webmanifest parses as JSON.
+- All manifest icon files exist.
+- Existing named-function set compared against PWA v1.11.1; no existing named functions removed.
+- Flashcard/card/deck schema code remains unchanged by this installability-only patch.
+
+Environment limitation:
+The sandbox browser blocks localhost/file navigation by administrator policy, so Android Chrome's actual WebAPK mint/install UI cannot be invoked here. Final installability still depends on serving the complete folder from a direct HTTPS origin in normal Android Chrome.
