@@ -1,0 +1,16 @@
+StudyForge PWA v1.11.2 — Android install
+===========================================
+
+1. Upload the COMPLETE contents of this folder to one HTTPS location. Keep index.html, sw.js, manifest.webmanifest, and icons/ together.
+2. On Android, open that HTTPS address in Chrome.
+3. Open StudyForge Settings → Install StudyForge.
+   - If Chrome exposes the install prompt, tap Install StudyForge.
+   - Otherwise open Chrome's menu and choose Install app or Add to Home screen.
+4. Launch StudyForge from its Home Screen icon. It opens without normal browser chrome in standalone mode.
+5. Open a flashcard set once while online. The app shell is cached for offline reopening. Your flashcard library itself remains browser-local.
+
+IMPORTANT
+- Do not open the package from file:// if you want PWA installation. Service workers cannot install from file://.
+- Keep the same HTTPS domain after installation. Browser/IndexedDB storage belongs to that domain.
+- Before moving to a different domain or phone, use Settings → Download JSON backup, then Restore JSON backup on the new installation.
+- The PWA is app-like but is not a native .apk file. Android installs and manages it from Chrome as a web app.

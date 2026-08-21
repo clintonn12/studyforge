@@ -1,0 +1,32 @@
+StudyForge PWA v1.11.2 — Android install troubleshooting
+
+IMPORTANT: a PWA cannot be installed from a downloaded file:// HTML page.
+The WHOLE folder (index.html, manifest.webmanifest, sw.js, icons/) must be served from one HTTPS origin.
+
+Not installable from:
+- file:///.../index.html
+- Google Drive file preview
+- an embedded iframe/preview page
+- plain HTTP on a normal remote host
+- Incognito/private browsing in many Android configurations
+
+Expected Android Chrome path once the site is installable:
+Chrome ⋮ → Add to Home screen → Install app
+(wording can vary by Chrome/device)
+
+StudyForge now includes two app controls:
+1. Side menu → Install StudyForge
+2. Settings → Install StudyForge → Check installability
+
+The checker reports whether HTTPS, manifest, service worker, direct top-level page, and Chrome install prompt are available.
+
+If the checker says the service worker is not active yet:
+1. Reload once.
+2. Wait 2–5 seconds.
+3. Press Check installability again.
+
+If it says the PWA files look valid but Chrome has not exposed the prompt:
+1. Make sure you are using normal Chrome, not Incognito.
+2. Open Chrome ⋮ → Add to Home screen.
+3. Choose Install app if offered.
+4. If only Create shortcut appears, clear only this site's storage/cache, reopen the direct HTTPS URL, and reload once.
