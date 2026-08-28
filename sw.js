@@ -1,4 +1,4 @@
-const CACHE='studyforge-pwa-v1.11.3-shell-1';
+const CACHE='studyforge-pwa-v1.11.4-shell-1';
 const APP_SHELL=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/maskable-512.png'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(APP_SHELL)).then(()=>self.skipWaiting()));

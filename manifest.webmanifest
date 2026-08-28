@@ -2,7 +2,7 @@
   "id": "./",
   "name": "StudyForge",
   "short_name": "StudyForge",
-  "description": "Local-first flashcards with images, LaTeX, topics, tags, study progress, folders, bulk editing, and offline study.",
+  "description": "Local-first flashcard study with images, LaTeX, topics, tags, progress, folders, bulk editing, and offline PWA support.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

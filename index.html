@@ -1084,13 +1084,13 @@
     .flash-study-main{overflow:hidden!important;overscroll-behavior:none!important}
   
 
-    /* StudyForge PWA v1.11.3 (data format unchanged) */
+    /* StudyForge PWA v1.11.4 (data format unchanged) */
     .katex{display:inline-block;max-width:100%;vertical-align:middle}.katex math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-size:1em}.katex-display,.math-block{display:block;width:100%;text-align:center;margin:.38em 0}.math-inline{display:inline-block;max-width:100%}.math-wrap-composite{max-width:100%}.standalone-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--surface-2);border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800;color:var(--muted)}
 
 #standalone-boot{min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg,#f7f8fc);color:var(--text,#172033);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}#standalone-boot>div{padding:18px 22px;border:1px solid #d9deea;border-radius:16px;background:#fff;box-shadow:0 10px 35px rgba(16,24,40,.08);font-weight:800}
 
 
-    /* StudyForge PWA v1.11.3 — Android gesture, dashboard, install, and performance polish */
+    /* StudyForge PWA v1.11.4 — flashcard-only UI, topic study filters, sticky term tools */
     .flash-drag{
       touch-action:pan-y!important;
       overscroll-behavior:none!important;
@@ -1129,7 +1129,7 @@
     .pwa-install-state.warn{color:var(--orange)}.pwa-install-state.good{color:var(--green)}
     @media(max-width:780px){.rail-install-pwa{position:relative;flex:0 0 auto}.pwa-install-row>.row{display:grid;grid-template-columns:1fr;gap:8px}.pwa-install-row>.row .btn{width:100%}}
 
-    /* StudyForge v1.11.3 — Topics, bulk classification, image-aware rearrange */
+    /* StudyForge v1.11.4 — topic ordering, sticky controls, compact term actions */
     .topic-panel{margin:18px 0;border:1px solid color-mix(in srgb,var(--topic-color) 38%,var(--border));border-radius:16px;background:color-mix(in srgb,var(--topic-color) 7%,var(--surface));overflow:hidden;contain:layout style}
     .topic-panel-head{min-height:64px;display:flex;align-items:center;gap:10px;padding:8px 12px;background:color-mix(in srgb,var(--topic-color) 12%,var(--surface));border-bottom:1px solid color-mix(in srgb,var(--topic-color) 32%,var(--border))}
     .topic-panel.collapsed .topic-panel-head{border-bottom:0}.topic-panel-toggle{flex:1;min-width:0;border:0;background:transparent;color:var(--text);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:11px;text-align:left;padding:6px 4px;border-radius:10px}.topic-panel-toggle:hover{background:color-mix(in srgb,var(--topic-color) 10%,transparent)}
@@ -1140,6 +1140,33 @@
     .topic-enable-toggle{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 13px;border:1px solid var(--border);border-radius:12px;background:var(--surface-2)}.topic-enable-toggle>span{display:grid;gap:3px}.topic-enable-toggle small{color:var(--muted);font-weight:500}.topic-enable-toggle input{width:20px;height:20px;min-height:20px;accent-color:var(--primary);flex:0 0 auto}.topic-settings-list{display:grid;gap:8px}.topic-color-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 10px;border:1px solid var(--border);border-radius:10px}.topic-color-row input[type=color]{width:38px;height:34px;min-height:34px;padding:2px}.topic-dot{width:14px;height:14px;border-radius:50%}.bulk-classify-section{padding:15px;border:1px solid var(--border);border-radius:13px;background:var(--surface-2)}.bulk-classify-section h3{margin:0 0 11px}.inline-check{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;font-weight:700}.inline-check input{width:18px;height:18px;min-height:18px}.bulk-tag-suggestions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;max-height:115px;overflow:auto}
     .reorder-image-strip{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.reorder-image-strip button{width:58px;height:44px;border:1px solid var(--border);border-radius:8px;background:var(--surface-2);padding:2px;overflow:hidden}.reorder-image-strip img{display:block;width:100%;height:100%;object-fit:contain;border-radius:5px}.reorder-card{contain:layout style}.reorder-card-content{align-items:start}
     @media(max-width:780px){.topic-panel{border-radius:13px;margin:13px 0}.topic-panel-head{padding:6px 8px;min-height:58px}.topic-panel-toggle{gap:7px}.topic-panel-toggle strong{font-size:15px}.topic-panel-color span{display:none}.topic-panel-color input[type=color]{width:32px;height:32px}.topic-panel-cards{padding:7px}.term-topic-label{font-size:10px}.card-face-topic{max-width:96%;padding:6px 9px;gap:7px}.card-face-topic-label{font-size:8px}.card-face-topic strong{font-size:13px}.reorder-image-strip button{width:54px;height:42px}.bulk-classify-section{padding:12px}.topic-settings-list{max-height:38vh;overflow:auto}.deck-actions-row{grid-template-columns:1fr 1fr}.bulk-card-bar>div{grid-template-columns:1fr 1fr}}
+
+
+
+    /* StudyForge PWA v1.11.4 — flashcard-only, sticky term controls, topic ordering, compact responsive UI */
+    .flashcard-only-mode{grid-template-columns:minmax(0,1fr)!important}.flashcard-only-mode>button{max-width:520px;width:100%}
+    .flashcard-only-tabs .deck-tab{cursor:default}.flashcard-only-quick{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .deck-tools{flex-wrap:wrap}.topic-study-filter{flex:1 1 100%;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:2px}.topic-study-filter>strong{margin-right:3px;font-size:13px}.topic-filter-chip{position:relative;border-color:color-mix(in srgb,var(--topic-color,var(--border)) 45%,var(--border))}.topic-filter-chip.active{background:color-mix(in srgb,var(--topic-color,var(--primary)) 22%,var(--surface));border-color:var(--topic-color,var(--primary));color:var(--text)}
+    .deck-icon-action{width:44px!important;min-width:44px!important;padding:0!important;position:relative}.compact-icon-btn{width:40px!important;min-width:40px!important;padding:0!important;display:grid!important;place-items:center!important}
+    .terms-heading{position:sticky;top:72px;z-index:44;margin:0 0 12px;padding:10px 12px;border:1px solid color-mix(in srgb,var(--border) 82%,transparent);border-radius:14px;background:color-mix(in srgb,var(--canvas) 93%,var(--surface));backdrop-filter:blur(14px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+    .terms-heading-actions{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap}.terms-heading-helper{min-width:0}.bulk-card-bar{top:134px!important;z-index:43!important}
+    .term-placeholder{display:inline-flex;align-items:center;min-height:38px;padding:8px 10px;border:1px dashed var(--border);border-radius:10px;color:var(--muted);font-style:italic;background:color-mix(in srgb,var(--surface-3) 62%,transparent)}
+    .term-actions button{position:relative;transition:background .14s ease,color .14s ease,transform .14s ease,box-shadow .14s ease}.term-actions button:hover,.term-actions button:focus-visible{background:color-mix(in srgb,var(--primary) 18%,var(--surface-3))!important;color:var(--text)!important;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--primary) 38%,var(--border));transform:translateY(-1px)}.term-actions button:active{transform:scale(.94)}
+    .topic-settings-list{display:grid;gap:8px}.topic-settings-list-head{display:grid;gap:2px;margin-bottom:2px}.topic-settings-list-head .muted{font-size:12px}.topic-order-row{display:grid;grid-template-columns:38px 16px minmax(0,1fr) 42px;align-items:center;gap:9px;min-height:50px;padding:6px 7px;border:1px solid var(--border);border-radius:11px;background:var(--surface-2);transition:transform .12s ease,border-color .12s ease,background .12s ease}.topic-order-row.dragging{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 10%,var(--surface-2));transform:scale(1.01)}.topic-drag-handle{width:36px;height:36px;border:0;border-radius:9px;background:transparent;color:var(--muted);display:grid;place-items:center;cursor:grab;touch-action:none}.topic-drag-handle:hover{background:var(--surface-3);color:var(--text)}.topic-drag-handle:active{cursor:grabbing}.topic-order-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:760}.topic-order-row input[type="color"]{width:38px;height:34px;min-height:34px;padding:2px;border-radius:8px}
+    /* Keep sticky controls tied to the viewport instead of an overflow-x ancestor. */
+    .page,.deck-page{overflow-x:clip!important}
+    /* Immediate hover labels for compact desktop controls. Native title remains as fallback/accessibility. */
+    .deck-icon-action[data-tooltip],.compact-icon-btn[data-tooltip]{position:relative}
+    .deck-icon-action[data-tooltip]::after,.compact-icon-btn[data-tooltip]::after{content:attr(data-tooltip);position:absolute;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%) translateY(3px);z-index:160;pointer-events:none;opacity:0;visibility:hidden;white-space:nowrap;max-width:220px;padding:6px 9px;border-radius:8px;background:var(--text);color:var(--canvas);font-size:11px;font-weight:760;line-height:1.2;box-shadow:var(--shadow-soft);transition:opacity .12s ease,transform .12s ease,visibility .12s ease}
+    .deck-icon-action[data-tooltip]:hover::after,.deck-icon-action[data-tooltip]:focus-visible::after,.compact-icon-btn[data-tooltip]:hover::after,.compact-icon-btn[data-tooltip]:focus-visible::after{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+    @media(max-width:780px){
+      .flashcard-only-quick{grid-template-columns:1fr}.flashcard-only-mode>button{max-width:none}
+      .terms-heading{top:62px;padding:8px 9px;border-radius:12px;display:block!important}.terms-heading-helper{display:none!important}.terms-heading-actions{width:100%;display:flex!important;justify-content:flex-start!important;flex-wrap:nowrap!important;overflow-x:auto!important;overscroll-behavior-x:contain;padding:1px 0 3px;scrollbar-width:none}.terms-heading-actions::-webkit-scrollbar{display:none}.terms-heading-actions>*{flex:0 0 auto}.terms-heading-actions .terms-sort{min-width:170px}.bulk-card-bar{top:118px!important}
+      .deck-tools{gap:10px}.deck-tag-filter,.topic-study-filter{width:100%;overflow-x:auto;flex-wrap:nowrap!important;padding-bottom:5px;scrollbar-width:none}.deck-tag-filter::-webkit-scrollbar,.topic-study-filter::-webkit-scrollbar{display:none}.deck-tag-filter>*,.topic-study-filter>*{flex:0 0 auto}.deck-actions-row{grid-template-columns:auto repeat(4,44px)!important;align-items:center}.deck-actions-row .btn-primary{min-width:116px}.deck-actions-row .deck-icon-action{width:44px!important}.deck-actions-row select{grid-column:1/-1!important}
+      .quiz-term-row{display:grid!important;grid-template-columns:32px minmax(0,1fr)!important;grid-auto-rows:auto!important;gap:9px 10px!important;overflow:visible!important;contain:none!important;content-visibility:visible!important;width:100%!important;max-width:100%!important;padding:11px 10px 13px!important}.quiz-term-row>.term-number,.quiz-term-row>.term-select{grid-column:1!important;grid-row:1!important;align-self:center!important}.quiz-term-row>.term-actions{grid-column:2!important;grid-row:1!important;width:100%!important;max-width:100%!important;display:flex!important;justify-content:flex-start!important;align-items:center!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:visible!important;padding:1px 0 5px!important;scrollbar-width:none}.quiz-term-row>.term-actions::-webkit-scrollbar{display:none}.quiz-term-row>.term-actions button{flex:0 0 38px;width:38px;height:38px}.quiz-term-row>.term-side-front{grid-column:1/-1!important;grid-row:2!important}.quiz-term-row>.term-divider{display:none!important}.quiz-term-row>.term-side-back{grid-column:1/-1!important;grid-row:3!important;border-top:1px solid var(--border)!important;padding-top:12px!important}.quiz-term-row>.term-srs{grid-column:1/-1!important;grid-row:4!important}.quiz-term-row .term-column,.quiz-term-row .term-column:first-of-type,.quiz-term-row .term-column:nth-of-type(2){width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important}.quiz-term-row .term-column .rich-text{width:100%!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:break-word!important}.quiz-term-row .term-column .math-block,.quiz-term-row .term-column .katex-display{width:100%!important;max-width:100%!important;overflow-x:auto!important;overflow-y:hidden!important}.quiz-term-row .term-image-grid{width:100%!important;max-width:100%!important}.quiz-term-row .term-image-button{max-width:100%!important}.quiz-term-row .term-image-grid img{max-width:100%!important;max-height:360px!important;object-fit:contain!important}.topic-panel{max-width:100%;overflow:visible}.topic-panel-head{position:relative;z-index:2}.topic-panel-cards{max-width:100%;min-width:0}
+      .topic-order-row{grid-template-columns:42px 15px minmax(0,1fr) 44px;min-height:56px}.topic-drag-handle{width:40px;height:40px}.term-topic-label{max-width:100%;white-space:normal}
+      .deck-icon-action[data-tooltip]::after,.compact-icon-btn[data-tooltip]::after{display:none!important}
+    }
 
 </style>
 </head>
@@ -1801,10 +1828,10 @@ function ensureCardImagesReady(card, timeoutMs = 1600) { const urls = card ? stu
 function warmDeckImages(cards, count = 14) { const list = Array.isArray(cards) ? cards : []; if (!list.length) return; primeStudyImages(list, 0, Math.min(count, list.length)); const run = () => primeStudyImages(list, 0, Math.min(Math.max(count, 22), list.length)); if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 500 }); else setTimeout(run, 50); }
 const normalizeTopic = value => clean(String(value || '')).slice(0, 120);
 function topicDefaultColor(topic) { const palette = ['#6d7cff', '#00b894', '#ff9f43', '#e056fd', '#2e86de', '#ee5253', '#10ac84', '#f368e0', '#5f27cd', '#54a0ff', '#ff6b6b', '#1dd1a1']; let n = 0; for (const ch of String(topic || 'Unassigned')) n = (n * 33 + ch.charCodeAt(0)) >>> 0; return palette[n % palette.length]; }
-function deckTopicSettings(deck) { const raw = deck?.topicSettings && typeof deck.topicSettings === 'object' ? deck.topicSettings : {}; return { enabled: raw.enabled !== false, label: clean(raw.label) || 'Topic' }; }
+function deckTopicSettings(deck) { const raw = deck?.topicSettings && typeof deck.topicSettings === 'object' ? deck.topicSettings : {}; return { enabled: raw.enabled !== false, label: clean(raw.label) || 'Topic', showInTerms: raw.showInTerms === true, order: unique((Array.isArray(raw.order) ? raw.order : []).map(normalizeTopic).filter(Boolean)) }; }
 function deckTopicColor(deck, topic) { const key = normalizeTopic(topic) || '__unassigned__'; return deck?.topicColors?.[key] || topicDefaultColor(key); }
 const makeCard = (front, back, tags = [], extra = {}) => ({ id: uid('card'), front, back, frontImage: null, backImage: null, frontImageWidth: 320, backImageWidth: 320, frontImages: [], backImages: [], tags: unique(tags.map(normalizeTag)), tagColors: {}, topic: '', createdAt: nowISO(), updatedAt: nowISO(), progress: defaultProgress(), ...extra });
-const makeDeck = (name, folderId = null, cards = [], extra = {}) => ({ id: uid('deck'), name, folderId, cards, deactivatedCardIds: [], materials: [], notes: '', tagColors: {}, topicSettings: { enabled: true, label: 'Topic' }, topicColors: {}, creatorId: 'local_user', visibility: 'private', createdAt: nowISO(), updatedAt: nowISO(), ...extra });
+const makeDeck = (name, folderId = null, cards = [], extra = {}) => ({ id: uid('deck'), name, folderId, cards, deactivatedCardIds: [], materials: [], notes: '', tagColors: {}, topicSettings: { enabled: true, label: 'Topic', showInTerms: false, order: [] }, topicColors: {}, creatorId: 'local_user', visibility: 'private', createdAt: nowISO(), updatedAt: nowISO(), ...extra });
 const makeFolder = (name, parentId = null, color = '#6d7cff') => ({ id: uid('folder'), name, parentId, color: color || '#6d7cff', creatorId: 'local_user', visibility: 'private', expanded: true, createdAt: nowISO(), updatedAt: nowISO() });
 const cardStatus = card => { const p = normalizeProgress(card); if (!p.studied)
     return 'new'; return p.lastResult === false ? 'learning' : 'known'; };
@@ -1825,7 +1852,7 @@ function folderModifiedAt(folderId, data) { const folderIds = new Set([folderId,
 function tagDefaultColor(tag) { const palette = ['#6d7cff', '#00b894', '#ff9f43', '#e056fd', '#2e86de', '#ee5253', '#10ac84', '#f368e0', '#5f27cd', '#54a0ff', '#ff6b6b', '#1dd1a1']; let n = 0; for (const ch of String(tag || ''))
     n = (n * 31 + ch.charCodeAt(0)) >>> 0; return palette[n % palette.length]; }
 function deckTagColor(deck, tag) { return deck?.tagColors?.[tag] || deck?.cards?.find(c => c.tagColors?.[tag])?.tagColors?.[tag] || tagDefaultColor(tag); }
-const flashSessionKey = (deckIds, tags = []) => `flash:${[...deckIds].sort().join(',')}:${[...tags].sort().join(',')}`;
+const flashSessionKey = (deckIds, tags = [], topics = []) => { const base = `flash:${[...deckIds].sort().join(',')}:${[...tags].sort().join(',')}`; return topics.length ? `${base}:topics=${[...topics].sort().join(',')}` : base; };
 function richHtml(value) {
     let x = escapeHtml(String(value || ''));
     x = x.replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/~~([^~]+)~~/g, '<s>$1</s>').replace(/\+\+([^+]+)\+\+/g, '<u>$1</u>').replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
@@ -2284,7 +2311,7 @@ function migrate(raw) {
     const oldProfile = raw.profile && typeof raw.profile === 'object' ? raw.profile : {};
     const legacyTeamRejects = clean(oldProfile.name).toLowerCase() === 'team rejects' || clean(oldProfile.username).toLowerCase() === 'team_rejects';
     const profile = legacyTeamRejects ? defaultProfile() : { ...defaultProfile(), ...oldProfile, profilePublic: oldProfile.profilePublic === true };
-    let decks = Array.isArray(raw.decks) ? raw.decks.map(d => { const cards = Array.isArray(d.cards) ? d.cards.map(c => { const next = { ...makeCard('', ''), ...c, tags: Array.isArray(c.tags) ? c.tags : [], tagColors: c.tagColors && typeof c.tagColors === 'object' ? c.tagColors : {}, topic: normalizeTopic(c.topic || ''), frontImages: Array.isArray(c.frontImages) ? c.frontImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'front'), backImages: Array.isArray(c.backImages) ? c.backImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'back'), progress: normalizeProgress(c) }; delete next.srs; return next; }) : []; const validIds = new Set(cards.map(c => c.id)); return { ...d, folderId: d.folderId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (d.visibility || 'private'), materials: Array.isArray(d.materials) ? d.materials : [], notes: d.notes || '', tagColors: d.tagColors && typeof d.tagColors === 'object' ? d.tagColors : {}, topicSettings: { enabled: d.topicSettings?.enabled !== false, label: clean(d.topicSettings?.label) || 'Topic' }, topicColors: d.topicColors && typeof d.topicColors === 'object' ? d.topicColors : {}, sharedPermission: d.sharedPermission || null, sharedOwnerName: d.sharedOwnerName || '', cards, deactivatedCardIds: unique((Array.isArray(d.deactivatedCardIds) ? d.deactivatedCardIds : []).filter(id => validIds.has(id))) }; }) : demo.decks;
+    let decks = Array.isArray(raw.decks) ? raw.decks.map(d => { const cards = Array.isArray(d.cards) ? d.cards.map(c => { const next = { ...makeCard('', ''), ...c, tags: Array.isArray(c.tags) ? c.tags : [], tagColors: c.tagColors && typeof c.tagColors === 'object' ? c.tagColors : {}, topic: normalizeTopic(c.topic || ''), frontImages: Array.isArray(c.frontImages) ? c.frontImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'front'), backImages: Array.isArray(c.backImages) ? c.backImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'back'), progress: normalizeProgress(c) }; delete next.srs; return next; }) : []; const validIds = new Set(cards.map(c => c.id)); return { ...d, folderId: d.folderId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (d.visibility || 'private'), materials: Array.isArray(d.materials) ? d.materials : [], notes: d.notes || '', tagColors: d.tagColors && typeof d.tagColors === 'object' ? d.tagColors : {}, topicSettings: { enabled: d.topicSettings?.enabled !== false, label: clean(d.topicSettings?.label) || 'Topic', showInTerms: d.topicSettings?.showInTerms === true, order: unique((Array.isArray(d.topicSettings?.order) ? d.topicSettings.order : []).map(normalizeTopic).filter(Boolean)) }, topicColors: d.topicColors && typeof d.topicColors === 'object' ? d.topicColors : {}, sharedPermission: d.sharedPermission || null, sharedOwnerName: d.sharedOwnerName || '', cards, deactivatedCardIds: unique((Array.isArray(d.deactivatedCardIds) ? d.deactivatedCardIds : []).filter(id => validIds.has(id))) }; }) : demo.decks;
     decks = decks.filter(d => !isLegacyDemoDeck(d));
     const usedFolderIds = new Set(decks.map(d => d.folderId).filter(Boolean));
     let folders = (Array.isArray(raw.folders) ? raw.folders.map(f => ({ ...f, parentId: f.parentId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (f.visibility || 'private'), expanded: f.expanded !== false, updatedAt: f.updatedAt || f.createdAt || nowISO(), color: f.color || '#6d7cff' })) : demo.folders).filter(f => !(['Health Sciences', 'Core Sciences', 'Cardiology'].includes(f.name) && !usedFolderIds.has(f.id)));
@@ -2386,11 +2413,12 @@ function folderPath(folderId, folders) { const path = []; let cur = folders.find
     path.unshift(cur.name);
     cur = folders.find(f => f.id === cur.parentId);
 } return path.join(' / ') || 'Unfiled'; }
-function collectCards(decks, ids, tags = []) {
-    const starred = tags.includes('__starred__'), started = tags.includes('__started__'), realTags = tags.filter(t => !['__starred__', '__started__'].includes(t)), seen = new Set();
+function collectCards(decks, ids, tags = [], topics = []) {
+    const starred = tags.includes('__starred__'), started = tags.includes('__started__'), realTags = tags.filter(t => !['__starred__', '__started__'].includes(t)), topicKeys = unique((topics || []).map(t => normalizeTopic(t) || (t === '__unassigned__' ? '__unassigned__' : '')).filter(Boolean)), seen = new Set();
     return decks.filter(d => ids.includes(d.id)).flatMap(d => { const inactive = deactivatedIds(d); return (d.cards || []).filter(c => !inactive.has(c.id)).map(c => ({ ...c, sourceDeckId: d.id, sourceDeckName: d.name })); }).filter(c => { if (seen.has(c.id))
         return false; seen.add(c.id); if (starred && !normalizeProgress(c).starred)
         return false; if (started && cardStatus(c) === 'new')
+        return false; if (topicKeys.length && !topicKeys.includes(normalizeTopic(c.topic) || '__unassigned__'))
         return false; return !realTags.length || realTags.some(t => c.tags.includes(t)); });
 }
 const stopWords = new Set('the a an and or of to in on for from with by as at is are was were be been being this that these those it its into than then which what when where who why how can could should would may might will do does did not no yes about across after before between during each every any all some many much more most less least such only other same own very'.split(' '));
@@ -2905,8 +2933,8 @@ function App() {
                 return c; const p = normalizeProgress(c); const nextCorrect = Math.max(0, p.correct - (correct ? 1 : 0)), nextWrong = Math.max(0, p.wrong - (correct ? 0 : 1)), studied = nextCorrect + nextWrong > 0; return { ...c, progress: { ...p, correct: nextCorrect, wrong: nextWrong, studied, lastResult: studied ? (nextWrong > nextCorrect ? false : true) : null, lastStudied: studied ? p.lastStudied : null }, updatedAt: nowISO() }; }) } : deck) })); }
     function saveFlashSession(key, payload) { updateData(d => ({ ...d, studySessions: { ...(d.studySessions || {}), [key]: { ...(d.studySessions?.[key] || {}), ...payload, updatedAt: nowISO() } } })); }
     function clearFlashSession(key) { updateData(d => { const next = { ...(d.studySessions || {}) }; delete next[key]; return { ...d, studySessions: next }; }); }
-    async function launchStudy(mode, deckIds = data.selectedDeckIds.length ? data.selectedDeckIds : (activeDeck ? [activeDeck.id] : []), tags = []) {
-        const available = collectCards(data.decks, deckIds, tags);
+    async function launchStudy(mode, deckIds = data.selectedDeckIds.length ? data.selectedDeckIds : (activeDeck ? [activeDeck.id] : []), tags = [], topics = []) {
+        const available = collectCards(data.decks, deckIds, tags, topics);
         if (!available.length) {
             const rawCount = data.decks.filter(d => deckIds.includes(d.id)).reduce((n, d) => n + (d.cards?.length || 0), 0);
             toast(rawCount ? 'No active cards match this study selection. Reactivate cards to include them.' : (tags.length ? 'No cards match the selected tags' : 'Select a deck containing cards'));
@@ -2917,7 +2945,7 @@ function App() {
             return;
         }
         if (mode === 'flashcards') {
-            const sessionKey = flashSessionKey(deckIds, tags), saved = data.studySessions?.[sessionKey], resumable = saved && !saved.complete ? saved : null, byId = new Map(available.map(c => [c.id, c]));
+            const sessionKey = flashSessionKey(deckIds, tags, topics), saved = data.studySessions?.[sessionKey], resumable = saved && !saved.complete ? saved : null, byId = new Map(available.map(c => [c.id, c]));
             let cards = [];
             if (resumable) {
                 cards = (resumable.cardIds || []).map(id => byId.get(id)).filter(Boolean);
@@ -2931,7 +2959,7 @@ function App() {
             const startIndex = resume ? resume.index : 0;
             primeStudyImages(cards, startIndex, Math.min(12, cards.length));
             await ensureCardImagesReady(cards[startIndex], 1800);
-            setStudy({ mode, deckIds, tags, cards, originalCardIds: available.map(c => c.id), sessionKey, resume, key: uid('study') });
+            setStudy({ mode, deckIds, tags, topics, cards, originalCardIds: available.map(c => c.id), sessionKey, resume, key: uid('study') });
             return;
         }
         const studyCards = data.preferences.shuffle ? shuffle(available) : available;
@@ -2992,7 +3020,7 @@ function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, se
             React.createElement("button", { className: "rail-logo", onClick: openHome, "aria-label": "StudyForge home" },
                 React.createElement(BrandMark, null),
                 React.createElement("span", null, "StudyForge")),
-            React.createElement("span", { className: "rail-version" }, "PWA v1.11.3")),
+            React.createElement("span", { className: "rail-version" }, "PWA v1.11.4")),
         React.createElement("div", { className: "rail-profile-card" },
             React.createElement("span", { className: "rail-profile-avatar" }, profile.avatar ? React.createElement("img", { src: profile.avatar, alt: "" }) : profileInitials(profile)),
             React.createElement("button", { className: "rail-profile-copy", onClick: () => setModal({ type: 'edit-profile' }), "aria-label": "Edit creator profile" },
@@ -3092,7 +3120,7 @@ function Dashboard(p) {
                         React.createElement("span", { style: { width: `${deckStats(lead).progress}%` } }))),
                 React.createElement("button", { className: "btn btn-primary", onClick: () => launchStudy('flashcards', [lead.id]) }, "Continue")) : React.createElement("article", { className: "jump-card" },
                 React.createElement("h3", null, "Create your first deck"),
-                React.createElement("p", { className: "muted" }, "Build cards manually or generate them from a study file."),
+                React.createElement("p", { className: "muted" }, "Build a focused flashcard library for your subjects."),
                 React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'new-deck' }) }, "Create deck")),
             second && React.createElement("article", { className: "jump-card secondary" },
                 React.createElement("h3", null, second.name),
@@ -3107,7 +3135,6 @@ function Dashboard(p) {
             React.createElement("div", { className: "spread" },
                 React.createElement("h2", { className: "section-title" }, "Recents"),
                 React.createElement("div", { className: "row" },
-                    React.createElement("button", { className: "btn btn-secondary btn-sm", onClick: () => setModal({ type: 'import', deckId: data.activeDeckId }) }, "Upload material"),
                     React.createElement("button", { className: "btn btn-primary btn-sm", onClick: () => setModal({ type: 'new-deck' }) }, "\uFF0B Add deck"))),
             React.createElement("div", { className: "recent-grid" }, recent.slice(0, 10).map(deck => React.createElement("button", { className: "recent-item", key: deck.id, onClick: () => chooseDeck(deck.id) },
                 React.createElement("span", { className: "recent-icon" }, "\u25A4"),
@@ -3130,16 +3157,13 @@ function Dashboard(p) {
             React.createElement("div", { className: "card stat" },
                 React.createElement("strong", null, known),
                 React.createElement("span", null, "KNOWN"))),
-        React.createElement("section", { className: "quick-grid", style: { marginTop: 16 } },
+        React.createElement("section", { className: "quick-grid flashcard-only-quick", style: { marginTop: 16 } },
             React.createElement("button", { className: "quick-card", onClick: () => setModal({ type: 'new-folder' }) },
                 React.createElement("strong", null, "Nested folder"),
-                React.createElement("p", { className: "muted" }, "Organize subjects inside other folders.")),
-            React.createElement("button", { className: "quick-card", onClick: () => setModal({ type: 'import', deckId: data.activeDeckId }) },
-                React.createElement("strong", null, "Generate from a file"),
-                React.createElement("p", { className: "muted" }, "Create cards and notes from your source material.")),
-            React.createElement("button", { className: "quick-card", disabled: !selected, onClick: () => launchStudy('smart', data.selectedDeckIds) },
-                React.createElement("strong", null, "Test"),
-                React.createElement("p", { className: "muted" }, "Generate a fresh exam-style set from selected decks."))));
+                React.createElement("p", { className: "muted" }, "Organize flashcard sets inside subject folders.")),
+            React.createElement("button", { className: "quick-card", onClick: () => setModal({ type: 'new-deck' }) },
+                React.createElement("strong", null, "New flashcard set"),
+                React.createElement("p", { className: "muted" }, "Create a clean set, then add or batch-create cards."))));
 }
 function Library(p) {
     const { data, selectedDecks, search, setSearch, setModal, libraryFolderId, setLibraryFolderId, toggleSelected, chooseDeck, renameFolder, deleteFolder } = p;
@@ -3164,9 +3188,6 @@ function Library(p) {
                 React.createElement("h1", null, "Your library"),
                 React.createElement("p", { className: "muted" }, "Browse folders and flashcard sets. Select several sets to study them together.")),
             React.createElement("div", { className: "library-actions" },
-                React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'import', deckId: null }) },
-                    React.createElement(Icon, { name: "upload", size: 19 }),
-                    "Upload"),
                 React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'new-folder', parentId: libraryFolderId }) },
                     React.createElement(Icon, { name: "folder", size: 19 }),
                     "Folder"),
@@ -3247,7 +3268,7 @@ function Library(p) {
             }),
             decks.length > 0 && React.createElement("div", { className: "list-section-label" }, q ? 'Results' : 'Flashcard sets'),
             decks.map(deck => React.createElement(FlatLibraryDeckRow, { key: deck.id, deck: deck, ...p })),
-            !folders.length && !decks.length && React.createElement(Empty, { title: q ? 'No matching results' : 'This folder is empty', text: q ? 'Try another search term.' : 'Create a folder, flashcard set, or upload study material.', action: React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'new-deck', folderId: libraryFolderId }) }, "Create a flashcard set") })),
+            !folders.length && !decks.length && React.createElement(Empty, { title: q ? 'No matching results' : 'This folder is empty', text: q ? 'Try another search term.' : 'Create a folder or flashcard set.', action: React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'new-deck', folderId: libraryFolderId }) }, "Create a flashcard set") })),
         !!selectedDecks.length && React.createElement(SelectionBar, { ...p }));
 }
 function FlatLibraryDeckRow({ deck, data, toggleSelected, chooseDeck }) {
@@ -3280,14 +3301,14 @@ function FlatLibraryDeckRow({ deck, data, toggleSelected, chooseDeck }) {
 function DeckPage(p) {
     const { activeDeck, data, updateData, setModal, deleteDeck, launchStudy, libraryTab, setLibraryTab, openLibrary, openCreator, setDeckVisibility, resetDeckProgress, setCardsDeactivated, toggleCardDeactivated } = p;
     const readOnly = Boolean(activeDeck?.sharedPermission && activeDeck.sharedPermission !== 'copy');
-    const [selectedTags, setSelectedTags] = useState([]), [cardQuery, setCardQuery] = useState(''), [previewIndex, setPreviewIndex] = useState(0), [previewTurns, setPreviewTurns] = useState(0), [previewOrder, setPreviewOrder] = useState([]), [autoPlay, setAutoPlay] = useState(false), [previewSettings, setPreviewSettings] = useState(false), [previewFirstSide, setPreviewFirstSide] = useState(() => data.preferences.firstSide || 'back'), [previewShuffled, setPreviewShuffled] = useState(() => Boolean(data.preferences.shuffle)), [sortMode, setSortMode] = useState('original'), [cardVisibility, setCardVisibility] = useState('all'), [hideDefinitions, setHideDefinitions] = useState(false), [hideTerms, setHideTerms] = useState(false), [reorderMode, setReorderMode] = useState(false), [selectionMode, setSelectionMode] = useState(false), [selectedCardIds, setSelectedCardIds] = useState([]), [reorderSelectedIds, setReorderSelectedIds] = useState([]), [draggingCardId, setDraggingCardId] = useState(null), [dragOverCardId, setDragOverCardId] = useState(null), [dragAfter, setDragAfter] = useState(false), [collapsedTopics, setCollapsedTopics] = useState({});
+    const [selectedTags, setSelectedTags] = useState([]), [selectedTopics, setSelectedTopics] = useState([]), [cardQuery, setCardQuery] = useState(''), [previewIndex, setPreviewIndex] = useState(0), [previewTurns, setPreviewTurns] = useState(0), [previewOrder, setPreviewOrder] = useState([]), [autoPlay, setAutoPlay] = useState(false), [previewSettings, setPreviewSettings] = useState(false), [previewFirstSide, setPreviewFirstSide] = useState(() => data.preferences.firstSide || 'back'), [previewShuffled, setPreviewShuffled] = useState(() => Boolean(data.preferences.shuffle)), [sortMode, setSortMode] = useState('original'), [cardVisibility, setCardVisibility] = useState('all'), [hideDefinitions, setHideDefinitions] = useState(false), [hideTerms, setHideTerms] = useState(false), [reorderMode, setReorderMode] = useState(false), [selectionMode, setSelectionMode] = useState(false), [selectedCardIds, setSelectedCardIds] = useState([]), [reorderSelectedIds, setReorderSelectedIds] = useState([]), [draggingCardId, setDraggingCardId] = useState(null), [dragOverCardId, setDragOverCardId] = useState(null), [dragAfter, setDragAfter] = useState(false), [collapsedTopics, setCollapsedTopics] = useState({});
     const dragCardRef = useRef(null), previewSection = useRef(null);
-    useEffect(() => { setSelectedTags([]); setCardQuery(''); setPreviewIndex(0); setPreviewTurns(0); setCardVisibility('all'); setHideTerms(false); setReorderMode(false); setSelectionMode(false); setSelectedCardIds([]); setReorderSelectedIds([]); setDraggingCardId(null); setDragOverCardId(null); setCollapsedTopics({}); const ids = studyableDeckCards(activeDeck).map(c => c.id); setPreviewOrder(data.preferences.shuffle ? shuffle(ids) : ids); setPreviewShuffled(Boolean(data.preferences.shuffle)); setPreviewFirstSide(data.preferences.firstSide || 'back'); setAutoPlay(false); }, [activeDeck?.id]);
+    useEffect(() => { setSelectedTags([]); setSelectedTopics([]); setCardQuery(''); setPreviewIndex(0); setPreviewTurns(0); setCardVisibility('all'); setHideTerms(false); setReorderMode(false); setSelectionMode(false); setSelectedCardIds([]); setReorderSelectedIds([]); setDraggingCardId(null); setDragOverCardId(null); setCollapsedTopics({}); const ids = studyableDeckCards(activeDeck).map(c => c.id); setPreviewOrder(data.preferences.shuffle ? shuffle(ids) : ids); setPreviewShuffled(Boolean(data.preferences.shuffle)); setPreviewFirstSide(data.preferences.firstSide || 'back'); setAutoPlay(false); }, [activeDeck?.id]);
     useEffect(() => { const cards = studyableDeckCards(activeDeck); if (!cards.length)
         return; let handle = null; primeStudyImages(cards, 0, Math.min(8, cards.length)); const warm = () => primeStudyImages(cards, 0, Math.min(24, cards.length)); handle = 'requestIdleCallback' in window ? requestIdleCallback(warm, { timeout: 650 }) : setTimeout(warm, 90); return () => { if (!handle) return; if ('cancelIdleCallback' in window) cancelIdleCallback(handle); else clearTimeout(handle); }; }, [activeDeck?.id]);
-    const activeCards = activeDeck?.cards || [], stats = deckStats(activeDeck), inactiveSet = deactivatedIds(activeDeck), studyableCount = activeCards.length - inactiveSet.size, topicSettings = deckTopicSettings(activeDeck), tags = unique(activeCards.flatMap(c => c.tags)).sort(), topics = unique(activeCards.map(c => normalizeTopic(c.topic)).filter(Boolean)), starFilter = selectedTags.includes('__starred__'), startedFilter = selectedTags.includes('__started__'), realTags = selectedTags.filter(t => !['__starred__', '__started__'].includes(t)), deferredCardQuery = useDeferredValue(cardQuery), normalizedCardQuery = clean(deferredCardQuery).toLowerCase();
+    const activeCards = activeDeck?.cards || [], stats = deckStats(activeDeck), inactiveSet = deactivatedIds(activeDeck), studyableCount = activeCards.length - inactiveSet.size, topicSettings = deckTopicSettings(activeDeck), tags = unique(activeCards.flatMap(c => c.tags)).sort(), rawTopics = unique(activeCards.map(c => normalizeTopic(c.topic)).filter(Boolean)), topics = [...topicSettings.order.filter(t => rawTopics.includes(t)), ...rawTopics.filter(t => !topicSettings.order.includes(t)).sort((a,b) => a.localeCompare(b))], hasUnassignedTopic = activeCards.some(c => !normalizeTopic(c.topic)), starFilter = selectedTags.includes('__starred__'), startedFilter = selectedTags.includes('__started__'), realTags = selectedTags.filter(t => !['__starred__', '__started__'].includes(t)), deferredCardQuery = useDeferredValue(cardQuery), normalizedCardQuery = clean(deferredCardQuery).toLowerCase();
     const originalIndex = useMemo(() => new Map(activeCards.map((card, index) => [card.id, index])), [activeDeck?.id, activeCards]), searchIndex = useMemo(() => new Map(activeCards.map(card => [card.id, `${stripMath(card.front).toLowerCase()}\n${stripMath(card.back).toLowerCase()}\n${normalizeTopic(card.topic).toLowerCase()}\n${(card.tags || []).join(' ').toLowerCase()}`])), [activeDeck?.id, activeCards]);
-    const filtered = activeCards.filter(c => { const inactive = inactiveSet.has(c.id), visibilityOk = cardVisibility === 'all' || (cardVisibility === 'active' && !inactive) || (cardVisibility === 'deactivated' && inactive); const qOk = !normalizedCardQuery || (searchIndex.get(c.id) || '').includes(normalizedCardQuery); const tagOk = !realTags.length || realTags.some(t => c.tags.includes(t)); return visibilityOk && qOk && tagOk && (!starFilter || normalizeProgress(c).starred) && (!startedFilter || cardStatus(c) !== 'new'); });
+    const filtered = activeCards.filter(c => { const inactive = inactiveSet.has(c.id), visibilityOk = cardVisibility === 'all' || (cardVisibility === 'active' && !inactive) || (cardVisibility === 'deactivated' && inactive); const qOk = !normalizedCardQuery || (searchIndex.get(c.id) || '').includes(normalizedCardQuery); const tagOk = !realTags.length || realTags.some(t => c.tags.includes(t)); const topicKey = normalizeTopic(c.topic) || '__unassigned__', topicOk = !selectedTopics.length || selectedTopics.includes(topicKey); return visibilityOk && qOk && tagOk && topicOk && (!starFilter || normalizeProgress(c).starred) && (!startedFilter || cardStatus(c) !== 'new'); });
     const previewEligible = filtered.filter(c => !inactiveSet.has(c.id)), byId = new Map(previewEligible.map(c => [c.id, c])), previewOrderSet = new Set(previewOrder), previewCards = [...previewOrder.map(id => byId.get(id)).filter(Boolean), ...previewEligible.filter(c => !previewOrderSet.has(c.id))], preview = previewCards[previewIndex] || previewEligible[0] || null, previewFlipped = previewTurns % 2 === 1, fitPreview = data.preferences.flashFitContent !== false;
     useEffect(() => { if (!previewCards.length) {
         setPreviewIndex(0);
@@ -3297,10 +3318,10 @@ function DeckPage(p) {
     const previewFront = preview ? (previewFirstSide === 'back' ? { text: preview.back, images: sideImages(preview, 'back'), label: 'definition' } : { text: preview.front, images: sideImages(preview, 'front'), label: 'term' }) : null;
     const previewBack = preview ? (previewFirstSide === 'back' ? { text: preview.front, images: sideImages(preview, 'front'), label: 'term' } : { text: preview.back, images: sideImages(preview, 'back'), label: 'definition' }) : null;
     const sortedCards = [...filtered].sort((a, b) => { const original = (originalIndex.get(a.id) || 0) - (originalIndex.get(b.id) || 0); if (sortMode === 'alphabetical') return stripMath(a.front).localeCompare(stripMath(b.front)); if (sortMode === 'tags') return ((a.tags || []).slice().sort().join(' ') || '~').localeCompare((b.tags || []).slice().sort().join(' ') || '~') || stripMath(a.front).localeCompare(stripMath(b.front)); if (sortMode === 'active') return Number(inactiveSet.has(a.id)) - Number(inactiveSet.has(b.id)) || original; if (sortMode === 'deactivated') return Number(inactiveSet.has(b.id)) - Number(inactiveSet.has(a.id)) || original; if (['known','learning','new'].includes(sortMode)) { const order = sortMode === 'known' ? { known:0, learning:1, new:2 } : sortMode === 'learning' ? { learning:0, known:1, new:2 } : { new:0, learning:1, known:2 }; return order[cardStatus(a)] - order[cardStatus(b)] || original; } return original; });
-    const topicGroupKeys = (() => { const seen = new Set(), order = []; for (const c of sortedCards) { const key = normalizeTopic(c.topic) || '__unassigned__'; if (!seen.has(key)) { seen.add(key); order.push(key); } } return order; })();
+    const topicGroupKeys = (() => { const present = unique(sortedCards.map(c => normalizeTopic(c.topic) || '__unassigned__')), configured = topicSettings.order.filter(t => present.includes(t)), extras = present.filter(t => t !== '__unassigned__' && !configured.includes(t)).sort((a,b) => a.localeCompare(b)); return [...configured, ...extras, ...(present.includes('__unassigned__') ? ['__unassigned__'] : [])]; })();
     const statusGroups = { known: ['known', 'Know', 'You most recently marked these cards correct.'], learning: ['learning', 'Still learning', 'You marked these cards as still learning.'], new: ['new', 'Not studied', 'You have not graded these cards yet.'] };
     const sortDescription = sortMode === 'original' ? 'Original deck order.' : sortMode === 'alphabetical' ? 'Alphabetical order.' : sortMode === 'tags' ? 'Sorted by tags.' : sortMode === 'active' ? 'Active cards first; deactivated cards remain visible below.' : sortMode === 'deactivated' ? 'Deactivated cards first for quick review.' : 'Current study-progress order.';
-    const groups = sortMode === 'known' ? [statusGroups.known, statusGroups.learning, statusGroups.new] : sortMode === 'learning' ? [statusGroups.learning, statusGroups.known, statusGroups.new] : sortMode === 'new' ? [statusGroups.new, statusGroups.learning, statusGroups.known] : [['all', 'Terms', sortDescription]], session = activeDeck ? data.studySessions?.[flashSessionKey([activeDeck.id], selectedTags)] : null;
+    const groups = sortMode === 'known' ? [statusGroups.known, statusGroups.learning, statusGroups.new] : sortMode === 'learning' ? [statusGroups.learning, statusGroups.known, statusGroups.new] : sortMode === 'new' ? [statusGroups.new, statusGroups.learning, statusGroups.known] : [['all', 'Terms', sortDescription]], session = activeDeck ? data.studySessions?.[flashSessionKey([activeDeck.id], selectedTags, selectedTopics)] : null;
     function rename(name) { updateData(d => ({ ...d, decks: d.decks.map(x => x.id === activeDeck.id ? { ...x, name, updatedAt: nowISO() } : x) })); }
     function moveFolder(folderId) { updateData(d => ({ ...d, decks: d.decks.map(x => x.id === activeDeck.id ? { ...x, folderId: folderId || null, updatedAt: nowISO() } : x) })); }
     function resetPreviewFace() { setPreviewTurns(t => t % 2 ? t + 1 : t); }
@@ -3347,7 +3368,7 @@ function DeckPage(p) {
         setReorderMode(false);
         setReorderSelectedIds([]);
         return;
-    } setCardQuery(''); setSelectedTags([]); setSortMode('original'); setHideDefinitions(false); setSelectionMode(false); setReorderSelectedIds(selectedCardIds.length ? selectedCardIds : []); setReorderMode(true); }
+    } setCardQuery(''); setSelectedTags([]); setSelectedTopics([]); setSortMode('original'); setHideDefinitions(false); setSelectionMode(false); setReorderSelectedIds(selectedCardIds.length ? selectedCardIds : []); setReorderMode(true); }
     useEffect(() => { const move = event => { const drag = dragCardRef.current; if (!drag)
         return; if (event.clientY < 92)
         window.scrollBy({ top: -18, behavior: 'auto' });
@@ -3375,8 +3396,6 @@ function DeckPage(p) {
                 !readOnly && React.createElement(React.Fragment, null,
                     React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }), "aria-label": "Add card" },
                         React.createElement(Icon, { name: "plus" })),
-                    React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'import', deckId: activeDeck.id }), "aria-label": "Upload study material" },
-                        React.createElement(Icon, { name: "upload" })),
                     React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), "aria-label": "Import or export flashcards" },
                         React.createElement(Icon, { name: "importExport" })),
                     React.createElement("button", { className: "circle-action", onClick: () => p.shareResource('deck', activeDeck.id), "aria-label": "Access settings" },
@@ -3413,28 +3432,15 @@ function DeckPage(p) {
                 activeDeck.sharedOwnerName || 'another creator',
                 ". Your study progress is private to your account.")),
         !readOnly && React.createElement(CreatorStrip, { profile: data.profile, deck: activeDeck, onOpen: () => openCreator(activeDeck.creatorId || data.profile.id), onVisibility: visibility => setDeckVisibility(activeDeck.id, visibility) }),
-        React.createElement("section", { className: "deck-mode-grid", "aria-label": "Study modes" },
-            React.createElement("button", { disabled: !studyableCount, onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags) },
+        React.createElement("section", { className: "deck-mode-grid flashcard-only-mode", "aria-label": "Flashcard study" },
+            React.createElement("button", { disabled: !filtered.some(c => !inactiveSet.has(c.id)), onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics) },
                 React.createElement("span", { className: "mode-icon cards" },
                     React.createElement(Icon, { name: "cards", size: 25 })),
                 React.createElement("span", { className: "mode-copy" },
                     React.createElement("strong", null, "Flashcards"),
                     React.createElement("small", null,
-                        studyableCount,
-                        " active card",
-                        studyableCount === 1 ? '' : 's'))),
-            React.createElement("button", { disabled: !studyableCount, onClick: () => launchStudy('learn', [activeDeck.id], selectedTags) },
-                React.createElement("span", { className: "mode-icon learn" },
-                    React.createElement(Icon, { name: "learn", size: 25 })),
-                React.createElement("span", { className: "mode-copy" },
-                    React.createElement("strong", null, "Learn"),
-                    React.createElement("small", null, "Skips deactivated cards"))),
-            React.createElement("button", { disabled: !studyableCount, onClick: () => launchStudy('smart', [activeDeck.id], selectedTags) },
-                React.createElement("span", { className: "mode-icon test" },
-                    React.createElement(Icon, { name: "test", size: 25 })),
-                React.createElement("span", { className: "mode-copy" },
-                    React.createElement("strong", null, "Test"),
-                    React.createElement("small", null, "Uses active cards only")))),
+                        filtered.filter(c => !inactiveSet.has(c.id)).length,
+                        selectedTopics.length || selectedTags.length ? " cards in current study filter" : " active cards")))),
         preview ? React.createElement("section", { className: "deck-preview-section", ref: previewSection },
             React.createElement("button", { className: "deck-preview-card", onClick: flipPreview, "aria-label": `Flip preview to show ${previewFlipped ? previewFront.label : previewBack.label}` },
                 React.createElement("span", { className: "deck-preview-inner", style: { transform: `rotateY(${previewTurns * 180}deg)`, transitionDuration: '680ms' } },
@@ -3465,7 +3471,7 @@ function DeckPage(p) {
                     React.createElement(Icon, { name: "settings" })),
                 React.createElement("button", { onClick: fullPreview, "aria-label": "Fullscreen preview" },
                     React.createElement(Icon, { name: "fullscreen" })),
-                React.createElement("button", { className: "preview-study", onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags) }, session && !session.complete ? 'Continue' : 'Study')),
+                React.createElement("button", { className: "preview-study", onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics) }, session && !session.complete ? 'Continue' : 'Study')),
             previewSettings && React.createElement("div", { className: "prestudy-settings" },
                 React.createElement("strong", null, "Preview and study settings"),
                 React.createElement("span", null, "New sessions start with the definition first."),
@@ -3485,7 +3491,7 @@ function DeckPage(p) {
                     " Hide definitions in the term list"))) : activeDeck.cards.length ? React.createElement("div", { className: "no-active-cards" },
             React.createElement(Icon, { name: "eyeOff", size: 28 }),
             React.createElement("h3", null, "No active cards to preview"),
-            React.createElement("p", null, inactiveSet.size === activeDeck.cards.length ? 'Every card in this set is deactivated. Reactivate any card below to study it again.' : 'No active cards match the current Study only filters.')) : React.createElement(Empty, { title: "No terms yet", text: "Add a card or upload a study file to generate cards.", action: React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }) }, "Add a card") }),
+            React.createElement("p", null, inactiveSet.size === activeDeck.cards.length ? 'Every card in this set is deactivated. Reactivate any card below to study it again.' : 'No active cards match the current Study only filters.')) : React.createElement(Empty, { title: "No terms yet", text: "Add a card or use Batch create to add several cards at once.", action: React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }) }, "Add a card") }),
         React.createElement("section", { className: "deck-tools" },
             React.createElement("div", { className: "deck-tag-filter" },
                 React.createElement("strong", null, "Study only"),
@@ -3505,46 +3511,41 @@ function DeckPage(p) {
                 tags.map(t => { const color = deckTagColor(activeDeck, t); return React.createElement("button", { style: { '--tag-color': color }, className: `tag color-tag ${selectedTags.includes(t) ? 'active' : ''}`, key: t, onClick: () => setSelectedTags(a => a.includes(t) ? a.filter(x => x !== t) : [...a, t]) },
                     "#",
                     t); })),
+            topicSettings.enabled && (topics.length || hasUnassignedTopic) && React.createElement("div", { className: "topic-study-filter" },
+                React.createElement("strong", null, `Study ${topicSettings.label.toLowerCase()}${topicSettings.label.toLowerCase().endsWith('s') ? '' : 's'}`),
+                React.createElement("button", { className: `tag ${!selectedTopics.length ? 'active' : ''}`, onClick: () => setSelectedTopics([]) }, "All"),
+                topics.map(topic => React.createElement("button", { key: topic, style: { '--topic-color': deckTopicColor(activeDeck, topic) }, className: `tag topic-filter-chip ${selectedTopics.includes(topic) ? 'active' : ''}`, onClick: () => setSelectedTopics(a => a.includes(topic) ? a.filter(x => x !== topic) : [...a, topic]) }, topic)),
+                hasUnassignedTopic && React.createElement("button", { className: `tag topic-filter-chip ${selectedTopics.includes('__unassigned__') ? 'active' : ''}`, onClick: () => setSelectedTopics(a => a.includes('__unassigned__') ? a.filter(x => x !== '__unassigned__') : [...a, '__unassigned__']) }, `No ${topicSettings.label}`)),
             !readOnly && React.createElement("div", { className: "deck-actions-row" },
                 React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }) },
                     React.createElement(Icon, { name: "plus", size: 18 }),
                     "Add card"),
-                React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }) },
-                    React.createElement(Icon, { name: "importExport", size: 18 }),
-                    "Batch create"),
-                React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'topic-settings', deckId: activeDeck.id }) },
-                    React.createElement(Icon, { name: "folder", size: 18 }),
-                    topicSettings.enabled ? `${topicSettings.label} settings` : 'Topics off'),
-                React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'import', deckId: activeDeck.id }) },
-                    React.createElement(Icon, { name: "upload", size: 18 }),
-                    "Upload material"),
-                React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }) },
-                    React.createElement(Icon, { name: "importExport", size: 18 }),
-                    "Import / export"),
-                React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'reset-progress', deckId: activeDeck.id }) }, "Reset progress"),
+                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), title: "Batch create / import flashcards", "aria-label": "Batch create / import flashcards", "data-tooltip": "Batch create" },
+                    React.createElement(Icon, { name: "importExport", size: 19 })),
+                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'topic-settings', deckId: activeDeck.id }), title: topicSettings.enabled ? `${topicSettings.label} settings` : 'Topic settings', "aria-label": topicSettings.enabled ? `${topicSettings.label} settings` : 'Topic settings', "data-tooltip": `${topicSettings.label} settings` },
+                    React.createElement(Icon, { name: "folder", size: 19 })),
+                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), title: "Import / export flashcards", "aria-label": "Import / export flashcards", "data-tooltip": "Import / export" },
+                    React.createElement(Icon, { name: "download", size: 19 })),
+                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'reset-progress', deckId: activeDeck.id }), title: "Reset progress", "aria-label": "Reset progress", "data-tooltip": "Reset progress" }, React.createElement(Icon, { name: "undo", size: 19 })),
                 React.createElement("select", { value: activeDeck.folderId || '', onChange: e => moveFolder(e.target.value), "aria-label": "Move deck to folder" },
                     React.createElement("option", { value: "" }, "Main library"),
                     data.folders.map(f => React.createElement("option", { key: f.id, value: f.id }, folderPath(f.id, data.folders)))))),
-        React.createElement("div", { className: "deck-tabs quiz-deck-tabs" },
-            React.createElement("button", { className: `deck-tab ${libraryTab === 'cards' ? 'active' : ''}`, onClick: () => setLibraryTab('cards') },
+        React.createElement("div", { className: "deck-tabs quiz-deck-tabs flashcard-only-tabs" },
+            React.createElement("button", { className: "deck-tab active", onClick: () => setLibraryTab('cards') },
                 "Terms in this set (",
                 activeDeck.cards.length,
-                ")"),
-            React.createElement("button", { className: `deck-tab ${libraryTab === 'materials' ? 'active' : ''}`, onClick: () => setLibraryTab('materials') }, "Materials & notes")),
-        libraryTab === 'cards' ? React.createElement("section", { className: "terms-section" },
+                ")")),
+        React.createElement("section", { className: "terms-section" },
             React.createElement("div", { className: "terms-heading" },
                 React.createElement("span", { className: "terms-heading-helper" }, reorderMode ? (reorderSelectedIds.length ? `${reorderSelectedIds.length} selected — drag any selected card to move the group.` : 'Select one or more cards, then drag a handle.') : `${filtered.length} of ${activeDeck.cards.length} cards shown · ${inactiveSet.size} deactivated`),
                 React.createElement("div", { className: "terms-heading-actions" },
-                    React.createElement("button", { className: "btn btn-secondary btn-sm", onClick: () => setHideTerms(v => !v) },
-                        React.createElement(Icon, { name: hideTerms ? 'down' : 'up', size: 17 }),
-                        hideTerms ? 'Show terms' : 'Hide terms'),
-                    !readOnly && !reorderMode && React.createElement("button", { className: `btn btn-secondary btn-sm ${selectionMode ? 'active' : ''}`, onClick: () => { setSelectionMode(v => !v); if (selectionMode)
-                            setSelectedCardIds([]); } },
-                        React.createElement(Icon, { name: "check", size: 17 }),
-                        selectionMode ? 'Done selecting' : 'Select cards'),
-                    !readOnly && React.createElement("button", { className: `btn btn-secondary btn-sm ${reorderMode ? 'active' : ''}`, onClick: toggleReorderMode },
-                        React.createElement(Icon, { name: reorderMode ? 'check' : 'transfer', size: 17 }),
-                        reorderMode ? 'Done arranging' : 'Rearrange'),
+                    React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setHideTerms(v => !v), title: hideTerms ? 'Show terms' : 'Hide terms', "aria-label": hideTerms ? 'Show terms' : 'Hide terms', "data-tooltip": hideTerms ? 'Show terms' : 'Hide terms' },
+                        React.createElement(Icon, { name: hideTerms ? 'eye' : 'eyeOff', size: 18 })),
+                    !readOnly && !reorderMode && React.createElement("button", { className: `btn btn-secondary btn-sm compact-icon-btn ${selectionMode ? 'active' : ''}`, onClick: () => { setSelectionMode(v => !v); if (selectionMode)
+                            setSelectedCardIds([]); }, title: selectionMode ? 'Done selecting' : 'Select cards', "aria-label": selectionMode ? 'Done selecting' : 'Select cards', "data-tooltip": selectionMode ? 'Done selecting' : 'Select cards' },
+                        React.createElement(Icon, { name: selectionMode ? 'check' : 'cards', size: 18 })),
+                    !readOnly && React.createElement("button", { className: `btn btn-secondary btn-sm compact-icon-btn ${reorderMode ? 'active' : ''}`, onClick: toggleReorderMode, title: reorderMode ? 'Done arranging' : 'Rearrange cards', "aria-label": reorderMode ? 'Done arranging' : 'Rearrange cards', "data-tooltip": reorderMode ? 'Done arranging' : 'Rearrange cards' },
+                        React.createElement(Icon, { name: reorderMode ? 'check' : 'transfer', size: 18 })),
                     React.createElement("label", { className: "terms-sort" },
                         "Sort",
                         React.createElement("select", { value: sortMode, disabled: reorderMode, onChange: e => setSortMode(e.target.value) },
@@ -3556,12 +3557,7 @@ function DeckPage(p) {
                             React.createElement("option", { value: "deactivated" }, "Deactivated cards first"),
                             React.createElement("option", { value: "alphabetical" }, "Alphabetical"),
                             React.createElement("option", { value: "tags" }, "Tags A\u2013Z"))))),
-            hideTerms ? React.createElement("div", { className: "terms-collapsed" },
-                React.createElement(Icon, { name: "cards", size: 24 }),
-                React.createElement("div", null,
-                    React.createElement("strong", null, "Terms are hidden"),
-                    React.createElement("span", null, "Show the list whenever you need to browse or edit individual cards.")),
-                React.createElement("button", { className: "btn btn-secondary btn-sm", onClick: () => setHideTerms(false) }, "Show terms")) : React.createElement(React.Fragment, null,
+            React.createElement(React.Fragment, null,
                 selectionMode && !reorderMode && React.createElement("div", { className: "bulk-card-bar" },
                     React.createElement("strong", null,
                         selectedCardIds.length,
@@ -3610,21 +3606,21 @@ function DeckPage(p) {
                             !readOnly && topicKey !== '__unassigned__' && React.createElement("label", { className: "topic-panel-color", title: "Change topic panel color" },
                                 React.createElement("span", null, "Color"),
                                 React.createElement("input", { type: "color", value: color, onChange: e => setTopicPanelColor(topicKey, e.target.value), "aria-label": `Change color for ${title}` }))),
-                        !collapsed && React.createElement("div", { className: "quiz-terms-list topic-panel-cards" }, cards.map(card => React.createElement(DeckTermRow, { key: card.id, card: card, index: originalIndex.get(card.id) || 0, deck: activeDeck, deactivated: inactiveSet.has(card.id), toggleCardDeactivated: toggleCardDeactivated, selectionMode: selectionMode, selected: selectedCardIds.includes(card.id), onSelect: () => toggleSelectedCard(card.id), readOnly: readOnly, hideDefinition: hideDefinitions, toggleStar: toggleStar, ...p })))) : null; }) : groups.map(([status, title, description]) => { const cards = status === 'all' ? sortedCards : sortedCards.filter(c => cardStatus(c) === status); return cards.length ? React.createElement("section", { className: `term-progress-group ${status}`, key: status },
+                        !collapsed && React.createElement("div", { className: "quiz-terms-list topic-panel-cards" }, cards.map(card => React.createElement(DeckTermRow, { key: card.id, card: card, index: originalIndex.get(card.id) || 0, deck: activeDeck, deactivated: inactiveSet.has(card.id), toggleCardDeactivated: toggleCardDeactivated, selectionMode: selectionMode, selected: selectedCardIds.includes(card.id), onSelect: () => toggleSelectedCard(card.id), readOnly: readOnly, hideTerm: hideTerms, hideDefinition: hideDefinitions, toggleStar: toggleStar, ...p })))) : null; }) : groups.map(([status, title, description]) => { const cards = status === 'all' ? sortedCards : sortedCards.filter(c => cardStatus(c) === status); return cards.length ? React.createElement("section", { className: `term-progress-group ${status}`, key: status },
                         React.createElement("div", { className: "term-group-heading" },
                             React.createElement("div", null,
                                 React.createElement("h3", null, title, " (", cards.length, ")"),
                                 React.createElement("p", null, description))),
-                        React.createElement("div", { className: "quiz-terms-list" }, cards.map(card => React.createElement(DeckTermRow, { key: card.id, card: card, index: originalIndex.get(card.id) || 0, deck: activeDeck, deactivated: inactiveSet.has(card.id), toggleCardDeactivated: toggleCardDeactivated, selectionMode: selectionMode, selected: selectedCardIds.includes(card.id), onSelect: () => toggleSelectedCard(card.id), readOnly: readOnly, hideDefinition: hideDefinitions, toggleStar: toggleStar, ...p })))) : null; }),
+                        React.createElement("div", { className: "quiz-terms-list" }, cards.map(card => React.createElement(DeckTermRow, { key: card.id, card: card, index: originalIndex.get(card.id) || 0, deck: activeDeck, deactivated: inactiveSet.has(card.id), toggleCardDeactivated: toggleCardDeactivated, selectionMode: selectionMode, selected: selectedCardIds.includes(card.id), onSelect: () => toggleSelectedCard(card.id), readOnly: readOnly, hideTerm: hideTerms, hideDefinition: hideDefinitions, toggleStar: toggleStar, ...p })))) : null; }),
                     React.createElement("div", { className: "terms-bottom-actions" },
                         !readOnly && React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }) },
                             React.createElement(Icon, { name: "plus", size: 18 }),
                             "Add another card"),
-                        React.createElement("button", { className: "btn btn-secondary", onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags) },
+                        React.createElement("button", { className: "btn btn-secondary", onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics) },
                             React.createElement(Icon, { name: "cards", size: 18 }),
                             "Study ",
-                            selectedTags.length ? 'filtered' : 'all',
-                            " cards"))))) : React.createElement(MaterialsPanel, { deck: activeDeck, setModal: setModal }));
+                            selectedTags.length || selectedTopics.length ? 'filtered' : 'all',
+                            " cards"))))));
 }
 function ReorderCardRow({ card, index, deck, deactivated = false, selected, onToggle, dragging, dragOver, dragAfter, total, onStart, onStep, setModal }) {
     const frontImages = sideImages(card, 'front'), backImages = sideImages(card, 'back'), topicSettings = deckTopicSettings(deck), topic = normalizeTopic(card.topic);
@@ -3656,10 +3652,10 @@ function ReorderCardRow({ card, index, deck, deactivated = false, selected, onTo
                 React.createElement(Icon, { name: "up", size: 18 })),
             React.createElement("button", { onClick: () => onStep(card.id, 1), disabled: index === total - 1, "aria-label": "Move selected cards down" },
                 React.createElement(Icon, { name: "down", size: 18 })),
-            React.createElement("button", { onClick: () => setModal({ type: 'card', mode: 'edit', deckId: deck.id, card }), "aria-label": "Edit card" },
+            React.createElement("button", { onClick: () => setModal({ type: 'card', mode: 'edit', deckId: deck.id, card }), "aria-label": "Edit card", title: "Edit card" },
                 React.createElement(Icon, { name: "edit", size: 18 }))));
 }
-function DeckTermRow({ card, index, deck, setModal, duplicateCard, deleteCard, hideDefinition, toggleStar, toggleCardDeactivated, deactivated = false, readOnly = false, selectionMode = false, selected = false, onSelect }) {
+function DeckTermRow({ card, index, deck, setModal, duplicateCard, deleteCard, hideTerm = false, hideDefinition, toggleStar, toggleCardDeactivated, deactivated = false, readOnly = false, selectionMode = false, selected = false, onSelect }) {
     const progress = normalizeProgress(card), frontImages = sideImages(card, 'front'), backImages = sideImages(card, 'back'), topicSettings = deckTopicSettings(deck), topic = normalizeTopic(card.topic);
     function speak() { if (!('speechSynthesis' in window))
         return; window.speechSynthesis.cancel(); window.speechSynthesis.speak(new SpeechSynthesisUtterance(stripMath(`${card.front}. ${card.back}`))); }
@@ -3673,10 +3669,11 @@ function DeckTermRow({ card, index, deck, setModal, duplicateCard, deleteCard, h
                 React.createElement(Icon, { name: "eyeOff", size: 12 }),
                 "Excluded from study"),
             React.createElement("span", { className: "mobile-side-label term-label" }, "TERM"),
-            topicSettings.enabled && topic && React.createElement("span", { className: "term-topic-label", style: { '--topic-color': deckTopicColor(deck, topic) } }, topicSettings.label, ': ', topic),
-            React.createElement(MathText, { text: card.front, wrapLatexText: true }),
-            frontImages.length > 0 && React.createElement("div", { className: "term-image-grid" }, frontImages.map(img => React.createElement("button", { type: "button", className: "term-image-button", key: img.id, onClick: () => openImage(img, 'Term'), "aria-label": "Open term image full screen" },
-                React.createElement("img", { src: img.src, loading: "lazy", decoding: "async", style: { maxWidth: `${img.width}%` }, alt: "Front attachment" }))))),
+            topicSettings.enabled && topicSettings.showInTerms && topic && React.createElement("span", { className: "term-topic-label", style: { '--topic-color': deckTopicColor(deck, topic) } }, topicSettings.label, ': ', topic),
+            hideTerm ? React.createElement("span", { className: "term-placeholder" }, "Term hidden") : React.createElement(React.Fragment, null,
+                React.createElement(MathText, { text: card.front, wrapLatexText: true }),
+                frontImages.length > 0 && React.createElement("div", { className: "term-image-grid" }, frontImages.map(img => React.createElement("button", { type: "button", className: "term-image-button", key: img.id, onClick: () => openImage(img, 'Term'), "aria-label": "Open term image full screen" },
+                    React.createElement("img", { src: img.src, loading: "lazy", decoding: "async", style: { maxWidth: `${img.width}%` }, alt: "Front attachment" })))))),
         React.createElement("div", { className: "term-divider" }),
         React.createElement("div", { className: `term-column term-side term-side-back ${hideDefinition ? 'definition-hidden' : ''}` },
             React.createElement("span", { className: "mobile-side-label definition-label" }, "DEFINITION"),
@@ -3690,18 +3687,18 @@ function DeckTermRow({ card, index, deck, setModal, duplicateCard, deleteCard, h
         React.createElement("div", { className: "term-actions" },
             !readOnly && React.createElement("button", { className: `deactivate-toggle ${deactivated ? 'active' : ''}`, onClick: () => toggleCardDeactivated(deck.id, card.id), "aria-label": deactivated ? 'Reactivate card for study' : 'Deactivate card and exclude from study', title: deactivated ? 'Reactivate for study' : 'Exclude from study' },
                 React.createElement(Icon, { name: deactivated ? 'eye' : 'eyeOff', size: 19 })),
-            React.createElement("button", { className: progress.starred ? 'starred' : '', onClick: () => toggleStar(card.id), "aria-label": progress.starred ? 'Unstar card' : 'Star card' },
+            React.createElement("button", { className: progress.starred ? 'starred' : '', onClick: () => toggleStar(card.id), "aria-label": progress.starred ? 'Unstar card' : 'Star card', title: progress.starred ? 'Unstar card' : 'Star card' },
                 React.createElement(Icon, { name: "star", size: 19 })),
-            React.createElement("button", { onClick: speak, "aria-label": "Read term and definition" },
+            React.createElement("button", { onClick: speak, "aria-label": "Read term and definition", title: "Read aloud" },
                 React.createElement(Icon, { name: "speaker", size: 19 })),
             !readOnly && React.createElement(React.Fragment, null,
-                React.createElement("button", { onClick: () => setModal({ type: 'card', mode: 'edit', deckId: deck.id, card }), "aria-label": "Edit card" },
+                React.createElement("button", { onClick: () => setModal({ type: 'card', mode: 'edit', deckId: deck.id, card }), "aria-label": "Edit card", title: "Edit card" },
                     React.createElement(Icon, { name: "edit", size: 18 })),
-                React.createElement("button", { onClick: () => duplicateCard(deck.id, card), "aria-label": "Duplicate inside this deck" },
+                React.createElement("button", { onClick: () => duplicateCard(deck.id, card), "aria-label": "Duplicate inside this deck", title: "Duplicate card" },
                     React.createElement(Icon, { name: "copy", size: 18 })),
-                React.createElement("button", { onClick: () => setModal({ type: 'transfer-card', sourceDeckId: deck.id, cardIds: [card.id] }), "aria-label": "Move or copy to another deck" },
+                React.createElement("button", { onClick: () => setModal({ type: 'transfer-card', sourceDeckId: deck.id, cardIds: [card.id] }), "aria-label": "Move or copy to another deck", title: "Move or copy" },
                     React.createElement(Icon, { name: "transfer", size: 19 })),
-                React.createElement("button", { onClick: () => deleteCard(deck.id, card.id), "aria-label": "Delete card" },
+                React.createElement("button", { onClick: () => deleteCard(deck.id, card.id), "aria-label": "Delete card", title: "Delete card" },
                     React.createElement(Icon, { name: "trash", size: 18 })))));
 }
 function CreatorStrip({ profile, deck, onOpen }) { return React.createElement("section", { className: "creator-strip" },
@@ -3808,12 +3805,6 @@ function SelectionBar({ selectedDecks, data, updateData, launchStudy }) {
             React.createElement("button", { onClick: () => launchStudy('flashcards', data.selectedDeckIds) },
                 React.createElement(Icon, { name: "cards", size: 18 }),
                 "Flashcards"),
-            React.createElement("button", { onClick: () => launchStudy('learn', data.selectedDeckIds) },
-                React.createElement(Icon, { name: "learn", size: 18 }),
-                "Learn"),
-            React.createElement("button", { onClick: () => launchStudy('smart', data.selectedDeckIds) },
-                React.createElement(Icon, { name: "test", size: 18 }),
-                "Test"),
             React.createElement("button", { onClick: () => updateData(d => ({ ...d, selectedDeckIds: [] })) },
                 React.createElement(Icon, { name: "close", size: 18 }),
                 "Clear")));
@@ -4338,32 +4329,66 @@ function CardImportExportModal({ data, modal, updateData, toast, close }) {
 }
 function TopicSettingsModal({ data, updateData, modal, close, toast }) {
     const deck = data.decks.find(d => d.id === modal.deckId), settings = deckTopicSettings(deck);
-    const [enabled, setEnabled] = useState(settings.enabled), [label, setLabel] = useState(settings.label);
-    const topics = unique((deck?.cards || []).map(c => normalizeTopic(c.topic)).filter(Boolean)).sort((a,b) => a.localeCompare(b));
+    const availableTopics = unique((deck?.cards || []).map(c => normalizeTopic(c.topic)).filter(Boolean));
+    const initialOrder = [...settings.order.filter(t => availableTopics.includes(t)), ...availableTopics.filter(t => !settings.order.includes(t)).sort((a,b) => a.localeCompare(b))];
+    const [enabled, setEnabled] = useState(settings.enabled), [label, setLabel] = useState(settings.label), [showInTerms, setShowInTerms] = useState(settings.showInTerms), [topicOrder, setTopicOrder] = useState(initialOrder), [draggingTopic, setDraggingTopic] = useState('');
+    const dragRef = useRef(null);
     function save() {
         if (!deck) return;
-        updateData(d => ({ ...d, decks: d.decks.map(x => x.id !== deck.id ? x : { ...x, topicSettings: { enabled, label: clean(label) || 'Topic' }, updatedAt: nowISO() }) }));
-        toast(enabled ? `${clean(label) || 'Topic'} grouping enabled` : 'Topic grouping hidden');
+        updateData(d => ({ ...d, decks: d.decks.map(x => x.id !== deck.id ? x : { ...x, topicSettings: { enabled, label: clean(label) || 'Topic', showInTerms, order: topicOrder }, updatedAt: nowISO() }) }));
+        toast(enabled ? `${clean(label) || 'Topic'} grouping updated` : 'Topic grouping hidden');
         close();
     }
+    function startDrag(event, topic) {
+        event.preventDefault(); event.stopPropagation();
+        dragRef.current = { topic, pointerId: event.pointerId };
+        event.currentTarget.setPointerCapture?.(event.pointerId);
+        setDraggingTopic(topic);
+    }
+    useEffect(() => {
+        const move = event => {
+            const drag = dragRef.current; if (!drag) return;
+            const row = document.elementFromPoint(event.clientX, event.clientY)?.closest?.('[data-topic-drag]');
+            if (!row) return;
+            const target = row.dataset.topicDrag; if (!target || target === drag.topic) return;
+            const rect = row.getBoundingClientRect(), after = event.clientY > rect.top + rect.height / 2;
+            setTopicOrder(current => {
+                const from = current.indexOf(drag.topic), targetIndex = current.indexOf(target); if (from < 0 || targetIndex < 0) return current;
+                const next = current.filter(t => t !== drag.topic);
+                let index = next.indexOf(target) + (after ? 1 : 0);
+                next.splice(Math.max(0, Math.min(index, next.length)), 0, drag.topic);
+                return next;
+            });
+        };
+        const end = () => { dragRef.current = null; setDraggingTopic(''); };
+        window.addEventListener('pointermove', move, { passive: true });
+        window.addEventListener('pointerup', end); window.addEventListener('pointercancel', end);
+        return () => { window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', end); window.removeEventListener('pointercancel', end); };
+    }, []);
     if (!deck) return React.createElement(ModalFrame, { title: 'Topic settings', close, small: true }, React.createElement('p', { className:'muted' }, 'Deck not found.'));
     return React.createElement(ModalFrame, { title: 'Topic category', close, small: true, footer: React.createElement(React.Fragment,null,
         React.createElement('button',{className:'btn btn-ghost',onClick:close},'Cancel'),
         React.createElement('button',{className:'btn btn-primary',onClick:save},'Save topic settings')) },
         React.createElement('div',{className:'stack'},
             React.createElement('label',{className:'topic-enable-toggle'},
-                React.createElement('span',null,React.createElement('strong',null,'Use topic grouping'),React.createElement('small',null,'Group cards into collapsible panels in Terms in this set. Turning this off does not delete any assigned topics.')),
+                React.createElement('span',null,React.createElement('strong',null,'Use topic grouping'),React.createElement('small',null,'Group cards into collapsible panels in Terms in this set. Turning this off does not delete assigned topics.')),
                 React.createElement('input',{type:'checkbox',checked:enabled,onChange:e=>setEnabled(e.target.checked)})),
             React.createElement('div',{className:'field'},
                 React.createElement('label',null,'Category name'),
                 React.createElement('input',{value:label,onChange:e=>setLabel(e.target.value),maxLength:40,placeholder:'Topic'}),
                 React.createElement('span',{className:'muted',style:{fontSize:12}},'Rename it to Chapter, Unit, Section, Module, or any label you prefer.')),
-            topics.length ? React.createElement('div',{className:'topic-settings-list'},
-                React.createElement('strong',null,'Panel colors'),
-                topics.map(topic=>React.createElement('label',{className:'topic-color-row',key:topic},
+            React.createElement('label',{className:'topic-enable-toggle'},
+                React.createElement('span',null,React.createElement('strong',null,`Show ${clean(label) || 'Topic'} label on each term card`),React.createElement('small',null,'Off by default. Topic panels still organize the list even when this label is hidden.')),
+                React.createElement('input',{type:'checkbox',checked:showInTerms,onChange:e=>setShowInTerms(e.target.checked)})),
+            topicOrder.length ? React.createElement('div',{className:'topic-settings-list'},
+                React.createElement('div',{className:'topic-settings-list-head'},
+                    React.createElement('strong',null,'Topic order & panel colors'),
+                    React.createElement('span',{className:'muted'},'Drag the handle to rearrange topics.')),
+                topicOrder.map(topic=>React.createElement('div',{className:`topic-order-row ${draggingTopic===topic?'dragging':''}`,key:topic,'data-topic-drag':topic},
+                    React.createElement('button',{type:'button',className:'topic-drag-handle',onPointerDown:e=>startDrag(e,topic),title:'Drag to rearrange', 'aria-label':`Drag ${topic} to rearrange`},React.createElement(Icon,{name:'menu',size:19})),
                     React.createElement('span',{className:'topic-dot',style:{background:deckTopicColor(deck,topic)}}),
-                    React.createElement('span',null,topic),
-                    React.createElement('input',{type:'color',value:deckTopicColor(deck,topic),onChange:e=>updateData(d=>({...d,decks:d.decks.map(x=>x.id!==deck.id?x:{...x,topicColors:{...(x.topicColors||{}),[topic]:e.target.value},updatedAt:nowISO()})}))})))
+                    React.createElement('span',{className:'topic-order-name'},topic),
+                    React.createElement('input',{type:'color',value:deckTopicColor(deck,topic),title:`Change color for ${topic}`,onChange:e=>updateData(d=>({...d,decks:d.decks.map(x=>x.id!==deck.id?x:{...x,topicColors:{...(x.topicColors||{}),[topic]:e.target.value},updatedAt:nowISO()})}))})))
             ) : React.createElement('p',{className:'muted',style:{margin:0}},'No topics have been assigned yet. Add a topic while editing a card or use bulk assignment.')));
 }
 function BulkClassifyModal({ data, updateData, modal, close, toast }) {

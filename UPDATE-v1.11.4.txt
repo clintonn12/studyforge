@@ -1,0 +1,11 @@
+StudyForge PWA v1.11.4
+
+- Sticky Terms in this set controls
+- Draggable Topic ordering
+- Optional Topic labels in term rows (off by default)
+- Multi-Topic study filtering
+- Hide Terms now leaves definitions visible
+- Flashcard-only app UI: Learn/Test/Upload Material/Materials tab removed
+- Stronger card-action hover states and compact icon controls
+- Cleaner, non-clipping Android/mobile term-card layout
+- Same data version/storage keys; local cards are not intentionally erased by the update
