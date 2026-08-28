@@ -1,16 +1,25 @@
-StudyForge PWA v1.11.4 — Android install
-===========================================
+StudyForge PWA v1.11.5 — Android install/update
+================================================
 
-1. Upload the COMPLETE contents of this folder to one HTTPS location. Keep index.html, sw.js, manifest.webmanifest, and icons/ together.
-2. On Android, open that HTTPS address in Chrome.
-3. Open StudyForge Settings → Install StudyForge.
-   - If Chrome exposes the install prompt, tap Install StudyForge.
-   - Otherwise open Chrome's menu and choose Install app or Add to Home screen.
-4. Launch StudyForge from its Home Screen icon. It opens without normal browser chrome in standalone mode.
-5. Open a flashcard set once while online. The app shell is cached for offline reopening. Your flashcard library itself remains browser-local.
+FIRST-TIME INSTALL
+1. Serve the complete StudyForge folder from one HTTPS website, such as GitHub Pages.
+2. Open the direct HTTPS StudyForge URL in normal Android Chrome.
+3. Reload once after the first visit if needed so the service worker takes control.
+4. Use either:
+   - StudyForge → Settings & comfort → Install StudyForge, or
+   - Chrome ⋮ → Add to Home screen → Install app
+   Wording varies by Chrome/device.
 
-IMPORTANT
-- Do not open the package from file:// if you want PWA installation. Service workers cannot install from file://.
-- Keep the same HTTPS domain after installation. Browser/IndexedDB storage belongs to that domain.
-- Before moving to a different domain or phone, use Settings → Download JSON backup, then Restore JSON backup on the new installation.
-- The PWA is app-like but is not a native .apk file. Android installs and manages it from Chrome as a web app.
+ALREADY INSTALLED — UPDATING TO v1.11.5
+1. Keep the SAME GitHub repository and SAME StudyForge URL.
+2. Make a Complete JSON Backup from StudyForge first.
+3. Replace the GitHub-root app files with the v1.11.5 files and commit.
+4. Wait for GitHub Pages deployment to finish successfully.
+5. Open the StudyForge HTTPS URL in Chrome and reload once.
+6. Close and reopen the installed StudyForge app.
+
+IMPORTANT LOCAL-DATA RULES
+- Do not clear Chrome/StudyForge site storage.
+- Do not move to a different domain/origin if you expect the same local library to appear automatically.
+- Do not uninstall the PWA as a troubleshooting step unless you already have a verified backup and understand your device/browser's storage behavior.
+- v1.11.5 keeps the same StudyForge local data version and storage keys as v1.11.4.

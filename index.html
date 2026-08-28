@@ -1084,13 +1084,13 @@
     .flash-study-main{overflow:hidden!important;overscroll-behavior:none!important}
   
 
-    /* StudyForge PWA v1.11.4 (data format unchanged) */
+    /* StudyForge PWA v1.11.5 (data format unchanged) */
     .katex{display:inline-block;max-width:100%;vertical-align:middle}.katex math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-size:1em}.katex-display,.math-block{display:block;width:100%;text-align:center;margin:.38em 0}.math-inline{display:inline-block;max-width:100%}.math-wrap-composite{max-width:100%}.standalone-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--surface-2);border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800;color:var(--muted)}
 
 #standalone-boot{min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg,#f7f8fc);color:var(--text,#172033);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}#standalone-boot>div{padding:18px 22px;border:1px solid #d9deea;border-radius:16px;background:#fff;box-shadow:0 10px 35px rgba(16,24,40,.08);font-weight:800}
 
 
-    /* StudyForge PWA v1.11.4 — flashcard-only UI, topic study filters, sticky term tools */
+    /* StudyForge PWA v1.11.5 — flashcard-only UI, topic study filters, sticky term tools */
     .flash-drag{
       touch-action:pan-y!important;
       overscroll-behavior:none!important;
@@ -1123,13 +1123,11 @@
     }
 
 
-    .rail-install-pwa{width:100%;min-height:44px;margin:10px 0 0;border:1px solid color-mix(in srgb,var(--primary) 38%,var(--border));border-radius:11px;background:color-mix(in srgb,var(--primary) 13%,var(--surface-2));color:var(--text);display:flex;align-items:center;justify-content:center;gap:9px;font-weight:800}
-    .rail-install-pwa:hover{background:color-mix(in srgb,var(--primary) 20%,var(--surface-2))}
     .pwa-install-state{display:block;margin-top:10px;line-height:1.48;color:var(--muted)}
     .pwa-install-state.warn{color:var(--orange)}.pwa-install-state.good{color:var(--green)}
-    @media(max-width:780px){.rail-install-pwa{position:relative;flex:0 0 auto}.pwa-install-row>.row{display:grid;grid-template-columns:1fr;gap:8px}.pwa-install-row>.row .btn{width:100%}}
+    @media(max-width:780px){.pwa-install-row>.row{display:grid;grid-template-columns:1fr;gap:8px}.pwa-install-row>.row .btn{width:100%}}
 
-    /* StudyForge v1.11.4 — topic ordering, sticky controls, compact term actions */
+    /* StudyForge v1.11.5 — topic ordering, sticky controls, compact term actions */
     .topic-panel{margin:18px 0;border:1px solid color-mix(in srgb,var(--topic-color) 38%,var(--border));border-radius:16px;background:color-mix(in srgb,var(--topic-color) 7%,var(--surface));overflow:hidden;contain:layout style}
     .topic-panel-head{min-height:64px;display:flex;align-items:center;gap:10px;padding:8px 12px;background:color-mix(in srgb,var(--topic-color) 12%,var(--surface));border-bottom:1px solid color-mix(in srgb,var(--topic-color) 32%,var(--border))}
     .topic-panel.collapsed .topic-panel-head{border-bottom:0}.topic-panel-toggle{flex:1;min-width:0;border:0;background:transparent;color:var(--text);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:11px;text-align:left;padding:6px 4px;border-radius:10px}.topic-panel-toggle:hover{background:color-mix(in srgb,var(--topic-color) 10%,transparent)}
@@ -1143,7 +1141,7 @@
 
 
 
-    /* StudyForge PWA v1.11.4 — flashcard-only, sticky term controls, topic ordering, compact responsive UI */
+    /* StudyForge PWA v1.11.5 — flashcard-only, sticky term controls, topic ordering, compact responsive UI */
     .flashcard-only-mode{grid-template-columns:minmax(0,1fr)!important}.flashcard-only-mode>button{max-width:520px;width:100%}
     .flashcard-only-tabs .deck-tab{cursor:default}.flashcard-only-quick{grid-template-columns:repeat(2,minmax(0,1fr))}
     .deck-tools{flex-wrap:wrap}.topic-study-filter{flex:1 1 100%;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:2px}.topic-study-filter>strong{margin-right:3px;font-size:13px}.topic-filter-chip{position:relative;border-color:color-mix(in srgb,var(--topic-color,var(--border)) 45%,var(--border))}.topic-filter-chip.active{background:color-mix(in srgb,var(--topic-color,var(--primary)) 22%,var(--surface));border-color:var(--topic-color,var(--primary));color:var(--text)}
@@ -1166,6 +1164,31 @@
       .quiz-term-row{display:grid!important;grid-template-columns:32px minmax(0,1fr)!important;grid-auto-rows:auto!important;gap:9px 10px!important;overflow:visible!important;contain:none!important;content-visibility:visible!important;width:100%!important;max-width:100%!important;padding:11px 10px 13px!important}.quiz-term-row>.term-number,.quiz-term-row>.term-select{grid-column:1!important;grid-row:1!important;align-self:center!important}.quiz-term-row>.term-actions{grid-column:2!important;grid-row:1!important;width:100%!important;max-width:100%!important;display:flex!important;justify-content:flex-start!important;align-items:center!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:visible!important;padding:1px 0 5px!important;scrollbar-width:none}.quiz-term-row>.term-actions::-webkit-scrollbar{display:none}.quiz-term-row>.term-actions button{flex:0 0 38px;width:38px;height:38px}.quiz-term-row>.term-side-front{grid-column:1/-1!important;grid-row:2!important}.quiz-term-row>.term-divider{display:none!important}.quiz-term-row>.term-side-back{grid-column:1/-1!important;grid-row:3!important;border-top:1px solid var(--border)!important;padding-top:12px!important}.quiz-term-row>.term-srs{grid-column:1/-1!important;grid-row:4!important}.quiz-term-row .term-column,.quiz-term-row .term-column:first-of-type,.quiz-term-row .term-column:nth-of-type(2){width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important}.quiz-term-row .term-column .rich-text{width:100%!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:break-word!important}.quiz-term-row .term-column .math-block,.quiz-term-row .term-column .katex-display{width:100%!important;max-width:100%!important;overflow-x:auto!important;overflow-y:hidden!important}.quiz-term-row .term-image-grid{width:100%!important;max-width:100%!important}.quiz-term-row .term-image-button{max-width:100%!important}.quiz-term-row .term-image-grid img{max-width:100%!important;max-height:360px!important;object-fit:contain!important}.topic-panel{max-width:100%;overflow:visible}.topic-panel-head{position:relative;z-index:2}.topic-panel-cards{max-width:100%;min-width:0}
       .topic-order-row{grid-template-columns:42px 15px minmax(0,1fr) 44px;min-height:56px}.topic-drag-handle{width:40px;height:40px}.term-topic-label{max-width:100%;white-space:normal}
       .deck-icon-action[data-tooltip]::after,.compact-icon-btn[data-tooltip]::after{display:none!important}
+    }
+
+
+    /* StudyForge PWA v1.11.5 — mobile terms, compact topic chips, sticky creation tools, progress settings */
+    .rail-save-note{display:grid!important;gap:7px!important;padding:11px 12px!important}.rail-save-line{display:flex;align-items:center;gap:8px}.rail-save-line strong{margin:0!important}.rail-save-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px color-mix(in srgb,var(--green) 14%,transparent);flex:0 0 auto}
+    .card-face-topic{width:max-content!important;max-width:min(86%,440px)!important;flex:0 1 auto!important;align-self:center!important;padding:6px 10px!important;gap:8px!important;border-radius:9px!important}.card-face-topic strong{display:block!important;max-width:340px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}.deck-preview-face .card-face-topic{max-width:min(76%,380px)!important}
+    .topic-select-action{height:36px;border:1px solid color-mix(in srgb,var(--topic-color) 38%,var(--border));border-radius:9px;background:transparent;color:var(--muted);display:inline-flex;align-items:center;gap:6px;padding:0 9px;font-size:11px;font-weight:800;white-space:nowrap}.topic-select-action:hover,.topic-select-action.active{background:color-mix(in srgb,var(--topic-color) 18%,var(--surface));color:var(--text)}
+    .terms-end-spacer{height:96px}.sticky-create-action{background:var(--primary)!important;color:#fff!important}
+    .deck-settings-stack{display:grid;gap:12px}.deck-progress-settings,.deck-settings-action-card{border:1px solid var(--border);border-radius:13px;background:var(--surface-2);padding:14px}.deck-settings-progress-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}.deck-settings-progress-head>div{display:grid;gap:2px}.deck-settings-progress-head b{font-size:22px;color:var(--primary)}.deck-settings-action-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center}.deck-settings-action-card>div{display:grid;gap:4px}.deck-settings-action-card>div>span{font-size:12px;color:var(--muted);line-height:1.45}
+    @media(max-width:780px){
+      .card-face-topic{max-width:min(82vw,320px)!important;padding:5px 8px!important;gap:6px!important}.card-face-topic strong{max-width:min(62vw,235px)!important;font-size:12px!important}.card-face-topic-label{font-size:7px!important}.deck-preview-face .card-face-topic{max-width:min(78vw,300px)!important}
+      .terms-heading{padding:7px 8px!important}.terms-heading-actions{gap:6px!important}.terms-heading-actions .compact-icon-btn{width:38px!important;min-width:38px!important;height:38px!important}.terms-heading-actions .terms-sort{min-width:150px!important}.bulk-card-bar{top:116px!important}
+      .bulk-card-bar>div{display:flex!important;overflow-x:auto!important;flex-wrap:nowrap!important;gap:6px!important;padding-bottom:2px!important;scrollbar-width:none}.bulk-card-bar>div::-webkit-scrollbar{display:none}.bulk-card-bar>div .btn{flex:0 0 auto!important;white-space:nowrap!important}
+      .topic-panel{overflow:hidden!important}.topic-panel-head{gap:6px!important}.topic-panel-toggle{min-width:0!important}.topic-panel-toggle strong{font-size:16px!important}.topic-select-action{width:36px!important;min-width:36px!important;height:36px!important;padding:0!important;display:grid!important;place-items:center!important}.topic-select-action span{display:none!important}
+      .topic-panel-cards{display:grid!important;gap:10px!important;padding:8px!important;min-width:0!important;overflow:visible!important}
+      .quiz-term-row{display:flex!important;flex-direction:column!important;position:relative!important;width:100%!important;max-width:100%!important;min-width:0!important;min-height:0!important;gap:10px!important;padding:12px!important;border-radius:15px!important;overflow:visible!important;contain:none!important;content-visibility:visible!important}
+      .quiz-term-row>.term-number{display:none!important}.quiz-term-row>.term-select{order:-5!important;align-self:flex-start!important;margin:0 0 -2px!important;z-index:2!important}.quiz-term-row>.term-actions{order:-4!important;width:100%!important;max-width:100%!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:4px!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;padding:2px 0 9px!important;border:0!important;border-bottom:1px solid var(--border)!important;scrollbar-width:none!important}.quiz-term-row>.term-actions::-webkit-scrollbar{display:none}.quiz-term-row>.term-actions button{flex:0 0 40px!important;width:40px!important;height:40px!important}
+      .quiz-term-row>.term-side-front{order:-3!important}.quiz-term-row>.term-divider{display:none!important}.quiz-term-row>.term-side-back{order:-2!important}.quiz-term-row>.term-srs{order:-1!important}
+      .quiz-term-row>.term-side-front,.quiz-term-row>.term-side-back,.quiz-term-row .term-column,.quiz-term-row .term-column:first-of-type,.quiz-term-row .term-column:nth-of-type(2){display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;box-sizing:border-box!important;padding:12px!important;margin:0!important;border-radius:12px!important}
+      .quiz-term-row>.term-side-front{background:color-mix(in srgb,var(--primary) 7%,var(--surface-2))!important;border:1px solid color-mix(in srgb,var(--primary) 22%,var(--border))!important;border-left:4px solid var(--primary)!important}.quiz-term-row>.term-side-back{background:color-mix(in srgb,var(--green) 5%,var(--surface))!important;border:1px solid color-mix(in srgb,var(--green) 20%,var(--border))!important;border-left:4px solid var(--green)!important}
+      .quiz-term-row .mobile-side-label{display:inline-flex!important;width:max-content!important;max-width:100%!important;min-width:0!important;margin:0 0 10px!important;padding:5px 9px!important;overflow:visible!important;white-space:nowrap!important}
+      .quiz-term-row .rich-text,.quiz-term-row .rich-text-segment{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important}
+      .quiz-term-row .math-inline,.quiz-term-row .math-block,.quiz-term-row .katex-display{max-width:100%!important;overflow-x:auto!important;overflow-y:hidden!important}
+      .quiz-term-row .term-image-grid{display:grid!important;grid-template-columns:1fr!important;place-items:center!important;width:100%!important;max-width:100%!important;gap:9px!important;margin-top:10px!important;overflow:visible!important}.quiz-term-row .term-image-button{display:flex!important;width:100%!important;max-width:100%!important;min-height:110px!important;align-items:center!important;justify-content:center!important;overflow:visible!important}.quiz-term-row .term-image-button img{display:block!important;width:auto!important;height:auto!important;min-width:min(48vw,160px)!important;max-width:100%!important;max-height:330px!important;object-fit:contain!important;margin:0 auto!important}
+      .deck-settings-action-card{grid-template-columns:1fr!important}.deck-settings-action-card .btn{width:100%!important}.terms-end-spacer{height:118px}
     }
 
 </style>
@@ -1683,6 +1706,10 @@ function standaloneResourceBackup(data, resourceType, resourceId) { if (resource
 } }
 const uid = (prefix = 'id') => `${prefix}_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 9)}`;
 const nowISO = () => new Date().toISOString();
+const LAST_SAVED_KEY = 'studyforge.lastSavedAt';
+function noteStandaloneSaved() { const savedAt = Date.now(); window.__studyforgeLastSavedAt = savedAt; try { localStorage.setItem(LAST_SAVED_KEY, String(savedAt)); } catch {} try { window.dispatchEvent(new CustomEvent('studyforge:saved', { detail: { savedAt } })); } catch {} return savedAt; }
+function getStandaloneSavedAt() { if (Number(window.__studyforgeLastSavedAt) > 0) return Number(window.__studyforgeLastSavedAt); try { const value = Number(localStorage.getItem(LAST_SAVED_KEY) || 0); if (value > 0) window.__studyforgeLastSavedAt = value; return value; } catch { return 0; } }
+function savedAgoText(savedAt) { const diff = Math.max(0, Date.now() - Number(savedAt || 0)); if (!savedAt) return 'Saved locally'; if (diff < 45000) return 'Saved just now'; const mins = Math.floor(diff / 60000); if (mins < 60) return `Saved ${mins} min ago`; const hours = Math.floor(mins / 60); if (hours < 24) return `Saved ${hours} hr${hours === 1 ? '' : 's'} ago`; const days = Math.floor(hours / 24); return `Saved ${days} day${days === 1 ? '' : 's'} ago`; }
 const clean = s => String(s ?? '').replace(/\s+/g, ' ').trim();
 const normalizeTag = s => clean(s).toLowerCase().replace(/[^a-z0-9\- _]/gi, '').slice(0, 36);
 const clamp = (n, a, b) => Math.min(b, Math.max(a, n));
@@ -2376,7 +2403,8 @@ function usePersistentData() {
         writeStandaloneStateText(serialized).then(idbOk => { if (idbOk)
             scheduleRecoveryWrite(serialized, value?.profile?.id || null);
         else if (!localOk)
-            showStorageWarning(); });
+            showStorageWarning();
+        if (idbOk || localOk) noteStandaloneSaved(); });
     }
     catch (e) {
         console.error('Storage failed', e);
@@ -2914,6 +2942,7 @@ function App() {
     function resetDeckProgress(deckId, clearStars = false) { updateData(d => { const decks = d.decks.map(deck => deck.id !== deckId ? deck : { ...deck, cards: deck.cards.map(card => { const prior = normalizeProgress(card), next = defaultProgress(); if (!clearStars)
             next.starred = prior.starred; return { ...card, progress: next, updatedAt: nowISO() }; }), updatedAt: nowISO() }); const studySessions = Object.fromEntries(Object.entries(d.studySessions || {}).filter(([key]) => { if (!key.startsWith('flash:'))
         return true; const deckPart = key.slice(6).split(':', 1)[0]; return !deckPart.split(',').includes(deckId); })); return { ...d, decks, studySessions }; }); toast(clearStars ? 'Progress and stars reset' : 'Progress reset; stars kept'); }
+    function markDeckComplete(deckId) { const stamp = nowISO(); updateData(d => { const decks = d.decks.map(deck => deck.id !== deckId ? deck : { ...deck, cards: (deck.cards || []).map(card => { const prior = normalizeProgress(card); return { ...card, progress: { ...prior, correct: Math.max(1, Number(prior.correct) || 0), studied: true, lastResult: true, lastStudied: stamp }, updatedAt: stamp }; }), updatedAt: stamp }); const studySessions = Object.fromEntries(Object.entries(d.studySessions || {}).filter(([key]) => { if (!key.startsWith('flash:')) return true; const deckPart = key.slice(6).split(':', 1)[0]; return !deckPart.split(',').includes(deckId); })); return { ...d, decks, studySessions }; }); toast('Flashcard set marked 100% known'); }
     function setDeckVisibility(deckId, visibility) { updateDeck(deckId, d => ({ ...d, visibility })); toast(visibility === 'public' ? 'Deck is visible on your creator profile' : 'Deck is hidden from your creator profile'); }
     function setCardsDeactivated(deckId, cardIds, deactivated = true) { const ids = unique(Array.isArray(cardIds) ? cardIds : [cardIds]); if (!ids.length)
         return; updateDeck(deckId, deck => { const valid = new Set((deck.cards || []).map(c => c.id)), current = deactivatedIds(deck); for (const id of ids) {
@@ -2994,7 +3023,7 @@ function App() {
         setModal(null);
         toast(`${payload.cards.length} cards and study notes generated locally`);
     }
-    const context = { data, updateData, activeDeck, selectedDecks, search, setSearch, modal, setModal, study, setStudy, toast, chooseDeck, toggleSelected, createFolder, renameFolder, deleteFolder, createDeck, deleteDeck, saveCard, duplicateCard, transferCard, transferCards, resetDeckProgress, setDeckVisibility, setCardsDeactivated, toggleCardDeactivated, deleteCard, gradeCard, undoGradeCard, saveFlashSession, clearFlashSession, launchStudy, startSmart, saveImported, libraryTab, setLibraryTab, libraryFolderId, setLibraryFolderId, openLibrary, openHome, openCreator, profileUserId, navOpen, setNavOpen, screen, setScreen, shareResource };
+    const context = { data, updateData, activeDeck, selectedDecks, search, setSearch, modal, setModal, study, setStudy, toast, chooseDeck, toggleSelected, createFolder, renameFolder, deleteFolder, createDeck, deleteDeck, saveCard, duplicateCard, transferCard, transferCards, resetDeckProgress, markDeckComplete, setDeckVisibility, setCardsDeactivated, toggleCardDeactivated, deleteCard, gradeCard, undoGradeCard, saveFlashSession, clearFlashSession, launchStudy, startSmart, saveImported, libraryTab, setLibraryTab, libraryFolderId, setLibraryFolderId, openLibrary, openHome, openCreator, profileUserId, navOpen, setNavOpen, screen, setScreen, shareResource };
     if (study)
         return React.createElement(StudyRouter, { ...context });
     return React.createElement("div", { className: "app quizlet-shell" },
@@ -3010,6 +3039,9 @@ function App() {
 }
 function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, setModal, chooseDeck, setScreen }) {
     const profile = data.profile || defaultProfile();
+    const [saveClock, setSaveClock] = useState(0);
+    useEffect(() => { const refresh = () => setSaveClock(v => v + 1); window.addEventListener('studyforge:saved', refresh); const timer = setInterval(refresh, 30000); return () => { window.removeEventListener('studyforge:saved', refresh); clearInterval(timer); }; }, []);
+    const savedAt = getStandaloneSavedAt(), savedText = savedAgoText(savedAt);
     const recent = (data.decks || []).slice().sort((a, b) => new Date(b.updatedAt || 0) - new Date(a.updatedAt || 0)).slice(0, 4);
     const nav = (target, action) => { action(); if (innerWidth < 781)
         setNavOpen(false); };
@@ -3020,7 +3052,7 @@ function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, se
             React.createElement("button", { className: "rail-logo", onClick: openHome, "aria-label": "StudyForge home" },
                 React.createElement(BrandMark, null),
                 React.createElement("span", null, "StudyForge")),
-            React.createElement("span", { className: "rail-version" }, "PWA v1.11.4")),
+            React.createElement("span", { className: "rail-version" }, "PWA v1.11.5")),
         React.createElement("div", { className: "rail-profile-card" },
             React.createElement("span", { className: "rail-profile-avatar" }, profile.avatar ? React.createElement("img", { src: profile.avatar, alt: "" }) : profileInitials(profile)),
             React.createElement("button", { className: "rail-profile-copy", onClick: () => setModal({ type: 'edit-profile' }), "aria-label": "Edit creator profile" },
@@ -3061,12 +3093,11 @@ function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, se
                         ready,
                         " active",
                         inactive ? ` · ${inactive} off` : ''))); }))),
-        !window.__studyforgePwaInstalled && React.createElement("button", { className: "rail-install-pwa", onClick: async () => { const result = await window.studyforgeInstallPWA?.(); if (result?.status === 'unavailable') { setScreen('settings'); setNavOpen(false); setTimeout(() => document.getElementById('pwa-install-settings')?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60); } }, "aria-label": "Install StudyForge on this device" },
-            React.createElement(Icon, { name: "download", size: 18 }),
-            React.createElement("span", null, "Install StudyForge")),
-        React.createElement("div", { className: "rail-note" },
-            React.createElement("strong", null, "Saved on this device"),
-            React.createElement("span", null, "StudyForge runs locally. Deactivated cards stay in their set but are skipped in every study mode.")));
+        React.createElement("div", { className: "rail-note rail-save-note", title: savedAt ? new Date(savedAt).toLocaleString() : 'Local browser storage' },
+            React.createElement("div", { className: "rail-save-line" },
+                React.createElement("span", { className: "rail-save-dot", "aria-hidden": "true" }),
+                React.createElement("strong", null, savedText)),
+            React.createElement("span", null, "Your decks and progress are kept in this device's StudyForge storage.")));
 }
 function Header({ screen, setScreen, theme, toggleTheme, search, setSearch, setModal, setNavOpen, setLibraryFolderId, openCreator, data }) {
     return React.createElement("header", { className: "topbar" },
@@ -3299,7 +3330,7 @@ function FlatLibraryDeckRow({ deck, data, toggleSelected, chooseDeck }) {
             React.createElement(Icon, { name: "chevron", size: 21 })));
 }
 function DeckPage(p) {
-    const { activeDeck, data, updateData, setModal, deleteDeck, launchStudy, libraryTab, setLibraryTab, openLibrary, openCreator, setDeckVisibility, resetDeckProgress, setCardsDeactivated, toggleCardDeactivated } = p;
+    const { activeDeck, data, updateData, setModal, deleteDeck, launchStudy, libraryTab, setLibraryTab, openLibrary, openCreator, setDeckVisibility, resetDeckProgress, markDeckComplete, setCardsDeactivated, toggleCardDeactivated } = p;
     const readOnly = Boolean(activeDeck?.sharedPermission && activeDeck.sharedPermission !== 'copy');
     const [selectedTags, setSelectedTags] = useState([]), [selectedTopics, setSelectedTopics] = useState([]), [cardQuery, setCardQuery] = useState(''), [previewIndex, setPreviewIndex] = useState(0), [previewTurns, setPreviewTurns] = useState(0), [previewOrder, setPreviewOrder] = useState([]), [autoPlay, setAutoPlay] = useState(false), [previewSettings, setPreviewSettings] = useState(false), [previewFirstSide, setPreviewFirstSide] = useState(() => data.preferences.firstSide || 'back'), [previewShuffled, setPreviewShuffled] = useState(() => Boolean(data.preferences.shuffle)), [sortMode, setSortMode] = useState('original'), [cardVisibility, setCardVisibility] = useState('all'), [hideDefinitions, setHideDefinitions] = useState(false), [hideTerms, setHideTerms] = useState(false), [reorderMode, setReorderMode] = useState(false), [selectionMode, setSelectionMode] = useState(false), [selectedCardIds, setSelectedCardIds] = useState([]), [reorderSelectedIds, setReorderSelectedIds] = useState([]), [draggingCardId, setDraggingCardId] = useState(null), [dragOverCardId, setDragOverCardId] = useState(null), [dragAfter, setDragAfter] = useState(false), [collapsedTopics, setCollapsedTopics] = useState({});
     const dragCardRef = useRef(null), previewSection = useRef(null);
@@ -3343,6 +3374,8 @@ function DeckPage(p) {
     function toggleSelectedCard(id) { setSelectedCardIds(ids => ids.includes(id) ? ids.filter(x => x !== id) : [...ids, id]); }
     function toggleReorderSelected(id) { setReorderSelectedIds(ids => ids.includes(id) ? ids.filter(x => x !== id) : [...ids, id]); }
     function selectAllVisible() { setSelectedCardIds(filtered.map(c => c.id)); }
+    function selectAllCards() { setSelectedCardIds(activeCards.map(c => c.id)); }
+    function toggleTopicCards(topicKey) { const topicIds = activeCards.filter(c => (normalizeTopic(c.topic) || '__unassigned__') === topicKey).map(c => c.id); setSelectedCardIds(current => { const allSelected = topicIds.length && topicIds.every(id => current.includes(id)); return allSelected ? current.filter(id => !topicIds.includes(id)) : unique([...current, ...topicIds]); }); }
     function setSelectedActivation(active) { if (!selectedCardIds.length)
         return; setCardsDeactivated(activeDeck.id, selectedCardIds, !active); setSelectedCardIds([]); }
     function toggleTopicPanel(topicKey) { setCollapsedTopics(current => ({ ...current, [topicKey]: !current[topicKey] })); }
@@ -3398,6 +3431,8 @@ function DeckPage(p) {
                         React.createElement(Icon, { name: "plus" })),
                     React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), "aria-label": "Import or export flashcards" },
                         React.createElement(Icon, { name: "importExport" })),
+                    React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'deck-settings', deckId: activeDeck.id }), "aria-label": "Flashcard set settings", title: "Set settings" },
+                        React.createElement(Icon, { name: "settings" })),
                     React.createElement("button", { className: "circle-action", onClick: () => p.shareResource('deck', activeDeck.id), "aria-label": "Access settings" },
                         React.createElement(Icon, { name: "share" })),
                     React.createElement("button", { className: "circle-action danger-icon", onClick: () => deleteDeck(activeDeck.id), "aria-label": "Delete deck" },
@@ -3432,15 +3467,6 @@ function DeckPage(p) {
                 activeDeck.sharedOwnerName || 'another creator',
                 ". Your study progress is private to your account.")),
         !readOnly && React.createElement(CreatorStrip, { profile: data.profile, deck: activeDeck, onOpen: () => openCreator(activeDeck.creatorId || data.profile.id), onVisibility: visibility => setDeckVisibility(activeDeck.id, visibility) }),
-        React.createElement("section", { className: "deck-mode-grid flashcard-only-mode", "aria-label": "Flashcard study" },
-            React.createElement("button", { disabled: !filtered.some(c => !inactiveSet.has(c.id)), onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics) },
-                React.createElement("span", { className: "mode-icon cards" },
-                    React.createElement(Icon, { name: "cards", size: 25 })),
-                React.createElement("span", { className: "mode-copy" },
-                    React.createElement("strong", null, "Flashcards"),
-                    React.createElement("small", null,
-                        filtered.filter(c => !inactiveSet.has(c.id)).length,
-                        selectedTopics.length || selectedTags.length ? " cards in current study filter" : " active cards")))),
         preview ? React.createElement("section", { className: "deck-preview-section", ref: previewSection },
             React.createElement("button", { className: "deck-preview-card", onClick: flipPreview, "aria-label": `Flip preview to show ${previewFlipped ? previewFront.label : previewBack.label}` },
                 React.createElement("span", { className: "deck-preview-inner", style: { transform: `rotateY(${previewTurns * 180}deg)`, transitionDuration: '680ms' } },
@@ -3526,7 +3552,7 @@ function DeckPage(p) {
                     React.createElement(Icon, { name: "folder", size: 19 })),
                 React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), title: "Import / export flashcards", "aria-label": "Import / export flashcards", "data-tooltip": "Import / export" },
                     React.createElement(Icon, { name: "download", size: 19 })),
-                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'reset-progress', deckId: activeDeck.id }), title: "Reset progress", "aria-label": "Reset progress", "data-tooltip": "Reset progress" }, React.createElement(Icon, { name: "undo", size: 19 })),
+                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'deck-settings', deckId: activeDeck.id }), title: "Flashcard set settings", "aria-label": "Flashcard set settings", "data-tooltip": "Set settings" }, React.createElement(Icon, { name: "settings", size: 19 })),
                 React.createElement("select", { value: activeDeck.folderId || '', onChange: e => moveFolder(e.target.value), "aria-label": "Move deck to folder" },
                     React.createElement("option", { value: "" }, "Main library"),
                     data.folders.map(f => React.createElement("option", { key: f.id, value: f.id }, folderPath(f.id, data.folders)))))),
@@ -3539,6 +3565,11 @@ function DeckPage(p) {
             React.createElement("div", { className: "terms-heading" },
                 React.createElement("span", { className: "terms-heading-helper" }, reorderMode ? (reorderSelectedIds.length ? `${reorderSelectedIds.length} selected — drag any selected card to move the group.` : 'Select one or more cards, then drag a handle.') : `${filtered.length} of ${activeDeck.cards.length} cards shown · ${inactiveSet.size} deactivated`),
                 React.createElement("div", { className: "terms-heading-actions" },
+                    !readOnly && React.createElement("button", { className: "btn btn-primary btn-sm compact-icon-btn sticky-create-action", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }), title: "Add card", "aria-label": "Add card", "data-tooltip": "Add card" }, React.createElement(Icon, { name: "plus", size: 18 })),
+                    !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), title: "Batch create / import", "aria-label": "Batch create or import flashcards", "data-tooltip": "Batch create" }, React.createElement(Icon, { name: "importExport", size: 18 })),
+                    topicSettings.enabled && !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setModal({ type: 'topic-settings', deckId: activeDeck.id }), title: `${topicSettings.label} settings`, "aria-label": `${topicSettings.label} settings`, "data-tooltip": `${topicSettings.label} settings` }, React.createElement(Icon, { name: "folder", size: 18 })),
+                    !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setModal({ type: 'deck-settings', deckId: activeDeck.id }), title: "Set settings", "aria-label": "Flashcard set settings", "data-tooltip": "Set settings" }, React.createElement(Icon, { name: "settings", size: 18 })),
+                    React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", disabled: !filtered.some(c => !inactiveSet.has(c.id)), onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics), title: "Study current selection", "aria-label": "Study current selection", "data-tooltip": "Study" }, React.createElement(Icon, { name: "cards", size: 18 })),
                     React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setHideTerms(v => !v), title: hideTerms ? 'Show terms' : 'Hide terms', "aria-label": hideTerms ? 'Show terms' : 'Hide terms', "data-tooltip": hideTerms ? 'Show terms' : 'Hide terms' },
                         React.createElement(Icon, { name: hideTerms ? 'eye' : 'eyeOff', size: 18 })),
                     !readOnly && !reorderMode && React.createElement("button", { className: `btn btn-secondary btn-sm compact-icon-btn ${selectionMode ? 'active' : ''}`, onClick: () => { setSelectionMode(v => !v); if (selectionMode)
@@ -3565,6 +3596,7 @@ function DeckPage(p) {
                         selectedCardIds.length === 1 ? '' : 's',
                         " selected"),
                     React.createElement("div", null,
+                        React.createElement("button", { className: "btn btn-secondary btn-sm", onClick: selectAllCards }, "Select all"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm", onClick: selectAllVisible }, "Select visible"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm bulk-deactivate", disabled: !selectedCardIds.length, onClick: () => setSelectedActivation(false) },
                             React.createElement(Icon, { name: "eyeOff", size: 16 }),
@@ -3603,6 +3635,9 @@ function DeckPage(p) {
                                     React.createElement("small", null, topicSettings.label.toUpperCase()),
                                     React.createElement("strong", null, title)),
                                 React.createElement("b", null, cards.length)),
+                            selectionMode && React.createElement("button", { type: "button", className: `topic-select-action ${cards.every(card => selectedCardIds.includes(card.id)) ? 'active' : ''}`, onClick: () => toggleTopicCards(topicKey), title: cards.every(card => selectedCardIds.includes(card.id)) ? `Deselect all cards in ${title}` : `Select all cards in ${title}`, "aria-label": cards.every(card => selectedCardIds.includes(card.id)) ? `Deselect all cards in ${title}` : `Select all cards in ${title}` },
+                                React.createElement(Icon, { name: cards.every(card => selectedCardIds.includes(card.id)) ? 'check' : 'cards', size: 17 }),
+                                React.createElement("span", null, cards.every(card => selectedCardIds.includes(card.id)) ? 'Deselect topic' : 'Select topic')),
                             !readOnly && topicKey !== '__unassigned__' && React.createElement("label", { className: "topic-panel-color", title: "Change topic panel color" },
                                 React.createElement("span", null, "Color"),
                                 React.createElement("input", { type: "color", value: color, onChange: e => setTopicPanelColor(topicKey, e.target.value), "aria-label": `Change color for ${title}` }))),
@@ -3612,15 +3647,7 @@ function DeckPage(p) {
                                 React.createElement("h3", null, title, " (", cards.length, ")"),
                                 React.createElement("p", null, description))),
                         React.createElement("div", { className: "quiz-terms-list" }, cards.map(card => React.createElement(DeckTermRow, { key: card.id, card: card, index: originalIndex.get(card.id) || 0, deck: activeDeck, deactivated: inactiveSet.has(card.id), toggleCardDeactivated: toggleCardDeactivated, selectionMode: selectionMode, selected: selectedCardIds.includes(card.id), onSelect: () => toggleSelectedCard(card.id), readOnly: readOnly, hideTerm: hideTerms, hideDefinition: hideDefinitions, toggleStar: toggleStar, ...p })))) : null; }),
-                    React.createElement("div", { className: "terms-bottom-actions" },
-                        !readOnly && React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }) },
-                            React.createElement(Icon, { name: "plus", size: 18 }),
-                            "Add another card"),
-                        React.createElement("button", { className: "btn btn-secondary", onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics) },
-                            React.createElement(Icon, { name: "cards", size: 18 }),
-                            "Study ",
-                            selectedTags.length || selectedTopics.length ? 'filtered' : 'all',
-                            " cards"))))));
+                    React.createElement("div", { className: "terms-end-spacer", "aria-hidden": "true" })))));
 }
 function ReorderCardRow({ card, index, deck, deactivated = false, selected, onToggle, dragging, dragOver, dragAfter, total, onStart, onStep, setModal }) {
     const frontImages = sideImages(card, 'front'), backImages = sideImages(card, 'back'), topicSettings = deckTopicSettings(deck), topic = normalizeTopic(card.topic);
@@ -4023,7 +4050,8 @@ function ModalRouter(p) { const { modal, setModal } = p; if (!modal)
     return React.createElement(EditProfileModal, { ...p, close: close }); if (modal.type === 'import')
     return React.createElement(ImportModal, { ...p, close: close }); if (modal.type === 'smart-settings')
     return React.createElement(SmartSettingsModal, { ...p, close: close }); if (modal.type === 'image-viewer')
-    return React.createElement(ImageViewerModal, { modal: modal, close: close }); if (modal.type === 'reset-progress')
+    return React.createElement(ImageViewerModal, { modal: modal, close: close }); if (modal.type === 'deck-settings')
+    return React.createElement(DeckSettingsModal, { ...p, close: close }); if (modal.type === 'reset-progress')
     return React.createElement(ResetProgressModal, { ...p, close: close }); return null; }
 function AccessSettingsModal({ data, updateData, modal, close, toast }) {
     const resource = modal.resourceType === 'deck' ? data.decks.find(d => d.id === modal.resourceId) : data.folders.find(f => f.id === modal.resourceId);
@@ -4114,6 +4142,24 @@ function ModalFrame({ title, children, footer, close, small = false, className =
 function ImageViewerModal({ modal, close }) { useEffect(() => { const key = e => e.key === 'Escape' && close(); window.addEventListener('keydown', key); return () => window.removeEventListener('keydown', key); }, []); return React.createElement("div", { className: "image-viewer-backdrop", role: "dialog", "aria-modal": "true", "aria-label": "Flashcard image viewer", onClick: e => e.currentTarget === e.target && close() },
     React.createElement("button", { className: "image-viewer-close", onClick: close, "aria-label": "Close image viewer" }, "\u00D7"),
     React.createElement("img", { src: modal.src, alt: modal.alt || 'Flashcard image', loading: "eager", fetchPriority: "high", decoding: "async" })); }
+function DeckSettingsModal({ data, modal, markDeckComplete, setModal, close }) {
+    const deck = data.decks.find(d => d.id === modal.deckId);
+    if (!deck) return React.createElement(ModalFrame, { title: 'Set settings', close, small: true }, React.createElement('p', { className: 'muted' }, 'Flashcard set not found.'));
+    const stats = deckStats(deck);
+    return React.createElement(ModalFrame, { title: `${deck.name} settings`, close, small: true, footer: React.createElement('button', { className: 'btn btn-secondary', onClick: close }, 'Done') },
+        React.createElement('div', { className: 'deck-settings-stack' },
+            React.createElement('section', { className: 'deck-progress-settings' },
+                React.createElement('div', { className: 'deck-settings-progress-head' },
+                    React.createElement('div', null, React.createElement('strong', null, 'Study progress'), React.createElement('span', { className: 'muted' }, `${stats.known} of ${stats.total} cards known`)),
+                    React.createElement('b', null, `${stats.progress}%`)),
+                React.createElement('div', { className: 'progress' }, React.createElement('span', { style: { width: `${stats.progress}%` } }))),
+            React.createElement('section', { className: 'deck-settings-action-card complete' },
+                React.createElement('div', null, React.createElement('strong', null, 'Mark set completely studied'), React.createElement('span', null, 'Marks every card as Know so this set becomes 100% complete. Card content, images, tags, topics, and stars are unchanged.')),
+                React.createElement('button', { className: 'btn btn-success', onClick: () => { if (confirm('Mark every card in this set as Know and set progress to 100%?')) { markDeckComplete(deck.id); close(); } } }, React.createElement(Icon, { name: 'check', size: 17 }), 'Mark 100%')),
+            React.createElement('section', { className: 'deck-settings-action-card reset' },
+                React.createElement('div', null, React.createElement('strong', null, 'Reset progress'), React.createElement('span', null, 'Return cards to Not studied. The reset screen also lets you choose whether stars are kept.')),
+                React.createElement('button', { className: 'btn btn-danger', onClick: () => setModal({ type: 'reset-progress', deckId: deck.id }) }, React.createElement(Icon, { name: 'undo', size: 17 }), 'Reset progress'))));
+}
 function ResetProgressModal({ data, modal, resetDeckProgress, close }) { const deck = data.decks.find(d => d.id === modal.deckId), [clearStars, setClearStars] = useState(false); return React.createElement(ModalFrame, { title: "Reset progress", close: close, small: true, footer: React.createElement(React.Fragment, null,
         React.createElement("button", { className: "btn btn-ghost", onClick: close }, "Cancel"),
         React.createElement("button", { className: "btn btn-danger", disabled: !deck, onClick: () => { resetDeckProgress(modal.deckId, clearStars); close(); } }, "Reset progress")) },

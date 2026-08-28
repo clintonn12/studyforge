@@ -1,12 +1,19 @@
-SAFE UPDATE TO YOUR EXISTING GITHUB PAGES APP
+StudyForge v1.11.5 — Safe GitHub Pages Update
+=============================================
 
-1. Make a Complete JSON Backup in StudyForge.
-2. Open your existing studyforge repository.
-3. Stay at the repository root (where index.html is already visible).
-4. Extract this ZIP on your PC.
-5. Upload the CONTENTS: index.html, manifest.webmanifest, sw.js, .nojekyll, icons/, and optional text files.
-6. Let GitHub replace/update files with the same names, then Commit changes to main.
-7. GitHub Pages will redeploy automatically; there is no separate redeploy button.
-8. Keep using the same https://...github.io/studyforge/ URL.
-9. Reload the site once in Chrome; then reopen the installed Android PWA.
-10. Never use Clear site data/storage unless you intend to erase local-only flashcards.
+1. Open your CURRENT StudyForge and export a Complete JSON Backup.
+2. Keep the same repository and same GitHub Pages URL.
+3. Extract this ZIP on your PC.
+4. Upload the contents to the repository root, replacing matching files.
+5. Commit to main.
+6. Wait for GitHub Actions / Pages deployment to show a green check.
+7. Open the same StudyForge URL in Chrome and reload once.
+8. Reopen the installed PWA.
+
+Do NOT:
+- upload the outer ZIP folder as a nested folder;
+- change the StudyForge site origin/domain if you want the same local data;
+- clear Chrome site data;
+- delete your browser profile/storage.
+
+This package keeps StudyForge's existing local-storage/library format. GitHub Pages updates the application code; it does not itself erase the browser's StudyForge library.

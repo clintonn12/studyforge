@@ -1,0 +1,15 @@
+StudyForge PWA v1.11.5
+======================
+
+Focused update requested for the Android/mobile deck experience:
+- fixed clipped/tiny Terms-in-this-set mobile layout;
+- Select all cards + Select/Deselect this Topic;
+- compact Study Topic pill;
+- removed duplicate sidebar installer;
+- cleaner relative "Saved … ago" local status;
+- per-set Mark completely studied (100%) and Reset progress controls;
+- expanded sticky Terms controls with Add, Batch create, Topic settings, Set settings, Study, Hide, Select, Rearrange and Sort;
+- removed bottom Add-card action;
+- removed large top Flashcards tile.
+
+Local data version/storage keys remain unchanged from v1.11.4.
