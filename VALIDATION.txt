@@ -1,4 +1,4 @@
-StudyForge PWA v1.11.2 — Validation
+StudyForge PWA v1.11.3 — Validation
 =====================================
 
 Source: 41f48478-dbd6-42b0-9168-de2a51db7943.html

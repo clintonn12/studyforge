@@ -1084,13 +1084,13 @@
     .flash-study-main{overflow:hidden!important;overscroll-behavior:none!important}
   
 
-    /* StudyForge PWA v1.11.2 (data format unchanged) */
+    /* StudyForge PWA v1.11.3 (data format unchanged) */
     .katex{display:inline-block;max-width:100%;vertical-align:middle}.katex math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-size:1em}.katex-display,.math-block{display:block;width:100%;text-align:center;margin:.38em 0}.math-inline{display:inline-block;max-width:100%}.math-wrap-composite{max-width:100%}.standalone-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--surface-2);border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800;color:var(--muted)}
 
 #standalone-boot{min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg,#f7f8fc);color:var(--text,#172033);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}#standalone-boot>div{padding:18px 22px;border:1px solid #d9deea;border-radius:16px;background:#fff;box-shadow:0 10px 35px rgba(16,24,40,.08);font-weight:800}
 
 
-    /* StudyForge PWA v1.11.2 — Android gesture, dashboard, install, and performance polish */
+    /* StudyForge PWA v1.11.3 — Android gesture, dashboard, install, and performance polish */
     .flash-drag{
       touch-action:pan-y!important;
       overscroll-behavior:none!important;
@@ -1128,6 +1128,19 @@
     .pwa-install-state{display:block;margin-top:10px;line-height:1.48;color:var(--muted)}
     .pwa-install-state.warn{color:var(--orange)}.pwa-install-state.good{color:var(--green)}
     @media(max-width:780px){.rail-install-pwa{position:relative;flex:0 0 auto}.pwa-install-row>.row{display:grid;grid-template-columns:1fr;gap:8px}.pwa-install-row>.row .btn{width:100%}}
+
+    /* StudyForge v1.11.3 — Topics, bulk classification, image-aware rearrange */
+    .topic-panel{margin:18px 0;border:1px solid color-mix(in srgb,var(--topic-color) 38%,var(--border));border-radius:16px;background:color-mix(in srgb,var(--topic-color) 7%,var(--surface));overflow:hidden;contain:layout style}
+    .topic-panel-head{min-height:64px;display:flex;align-items:center;gap:10px;padding:8px 12px;background:color-mix(in srgb,var(--topic-color) 12%,var(--surface));border-bottom:1px solid color-mix(in srgb,var(--topic-color) 32%,var(--border))}
+    .topic-panel.collapsed .topic-panel-head{border-bottom:0}.topic-panel-toggle{flex:1;min-width:0;border:0;background:transparent;color:var(--text);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:11px;text-align:left;padding:6px 4px;border-radius:10px}.topic-panel-toggle:hover{background:color-mix(in srgb,var(--topic-color) 10%,transparent)}
+    .topic-panel-toggle>span{display:grid;min-width:0}.topic-panel-toggle small{font-size:9px;letter-spacing:.11em;font-weight:900;color:var(--muted)}.topic-panel-toggle strong{font-size:18px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.topic-panel-toggle>b{min-width:30px;height:28px;padding:0 8px;border-radius:999px;background:color-mix(in srgb,var(--topic-color) 20%,var(--surface));display:grid;place-items:center;font-size:12px}
+    .topic-panel-color{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:800;color:var(--muted);cursor:pointer}.topic-panel-color input[type=color]{width:34px;height:34px;min-height:34px;padding:2px;border-radius:9px;background:transparent}.topic-panel-cards{padding:10px;gap:8px}.topic-panel-cards .quiz-term-row{background:var(--surface)}
+    .term-topic-label,.reorder-topic{display:inline-flex;width:max-content;max-width:100%;align-items:center;border-left:4px solid var(--topic-color);background:color-mix(in srgb,var(--topic-color) 12%,var(--surface));border-radius:7px;padding:4px 8px;margin:0 0 8px;font-size:11px;font-weight:850;line-height:1.3;color:var(--text);overflow-wrap:anywhere}
+    .card-face-topic{flex:0 0 auto;max-width:min(92%,720px);align-self:center;display:flex;align-items:center;gap:9px;padding:7px 12px;border-radius:10px;border-left:5px solid var(--topic-color);background:color-mix(in srgb,var(--topic-color) 15%,transparent);font-family:var(--study-font)!important;line-height:1.15}.card-face-topic-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:900}.card-face-topic strong{font-size:15px;font-weight:850;overflow-wrap:anywhere}.card-face-tags{font-size:.82em}.classic-card-face .card-face-topic{margin-top:1px}
+    .topic-enable-toggle{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 13px;border:1px solid var(--border);border-radius:12px;background:var(--surface-2)}.topic-enable-toggle>span{display:grid;gap:3px}.topic-enable-toggle small{color:var(--muted);font-weight:500}.topic-enable-toggle input{width:20px;height:20px;min-height:20px;accent-color:var(--primary);flex:0 0 auto}.topic-settings-list{display:grid;gap:8px}.topic-color-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 10px;border:1px solid var(--border);border-radius:10px}.topic-color-row input[type=color]{width:38px;height:34px;min-height:34px;padding:2px}.topic-dot{width:14px;height:14px;border-radius:50%}.bulk-classify-section{padding:15px;border:1px solid var(--border);border-radius:13px;background:var(--surface-2)}.bulk-classify-section h3{margin:0 0 11px}.inline-check{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;font-weight:700}.inline-check input{width:18px;height:18px;min-height:18px}.bulk-tag-suggestions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;max-height:115px;overflow:auto}
+    .reorder-image-strip{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.reorder-image-strip button{width:58px;height:44px;border:1px solid var(--border);border-radius:8px;background:var(--surface-2);padding:2px;overflow:hidden}.reorder-image-strip img{display:block;width:100%;height:100%;object-fit:contain;border-radius:5px}.reorder-card{contain:layout style}.reorder-card-content{align-items:start}
+    @media(max-width:780px){.topic-panel{border-radius:13px;margin:13px 0}.topic-panel-head{padding:6px 8px;min-height:58px}.topic-panel-toggle{gap:7px}.topic-panel-toggle strong{font-size:15px}.topic-panel-color span{display:none}.topic-panel-color input[type=color]{width:32px;height:32px}.topic-panel-cards{padding:7px}.term-topic-label{font-size:10px}.card-face-topic{max-width:96%;padding:6px 9px;gap:7px}.card-face-topic-label{font-size:8px}.card-face-topic strong{font-size:13px}.reorder-image-strip button{width:54px;height:42px}.bulk-classify-section{padding:12px}.topic-settings-list{max-height:38vh;overflow:auto}.deck-actions-row{grid-template-columns:1fr 1fr}.bulk-card-bar>div{grid-template-columns:1fr 1fr}}
+
 </style>
 </head>
 <body>
@@ -1786,8 +1799,12 @@ function warmStudyStart(cards, start = 0, count = 5, budgetMs = 90) { const urls
     return Promise.resolve(); const ready = Promise.allSettled(urls.map(preloadImageSource)); const budget = new Promise(resolve => setTimeout(resolve, budgetMs)); return Promise.race([ready, budget]); }
 function ensureCardImagesReady(card, timeoutMs = 1600) { const urls = card ? studyImageSources([card], 0, 1) : []; if (!urls.length) return Promise.resolve(true); const ready = Promise.allSettled(urls.map(preloadImageSource)).then(() => true); if (!timeoutMs) return ready; return Promise.race([ready, new Promise(resolve => setTimeout(() => resolve(false), timeoutMs))]); }
 function warmDeckImages(cards, count = 14) { const list = Array.isArray(cards) ? cards : []; if (!list.length) return; primeStudyImages(list, 0, Math.min(count, list.length)); const run = () => primeStudyImages(list, 0, Math.min(Math.max(count, 22), list.length)); if ('requestIdleCallback' in window) requestIdleCallback(run, { timeout: 500 }); else setTimeout(run, 50); }
-const makeCard = (front, back, tags = [], extra = {}) => ({ id: uid('card'), front, back, frontImage: null, backImage: null, frontImageWidth: 320, backImageWidth: 320, frontImages: [], backImages: [], tags: unique(tags.map(normalizeTag)), tagColors: {}, createdAt: nowISO(), updatedAt: nowISO(), progress: defaultProgress(), ...extra });
-const makeDeck = (name, folderId = null, cards = [], extra = {}) => ({ id: uid('deck'), name, folderId, cards, deactivatedCardIds: [], materials: [], notes: '', tagColors: {}, creatorId: 'local_user', visibility: 'private', createdAt: nowISO(), updatedAt: nowISO(), ...extra });
+const normalizeTopic = value => clean(String(value || '')).slice(0, 120);
+function topicDefaultColor(topic) { const palette = ['#6d7cff', '#00b894', '#ff9f43', '#e056fd', '#2e86de', '#ee5253', '#10ac84', '#f368e0', '#5f27cd', '#54a0ff', '#ff6b6b', '#1dd1a1']; let n = 0; for (const ch of String(topic || 'Unassigned')) n = (n * 33 + ch.charCodeAt(0)) >>> 0; return palette[n % palette.length]; }
+function deckTopicSettings(deck) { const raw = deck?.topicSettings && typeof deck.topicSettings === 'object' ? deck.topicSettings : {}; return { enabled: raw.enabled !== false, label: clean(raw.label) || 'Topic' }; }
+function deckTopicColor(deck, topic) { const key = normalizeTopic(topic) || '__unassigned__'; return deck?.topicColors?.[key] || topicDefaultColor(key); }
+const makeCard = (front, back, tags = [], extra = {}) => ({ id: uid('card'), front, back, frontImage: null, backImage: null, frontImageWidth: 320, backImageWidth: 320, frontImages: [], backImages: [], tags: unique(tags.map(normalizeTag)), tagColors: {}, topic: '', createdAt: nowISO(), updatedAt: nowISO(), progress: defaultProgress(), ...extra });
+const makeDeck = (name, folderId = null, cards = [], extra = {}) => ({ id: uid('deck'), name, folderId, cards, deactivatedCardIds: [], materials: [], notes: '', tagColors: {}, topicSettings: { enabled: true, label: 'Topic' }, topicColors: {}, creatorId: 'local_user', visibility: 'private', createdAt: nowISO(), updatedAt: nowISO(), ...extra });
 const makeFolder = (name, parentId = null, color = '#6d7cff') => ({ id: uid('folder'), name, parentId, color: color || '#6d7cff', creatorId: 'local_user', visibility: 'private', expanded: true, createdAt: nowISO(), updatedAt: nowISO() });
 const cardStatus = card => { const p = normalizeProgress(card); if (!p.studied)
     return 'new'; return p.lastResult === false ? 'learning' : 'known'; };
@@ -2077,14 +2094,17 @@ function CardMediaFlow({ images = [], align = 'center', priority = false }) {
     return React.createElement("div", { className: `classic-card-images ${list.length > 1 ? 'multiple' : 'single'} align-${align}` }, list.map((img, index) => React.createElement("div", { className: "classic-card-image-wrap", key: img.id || index, style: { '--image-width': `${clamp(Number(img.width) || 100, 20, 100)}%` } },
         React.createElement("img", { src: img.src, loading: priority ? 'eager' : 'lazy', decoding: priority ? 'sync' : 'async', fetchPriority: priority ? 'high' : 'auto', alt: `Card attachment ${index + 1}` }))));
 }
-function CardFaceContent({ text = '', images = [], fit = true, maxPx = 38, minPx = 11, textAlign = 'center', imageAlign = 'center', showImages = true, tags = [], deck = null, priorityImages = false }) {
-    const normalized = (showImages ? images : []).map(normalizeImageItem).filter(Boolean), rawText = clean(text), plain = clean(stripMath(text)) || rawText, hasText = Boolean(rawText);
+function CardFaceContent({ text = '', images = [], fit = true, maxPx = 38, minPx = 11, textAlign = 'center', imageAlign = 'center', showImages = true, tags = [], topic = '', topicLabel = 'Topic', deck = null, priorityImages = false }) {
+    const normalized = (showImages ? images : []).map(normalizeImageItem).filter(Boolean), rawText = clean(text), plain = clean(stripMath(text)) || rawText, hasText = Boolean(rawText), topicEnabled = deckTopicSettings(deck).enabled;
     const density = !hasText ? 'no-text' : plain.length > 260 ? 'text-heavy' : plain.length > 120 ? 'text-medium' : 'text-short';
     return React.createElement("div", { className: `card-face-content classic-card-face ${normalized.length ? (hasText ? 'text-media' : 'media-only') : 'text-only'} ${density}`, style: { '--card-text-align': textAlign, '--card-base-px': `${maxPx}px` } },
         hasText && React.createElement("div", { className: "card-face-text" }, fit ? React.createElement(AutoFitMathText, { text: text, enabled: true, maxPx: maxPx, minPx: minPx }) : React.createElement("div", { className: "card-face-static-text" },
             React.createElement(MathText, { text: text }))),
         !!normalized.length && React.createElement("div", { className: "card-face-media classic" },
             React.createElement(CardMediaFlow, { images: normalized, align: imageAlign, priority: priorityImages })),
+        topicEnabled && !!normalizeTopic(topic) && React.createElement("div", { className: "card-face-topic", style: { '--topic-color': deckTopicColor(deck, topic) } },
+            React.createElement("span", { className: "card-face-topic-label" }, clean(topicLabel) || 'Topic'),
+            React.createElement("strong", null, normalizeTopic(topic))),
         !!tags.length && React.createElement("div", { className: "card-face-tags" }, tags.map(t => React.createElement("span", { className: "tag color-tag", style: { '--tag-color': deckTagColor(deck, t) }, key: t },
             "#",
             t))));
@@ -2247,7 +2267,7 @@ function Empty({ title = 'Nothing here yet', text = '', action = null, icon = 'd
 const defaultProfile = () => ({ id: 'local_user', name: '', username: '', bio: '', avatar: null, profilePublic: false, createdAt: nowISO() });
 const profileInitials = profile => clean(profile?.name || profile?.username || 'S').split(/\s+/).slice(0, 2).map(x => x[0]?.toUpperCase()).join('') || 'S';
 function buildDemo() {
-    return { version: 12, profile: defaultProfile(), folders: [], decks: [], preferences: { theme: 'system', shuffle: false, firstSide: 'back', definitionFirstV16: true, flipSpeed: 680, flashLayoutVersion: 4, flashTextAlignment: 'left', flashImageAlignment: 'center', flashShowImages: true, flashShowTags: true, flashAutoSpeak: false, flashFitContent: true, showFolderModifiedDate: true, showFolderProgressBar: true, flashKeybinds: normalizeFlashKeybinds(), customFlashFont: false, customFlashFontName: '', fontScope: 'cards', reduceMotion: false, highContrast: false, largeControls: false, keepScreenAwake: false }, activeDeckId: null, selectedDeckIds: [], studyHistory: [], studySessions: {}, createdAt: nowISO() };
+    return { version: 12, profile: defaultProfile(), folders: [], decks: [], preferences: { theme: 'system', shuffle: false, firstSide: 'back', definitionFirstV16: true, flipSpeed: 680, flashLayoutVersion: 4, flashTextAlignment: 'left', flashImageAlignment: 'center', flashShowImages: true, flashShowTags: true, flashShowTopic: true, flashAutoSpeak: false, flashFitContent: true, showFolderModifiedDate: true, showFolderProgressBar: true, flashKeybinds: normalizeFlashKeybinds(), customFlashFont: false, customFlashFontName: '', fontScope: 'cards', reduceMotion: false, highContrast: false, largeControls: false, keepScreenAwake: false }, activeDeckId: null, selectedDeckIds: [], studyHistory: [], studySessions: {}, createdAt: nowISO() };
 }
 function isLegacyDemoDeck(deck) {
     const signatures = {
@@ -2264,14 +2284,14 @@ function migrate(raw) {
     const oldProfile = raw.profile && typeof raw.profile === 'object' ? raw.profile : {};
     const legacyTeamRejects = clean(oldProfile.name).toLowerCase() === 'team rejects' || clean(oldProfile.username).toLowerCase() === 'team_rejects';
     const profile = legacyTeamRejects ? defaultProfile() : { ...defaultProfile(), ...oldProfile, profilePublic: oldProfile.profilePublic === true };
-    let decks = Array.isArray(raw.decks) ? raw.decks.map(d => { const cards = Array.isArray(d.cards) ? d.cards.map(c => { const next = { ...makeCard('', ''), ...c, tags: Array.isArray(c.tags) ? c.tags : [], tagColors: c.tagColors && typeof c.tagColors === 'object' ? c.tagColors : {}, frontImages: Array.isArray(c.frontImages) ? c.frontImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'front'), backImages: Array.isArray(c.backImages) ? c.backImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'back'), progress: normalizeProgress(c) }; delete next.srs; return next; }) : []; const validIds = new Set(cards.map(c => c.id)); return { ...d, folderId: d.folderId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (d.visibility || 'private'), materials: Array.isArray(d.materials) ? d.materials : [], notes: d.notes || '', tagColors: d.tagColors && typeof d.tagColors === 'object' ? d.tagColors : {}, sharedPermission: d.sharedPermission || null, sharedOwnerName: d.sharedOwnerName || '', cards, deactivatedCardIds: unique((Array.isArray(d.deactivatedCardIds) ? d.deactivatedCardIds : []).filter(id => validIds.has(id))) }; }) : demo.decks;
+    let decks = Array.isArray(raw.decks) ? raw.decks.map(d => { const cards = Array.isArray(d.cards) ? d.cards.map(c => { const next = { ...makeCard('', ''), ...c, tags: Array.isArray(c.tags) ? c.tags : [], tagColors: c.tagColors && typeof c.tagColors === 'object' ? c.tagColors : {}, topic: normalizeTopic(c.topic || ''), frontImages: Array.isArray(c.frontImages) ? c.frontImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'front'), backImages: Array.isArray(c.backImages) ? c.backImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'back'), progress: normalizeProgress(c) }; delete next.srs; return next; }) : []; const validIds = new Set(cards.map(c => c.id)); return { ...d, folderId: d.folderId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (d.visibility || 'private'), materials: Array.isArray(d.materials) ? d.materials : [], notes: d.notes || '', tagColors: d.tagColors && typeof d.tagColors === 'object' ? d.tagColors : {}, topicSettings: { enabled: d.topicSettings?.enabled !== false, label: clean(d.topicSettings?.label) || 'Topic' }, topicColors: d.topicColors && typeof d.topicColors === 'object' ? d.topicColors : {}, sharedPermission: d.sharedPermission || null, sharedOwnerName: d.sharedOwnerName || '', cards, deactivatedCardIds: unique((Array.isArray(d.deactivatedCardIds) ? d.deactivatedCardIds : []).filter(id => validIds.has(id))) }; }) : demo.decks;
     decks = decks.filter(d => !isLegacyDemoDeck(d));
     const usedFolderIds = new Set(decks.map(d => d.folderId).filter(Boolean));
     let folders = (Array.isArray(raw.folders) ? raw.folders.map(f => ({ ...f, parentId: f.parentId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (f.visibility || 'private'), expanded: f.expanded !== false, updatedAt: f.updatedAt || f.createdAt || nowISO(), color: f.color || '#6d7cff' })) : demo.folders).filter(f => !(['Health Sciences', 'Core Sciences', 'Cardiology'].includes(f.name) && !usedFolderIds.has(f.id)));
     const savedPreferences = raw.preferences && typeof raw.preferences === 'object' ? raw.preferences : {};
     const hasStackedLayoutV4 = Number(savedPreferences.flashLayoutVersion) >= 4;
     const legacyPx = savedPreferences.flashTextSize === 'small' ? 28 : savedPreferences.flashTextSize === 'large' ? 48 : 38;
-    const preferences = { theme: 'system', shuffle: false, firstSide: 'back', definitionFirstV16: true, flipSpeed: 680, flashShowImages: true, flashShowTags: true, flashAutoSpeak: false, flashFitContent: true, flashTextPx: clamp(Number(savedPreferences.flashTextPx || legacyPx || 38), 18, 64), showFolderModifiedDate: true, showFolderProgressBar: true, flashKeybinds: normalizeFlashKeybinds(savedPreferences.flashKeybinds), customFlashFont: Boolean(savedPreferences.customFlashFont), customFlashFontName: String(savedPreferences.customFlashFontName || ''), reduceMotion: false, highContrast: false, largeControls: false, keepScreenAwake: false, ...savedPreferences, firstSide: savedPreferences.definitionFirstV16 ? (savedPreferences.firstSide || 'back') : 'back', definitionFirstV16: true, flashLayoutVersion: 4, flashTextPx: clamp(Number(savedPreferences.flashTextPx || legacyPx || 38), 18, 64), flashTextAlignment: hasStackedLayoutV4 ? (savedPreferences.flashTextAlignment || 'left') : 'left', flashImageAlignment: hasStackedLayoutV4 ? (savedPreferences.flashImageAlignment || 'center') : 'center', flashKeybinds: normalizeFlashKeybinds(savedPreferences.flashKeybinds), customFlashFont: Boolean(savedPreferences.customFlashFont), customFlashFontName: String(savedPreferences.customFlashFontName || ''), fontScope: ['ui', 'cards', 'both'].includes(savedPreferences.fontScope) ? savedPreferences.fontScope : 'cards', reduceMotion: Boolean(savedPreferences.reduceMotion), highContrast: Boolean(savedPreferences.highContrast), largeControls: Boolean(savedPreferences.largeControls), keepScreenAwake: Boolean(savedPreferences.keepScreenAwake) };
+    const preferences = { theme: 'system', shuffle: false, firstSide: 'back', definitionFirstV16: true, flipSpeed: 680, flashShowImages: true, flashShowTags: true, flashShowTopic: true, flashAutoSpeak: false, flashFitContent: true, flashTextPx: clamp(Number(savedPreferences.flashTextPx || legacyPx || 38), 18, 64), showFolderModifiedDate: true, showFolderProgressBar: true, flashKeybinds: normalizeFlashKeybinds(savedPreferences.flashKeybinds), customFlashFont: Boolean(savedPreferences.customFlashFont), customFlashFontName: String(savedPreferences.customFlashFontName || ''), reduceMotion: false, highContrast: false, largeControls: false, keepScreenAwake: false, ...savedPreferences, firstSide: savedPreferences.definitionFirstV16 ? (savedPreferences.firstSide || 'back') : 'back', definitionFirstV16: true, flashLayoutVersion: 4, flashTextPx: clamp(Number(savedPreferences.flashTextPx || legacyPx || 38), 18, 64), flashTextAlignment: hasStackedLayoutV4 ? (savedPreferences.flashTextAlignment || 'left') : 'left', flashImageAlignment: hasStackedLayoutV4 ? (savedPreferences.flashImageAlignment || 'center') : 'center', flashKeybinds: normalizeFlashKeybinds(savedPreferences.flashKeybinds), customFlashFont: Boolean(savedPreferences.customFlashFont), customFlashFontName: String(savedPreferences.customFlashFontName || ''), fontScope: ['ui', 'cards', 'both'].includes(savedPreferences.fontScope) ? savedPreferences.fontScope : 'cards', reduceMotion: Boolean(savedPreferences.reduceMotion), highContrast: Boolean(savedPreferences.highContrast), largeControls: Boolean(savedPreferences.largeControls), keepScreenAwake: Boolean(savedPreferences.keepScreenAwake) };
     delete preferences.flashAlignment;
     delete preferences.flashTextSize;
     return { version: 12, profile, folders, decks, preferences, activeDeckId: decks.some(d => d.id === raw.activeDeckId) ? raw.activeDeckId : (decks[0]?.id || null), selectedDeckIds: Array.isArray(raw.selectedDeckIds) ? raw.selectedDeckIds.filter(id => decks.some(d => d.id === id)) : [], studyHistory: Array.isArray(raw.studyHistory) ? raw.studyHistory : [], studySessions: raw.studySessions && typeof raw.studySessions === 'object' ? raw.studySessions : {}, createdAt: raw.createdAt || nowISO() };
@@ -2461,10 +2481,10 @@ function downloadFile(name, content, type = 'application/octet-stream') { const 
 function csvCell(value) { const text = String(value ?? ''); return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text; }
 function exportDeckCards(deck, format = 'json') { if (!deck)
     return; if (format === 'csv') {
-    const rows = [['term', 'definition', 'tags'], ...deck.cards.map(c => [c.front, c.back, (c.tags || []).join('|')])];
+    const rows = [['term', 'definition', 'topic', 'tags'], ...deck.cards.map(c => [c.front, c.back, c.topic || '', (c.tags || []).join('|')])];
     downloadFile(`${safeFileName(deck.name)}-flashcards.csv`, rows.map(r => r.map(csvCell).join(',')).join('\r\n'), 'text/csv;charset=utf-8');
     return;
-} const payload = { format: 'studyforge-flashcards', version: 2, exportedAt: nowISO(), deck: { name: deck.name, tagColors: { ...(deck.tagColors || {}) }, cards: deck.cards.map(c => ({ front: c.front, back: c.back, frontImages: sideImages(c, 'front'), backImages: sideImages(c, 'back'), tags: [...(c.tags || [])], tagColors: { ...(c.tagColors || {}) }, progress: normalizeProgress(c) })) } }; downloadFile(`${safeFileName(deck.name)}-flashcards.json`, JSON.stringify(payload, null, 2), 'application/json'); }
+} const payload = { format: 'studyforge-flashcards', version: 2, exportedAt: nowISO(), deck: { name: deck.name, tagColors: { ...(deck.tagColors || {}) }, topicSettings: { ...deckTopicSettings(deck) }, topicColors: { ...(deck.topicColors || {}) }, cards: deck.cards.map(c => ({ front: c.front, back: c.back, frontImages: sideImages(c, 'front'), backImages: sideImages(c, 'back'), topic: c.topic || '', tags: [...(c.tags || [])], tagColors: { ...(c.tagColors || {}) }, progress: normalizeProgress(c) })) } }; downloadFile(`${safeFileName(deck.name)}-flashcards.json`, JSON.stringify(payload, null, 2), 'application/json'); }
 function parseDelimited(text, delimiter = ',') { const rows = []; let row = [], cell = '', quoted = false; for (let i = 0; i < text.length; i++) {
     const ch = text[i];
     if (ch === '"') {
@@ -2492,70 +2512,40 @@ function parseDelimited(text, delimiter = ',') { const rows = []; let row = [], 
         cell += ch;
 } row.push(cell); if (row.some(x => clean(x)))
     rows.push(row); return rows; }
-function importedCard(item) { const front = String(item?.front ?? item?.term ?? item?.question ?? '').trim(), back = String(item?.back ?? item?.definition ?? item?.answer ?? '').trim(); const tags = Array.isArray(item?.tags) ? item.tags : String(item?.tags || '').split(/[|;,]/), frontImages = Array.isArray(item?.frontImages) ? item.frontImages.map(normalizeImageItem).filter(Boolean) : (typeof item?.frontImage === 'string' ? [normalizeImageItem({ src: item.frontImage, width: 100, x: 50, y: 74 })] : []), backImages = Array.isArray(item?.backImages) ? item.backImages.map(normalizeImageItem).filter(Boolean) : (typeof item?.backImage === 'string' ? [normalizeImageItem({ src: item.backImage, width: 100, x: 50, y: 74 })] : []); if (!clean(front) && !clean(back) && !frontImages.length && !backImages.length)
-    return null; return makeCard(front, back, tags, { frontImages, backImages, tagColors: item?.tagColors && typeof item.tagColors === 'object' ? item.tagColors : {}, progress: item?.progress ? normalizeProgress(item) : defaultProgress() }); }
+function importedCard(item) { const front = String(item?.front ?? item?.term ?? item?.question ?? '').trim(), back = String(item?.back ?? item?.definition ?? item?.answer ?? '').trim(), topic = normalizeTopic(item?.topic ?? item?.chapter ?? item?.section ?? ''); const tags = Array.isArray(item?.tags) ? item.tags : String(item?.tags || '').split(/[|;,]/), frontImages = Array.isArray(item?.frontImages) ? item.frontImages.map(normalizeImageItem).filter(Boolean) : (typeof item?.frontImage === 'string' ? [normalizeImageItem({ src: item.frontImage, width: 100, x: 50, y: 74 })] : []), backImages = Array.isArray(item?.backImages) ? item.backImages.map(normalizeImageItem).filter(Boolean) : (typeof item?.backImage === 'string' ? [normalizeImageItem({ src: item.backImage, width: 100, x: 50, y: 74 })] : []); if (!clean(front) && !clean(back) && !frontImages.length && !backImages.length)
+    return null; return makeCard(front, back, tags, { frontImages, backImages, topic, tagColors: item?.tagColors && typeof item.tagColors === 'object' ? item.tagColors : {}, progress: item?.progress ? normalizeProgress(item) : defaultProgress() }); }
 function parseCommandCards(text) {
     const source = String(text || '');
     let pos = 0;
     const cards = [];
-    const skip = () => { while (pos < source.length && /\s/.test(source[pos]))
-        pos++; };
-    const word = label => { skip(); const re = new RegExp(`^${label}\\s*:`, 'i'), m = source.slice(pos).match(re); if (!m)
-        return false; pos += m[0].length; return true; };
-    const field = () => { skip(); if (source[pos] !== '{')
-        return null; pos++; let depth = 1, out = ''; while (pos < source.length) {
+    const skip = () => { while (pos < source.length && /\s/.test(source[pos])) pos++; };
+    const word = label => { skip(); const re = new RegExp(`^${label}\\s*:`, 'i'), m = source.slice(pos).match(re); if (!m) return false; pos += m[0].length; return true; };
+    const field = () => { skip(); if (source[pos] !== '{') return null; pos++; let depth = 1, out = ''; while (pos < source.length) {
         const ch = source[pos++];
-        if (ch === '\\' && pos < source.length) {
-            out += ch + source[pos++];
-            continue;
-        }
-        if (ch === '{') {
-            depth++;
-            out += ch;
-            continue;
-        }
-        if (ch === '}') {
-            depth--;
-            if (depth === 0)
-                return out.trim();
-            out += ch;
-            continue;
-        }
+        if (ch === '\\' && pos < source.length) { out += ch + source[pos++]; continue; }
+        if (ch === '{') { depth++; out += ch; continue; }
+        if (ch === '}') { depth--; if (depth === 0) return out.trim(); out += ch; continue; }
         out += ch;
     } return null; };
     while (pos < source.length) {
         skip();
-        if (pos >= source.length)
-            break;
+        if (pos >= source.length) break;
         const cardStart = pos;
-        if (!word('Term')) {
-            pos = cardStart + 1;
-            continue;
-        }
+        if (!word('Term')) { pos = cardStart + 1; continue; }
         const front = field();
-        if (front === null) {
-            pos = cardStart + 1;
-            continue;
-        }
-        if (!word('Definition')) {
-            pos = cardStart + 1;
-            continue;
-        }
+        if (front === null || !word('Definition')) { pos = cardStart + 1; continue; }
         const back = field();
-        if (back === null) {
-            pos = cardStart + 1;
-            continue;
+        if (back === null) { pos = cardStart + 1; continue; }
+        let topic = '', tags = '';
+        for (let pass = 0; pass < 3; pass++) {
+            const before = pos;
+            if (word('Topic')) { const value = field(); if (value !== null) { topic = value; continue; } pos = before; break; }
+            pos = before;
+            if (word('Tags')) { const value = field(); if (value !== null) { tags = value; continue; } pos = before; break; }
+            pos = before;
+            break;
         }
-        if (!word('Tags')) {
-            pos = cardStart + 1;
-            continue;
-        }
-        const tags = field();
-        if (tags === null) {
-            pos = cardStart + 1;
-            continue;
-        }
-        cards.push({ front, back, tags });
+        cards.push({ front, back, topic, tags });
     }
     return cards;
 }
@@ -2581,9 +2571,12 @@ async function parseFlashcardImport(fileOrText, fileName = 'pasted.txt') {
                 rows = text.split(/\r?\n/).filter(clean).map(line => line.includes('\t') ? line.split('\t') : line.split(/\s*\|\s*/, 2));
             const header = (rows[0] || []).map(x => clean(x).toLowerCase());
             const hasHeader = header.some(x => ['term', 'front', 'question'].includes(x)) && header.some(x => ['definition', 'back', 'answer'].includes(x));
-            if (hasHeader)
+            if (hasHeader) {
+                const termIndex = header.findIndex(x => ['term', 'front', 'question'].includes(x)), definitionIndex = header.findIndex(x => ['definition', 'back', 'answer'].includes(x)), topicIndex = header.findIndex(x => ['topic', 'chapter', 'section'].includes(x)), tagsIndex = header.findIndex(x => ['tags', 'tag'].includes(x));
                 rows = rows.slice(1);
-            raw = rows.map(r => ({ front: r[0] || '', back: r[1] || '', tags: r[2] || '' }));
+                raw = rows.map(r => ({ front: r[termIndex] || '', back: r[definitionIndex] || '', topic: topicIndex >= 0 ? (r[topicIndex] || '') : '', tags: tagsIndex >= 0 ? (r[tagsIndex] || '') : '' }));
+            }
+            else raw = rows.map(r => ({ front: r[0] || '', back: r[1] || '', tags: r[2] || '', topic: r[3] || '' }));
         }
     }
     const cards = raw.map(importedCard).filter(Boolean);
@@ -2860,13 +2853,13 @@ function App() {
     function deleteDeck(id) { if (!confirm('Delete this deck and all of its cards?'))
         return; updateData(d => { const decks = d.decks.filter(x => x.id !== id); return { ...d, decks, activeDeckId: d.activeDeckId === id ? (decks[0]?.id || null) : d.activeDeckId, selectedDeckIds: d.selectedDeckIds.filter(x => x !== id) }; }); setScreen('library'); toast('Deck deleted'); }
     function saveCard(deckId, draft, mode) {
-        const tags = unique((draft.tags || []).map(normalizeTag)), tagColors = { ...(draft.tagColors || {}) };
-        const card = { ...draft, front: String(draft.front || '').trim(), back: String(draft.back || '').trim(), frontImages: (draft.frontImages || []).map(normalizeImageItem).filter(Boolean), backImages: (draft.backImages || []).map(normalizeImageItem).filter(Boolean), tags, tagColors, updatedAt: nowISO() };
+        const tags = unique((draft.tags || []).map(normalizeTag)), tagColors = { ...(draft.tagColors || {}) }, topic = normalizeTopic(draft.topic || '');
+        const card = { ...draft, topic, front: String(draft.front || '').trim(), back: String(draft.back || '').trim(), frontImages: (draft.frontImages || []).map(normalizeImageItem).filter(Boolean), backImages: (draft.backImages || []).map(normalizeImageItem).filter(Boolean), tags, tagColors, updatedAt: nowISO() };
         if (!clean(card.front) && !clean(card.back) && !card.frontImages.length && !card.backImages.length) {
             toast('Add a term, definition, or image first');
             return;
         }
-        updateDeck(deckId, d => ({ ...d, tagColors: { ...(d.tagColors || {}), ...Object.fromEntries(tags.map(t => [t, tagColors[t] || d.tagColors?.[t] || '#6d7cff'])) }, cards: mode === 'create' ? [...d.cards, { ...card, id: uid('card'), createdAt: nowISO(), progress: defaultProgress() }] : d.cards.map(c => c.id === card.id ? { ...card, progress: normalizeProgress(card) } : c) }));
+        updateDeck(deckId, d => ({ ...d, tagColors: { ...(d.tagColors || {}), ...Object.fromEntries(tags.map(t => [t, tagColors[t] || d.tagColors?.[t] || '#6d7cff'])) }, topicColors: topic ? { ...(d.topicColors || {}), [topic]: d.topicColors?.[topic] || topicDefaultColor(topic) } : (d.topicColors || {}), cards: mode === 'create' ? [...d.cards, { ...card, id: uid('card'), createdAt: nowISO(), progress: defaultProgress() }] : d.cards.map(c => c.id === card.id ? { ...card, progress: normalizeProgress(card) } : c) }));
         setModal(null);
         toast(mode === 'create' ? 'Card added' : 'Card saved');
     }
@@ -2884,7 +2877,8 @@ function App() {
         }
         const copies = cards.map(card => ({ ...card, id: uid('card'), frontImages: sideImages(card, 'front').map(img => ({ ...img, id: uid('img') })), backImages: sideImages(card, 'back').map(img => ({ ...img, id: uid('img') })), createdAt: nowISO(), updatedAt: nowISO(), progress: operation === 'copy' ? defaultProgress() : normalizeProgress(card) }));
         const sourceInactive = deactivatedIds(source), movedInactiveNewIds = operation === 'move' ? copies.filter((copy, i) => sourceInactive.has(cards[i].id)).map(copy => copy.id) : [];
-        updateData(d => ({ ...d, decks: d.decks.map(deck => deck.id === targetDeckId ? { ...deck, cards: [...deck.cards, ...copies], deactivatedCardIds: operation === 'move' ? unique([...(deck.deactivatedCardIds || []), ...movedInactiveNewIds]) : (deck.deactivatedCardIds || []), updatedAt: nowISO() } : deck.id === sourceDeckId && operation === 'move' ? { ...deck, cards: deck.cards.filter(c => !ids.includes(c.id)), deactivatedCardIds: (deck.deactivatedCardIds || []).filter(id => !ids.includes(id)), updatedAt: nowISO() } : deck) }));
+        const transferredTopics = unique(cards.map(c => normalizeTopic(c.topic)).filter(Boolean)), transferredTags = unique(cards.flatMap(c => c.tags || []));
+        updateData(d => ({ ...d, decks: d.decks.map(deck => deck.id === targetDeckId ? { ...deck, cards: [...deck.cards, ...copies], tagColors: { ...(deck.tagColors || {}), ...Object.fromEntries(transferredTags.map(t => [t, deck.tagColors?.[t] || source?.tagColors?.[t] || deckTagColor(source, t)])) }, topicColors: { ...(deck.topicColors || {}), ...Object.fromEntries(transferredTopics.map(t => [t, deck.topicColors?.[t] || source?.topicColors?.[t] || deckTopicColor(source, t)])) }, deactivatedCardIds: operation === 'move' ? unique([...(deck.deactivatedCardIds || []), ...movedInactiveNewIds]) : (deck.deactivatedCardIds || []), updatedAt: nowISO() } : deck.id === sourceDeckId && operation === 'move' ? { ...deck, cards: deck.cards.filter(c => !ids.includes(c.id)), deactivatedCardIds: (deck.deactivatedCardIds || []).filter(id => !ids.includes(id)), updatedAt: nowISO() } : deck) }));
         setModal(null);
         toast(`${cards.length} card${cards.length === 1 ? '' : 's'} ${operation === 'move' ? 'moved' : 'copied'} to another deck`);
     }
@@ -2998,7 +2992,7 @@ function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, se
             React.createElement("button", { className: "rail-logo", onClick: openHome, "aria-label": "StudyForge home" },
                 React.createElement(BrandMark, null),
                 React.createElement("span", null, "StudyForge")),
-            React.createElement("span", { className: "rail-version" }, "PWA v1.11.2")),
+            React.createElement("span", { className: "rail-version" }, "PWA v1.11.3")),
         React.createElement("div", { className: "rail-profile-card" },
             React.createElement("span", { className: "rail-profile-avatar" }, profile.avatar ? React.createElement("img", { src: profile.avatar, alt: "" }) : profileInitials(profile)),
             React.createElement("button", { className: "rail-profile-copy", onClick: () => setModal({ type: 'edit-profile' }), "aria-label": "Edit creator profile" },
@@ -3286,13 +3280,13 @@ function FlatLibraryDeckRow({ deck, data, toggleSelected, chooseDeck }) {
 function DeckPage(p) {
     const { activeDeck, data, updateData, setModal, deleteDeck, launchStudy, libraryTab, setLibraryTab, openLibrary, openCreator, setDeckVisibility, resetDeckProgress, setCardsDeactivated, toggleCardDeactivated } = p;
     const readOnly = Boolean(activeDeck?.sharedPermission && activeDeck.sharedPermission !== 'copy');
-    const [selectedTags, setSelectedTags] = useState([]), [cardQuery, setCardQuery] = useState(''), [previewIndex, setPreviewIndex] = useState(0), [previewTurns, setPreviewTurns] = useState(0), [previewOrder, setPreviewOrder] = useState([]), [autoPlay, setAutoPlay] = useState(false), [previewSettings, setPreviewSettings] = useState(false), [previewFirstSide, setPreviewFirstSide] = useState(() => data.preferences.firstSide || 'back'), [previewShuffled, setPreviewShuffled] = useState(() => Boolean(data.preferences.shuffle)), [sortMode, setSortMode] = useState('original'), [cardVisibility, setCardVisibility] = useState('all'), [hideDefinitions, setHideDefinitions] = useState(false), [hideTerms, setHideTerms] = useState(false), [reorderMode, setReorderMode] = useState(false), [selectionMode, setSelectionMode] = useState(false), [selectedCardIds, setSelectedCardIds] = useState([]), [reorderSelectedIds, setReorderSelectedIds] = useState([]), [draggingCardId, setDraggingCardId] = useState(null), [dragOverCardId, setDragOverCardId] = useState(null), [dragAfter, setDragAfter] = useState(false);
+    const [selectedTags, setSelectedTags] = useState([]), [cardQuery, setCardQuery] = useState(''), [previewIndex, setPreviewIndex] = useState(0), [previewTurns, setPreviewTurns] = useState(0), [previewOrder, setPreviewOrder] = useState([]), [autoPlay, setAutoPlay] = useState(false), [previewSettings, setPreviewSettings] = useState(false), [previewFirstSide, setPreviewFirstSide] = useState(() => data.preferences.firstSide || 'back'), [previewShuffled, setPreviewShuffled] = useState(() => Boolean(data.preferences.shuffle)), [sortMode, setSortMode] = useState('original'), [cardVisibility, setCardVisibility] = useState('all'), [hideDefinitions, setHideDefinitions] = useState(false), [hideTerms, setHideTerms] = useState(false), [reorderMode, setReorderMode] = useState(false), [selectionMode, setSelectionMode] = useState(false), [selectedCardIds, setSelectedCardIds] = useState([]), [reorderSelectedIds, setReorderSelectedIds] = useState([]), [draggingCardId, setDraggingCardId] = useState(null), [dragOverCardId, setDragOverCardId] = useState(null), [dragAfter, setDragAfter] = useState(false), [collapsedTopics, setCollapsedTopics] = useState({});
     const dragCardRef = useRef(null), previewSection = useRef(null);
-    useEffect(() => { setSelectedTags([]); setCardQuery(''); setPreviewIndex(0); setPreviewTurns(0); setCardVisibility('all'); setHideTerms(false); setReorderMode(false); setSelectionMode(false); setSelectedCardIds([]); setReorderSelectedIds([]); setDraggingCardId(null); setDragOverCardId(null); const ids = studyableDeckCards(activeDeck).map(c => c.id); setPreviewOrder(data.preferences.shuffle ? shuffle(ids) : ids); setPreviewShuffled(Boolean(data.preferences.shuffle)); setPreviewFirstSide(data.preferences.firstSide || 'back'); setAutoPlay(false); }, [activeDeck?.id]);
+    useEffect(() => { setSelectedTags([]); setCardQuery(''); setPreviewIndex(0); setPreviewTurns(0); setCardVisibility('all'); setHideTerms(false); setReorderMode(false); setSelectionMode(false); setSelectedCardIds([]); setReorderSelectedIds([]); setDraggingCardId(null); setDragOverCardId(null); setCollapsedTopics({}); const ids = studyableDeckCards(activeDeck).map(c => c.id); setPreviewOrder(data.preferences.shuffle ? shuffle(ids) : ids); setPreviewShuffled(Boolean(data.preferences.shuffle)); setPreviewFirstSide(data.preferences.firstSide || 'back'); setAutoPlay(false); }, [activeDeck?.id]);
     useEffect(() => { const cards = studyableDeckCards(activeDeck); if (!cards.length)
         return; let handle = null; primeStudyImages(cards, 0, Math.min(8, cards.length)); const warm = () => primeStudyImages(cards, 0, Math.min(24, cards.length)); handle = 'requestIdleCallback' in window ? requestIdleCallback(warm, { timeout: 650 }) : setTimeout(warm, 90); return () => { if (!handle) return; if ('cancelIdleCallback' in window) cancelIdleCallback(handle); else clearTimeout(handle); }; }, [activeDeck?.id]);
-    const activeCards = activeDeck?.cards || [], stats = deckStats(activeDeck), inactiveSet = deactivatedIds(activeDeck), studyableCount = activeCards.length - inactiveSet.size, tags = unique(activeCards.flatMap(c => c.tags)).sort(), starFilter = selectedTags.includes('__starred__'), startedFilter = selectedTags.includes('__started__'), realTags = selectedTags.filter(t => !['__starred__', '__started__'].includes(t)), deferredCardQuery = useDeferredValue(cardQuery), normalizedCardQuery = clean(deferredCardQuery).toLowerCase();
-    const originalIndex = useMemo(() => new Map(activeCards.map((card, index) => [card.id, index])), [activeDeck?.id, activeCards]), searchIndex = useMemo(() => new Map(activeCards.map(card => [card.id, `${stripMath(card.front).toLowerCase()}\n${stripMath(card.back).toLowerCase()}\n${(card.tags || []).join(' ').toLowerCase()}`])), [activeDeck?.id, activeCards]);
+    const activeCards = activeDeck?.cards || [], stats = deckStats(activeDeck), inactiveSet = deactivatedIds(activeDeck), studyableCount = activeCards.length - inactiveSet.size, topicSettings = deckTopicSettings(activeDeck), tags = unique(activeCards.flatMap(c => c.tags)).sort(), topics = unique(activeCards.map(c => normalizeTopic(c.topic)).filter(Boolean)), starFilter = selectedTags.includes('__starred__'), startedFilter = selectedTags.includes('__started__'), realTags = selectedTags.filter(t => !['__starred__', '__started__'].includes(t)), deferredCardQuery = useDeferredValue(cardQuery), normalizedCardQuery = clean(deferredCardQuery).toLowerCase();
+    const originalIndex = useMemo(() => new Map(activeCards.map((card, index) => [card.id, index])), [activeDeck?.id, activeCards]), searchIndex = useMemo(() => new Map(activeCards.map(card => [card.id, `${stripMath(card.front).toLowerCase()}\n${stripMath(card.back).toLowerCase()}\n${normalizeTopic(card.topic).toLowerCase()}\n${(card.tags || []).join(' ').toLowerCase()}`])), [activeDeck?.id, activeCards]);
     const filtered = activeCards.filter(c => { const inactive = inactiveSet.has(c.id), visibilityOk = cardVisibility === 'all' || (cardVisibility === 'active' && !inactive) || (cardVisibility === 'deactivated' && inactive); const qOk = !normalizedCardQuery || (searchIndex.get(c.id) || '').includes(normalizedCardQuery); const tagOk = !realTags.length || realTags.some(t => c.tags.includes(t)); return visibilityOk && qOk && tagOk && (!starFilter || normalizeProgress(c).starred) && (!startedFilter || cardStatus(c) !== 'new'); });
     const previewEligible = filtered.filter(c => !inactiveSet.has(c.id)), byId = new Map(previewEligible.map(c => [c.id, c])), previewOrderSet = new Set(previewOrder), previewCards = [...previewOrder.map(id => byId.get(id)).filter(Boolean), ...previewEligible.filter(c => !previewOrderSet.has(c.id))], preview = previewCards[previewIndex] || previewEligible[0] || null, previewFlipped = previewTurns % 2 === 1, fitPreview = data.preferences.flashFitContent !== false;
     useEffect(() => { if (!previewCards.length) {
@@ -3302,7 +3296,8 @@ function DeckPage(p) {
         setPreviewIndex(previewCards.length - 1); }, [previewCards.length, previewIndex]);
     const previewFront = preview ? (previewFirstSide === 'back' ? { text: preview.back, images: sideImages(preview, 'back'), label: 'definition' } : { text: preview.front, images: sideImages(preview, 'front'), label: 'term' }) : null;
     const previewBack = preview ? (previewFirstSide === 'back' ? { text: preview.front, images: sideImages(preview, 'front'), label: 'term' } : { text: preview.back, images: sideImages(preview, 'back'), label: 'definition' }) : null;
-    const sortedCards = [...filtered].sort((a, b) => sortMode === 'alphabetical' ? stripMath(a.front).localeCompare(stripMath(b.front)) : sortMode === 'tags' ? (((a.tags || []).slice().sort().join(' ') || '~').localeCompare((b.tags || []).slice().sort().join(' ') || '~') || stripMath(a.front).localeCompare(stripMath(b.front))) : sortMode === 'active' ? Number(inactiveSet.has(a.id)) - Number(inactiveSet.has(b.id)) || ((originalIndex.get(a.id) || 0) - (originalIndex.get(b.id) || 0)) : sortMode === 'deactivated' ? Number(inactiveSet.has(b.id)) - Number(inactiveSet.has(a.id)) || ((originalIndex.get(a.id) || 0) - (originalIndex.get(b.id) || 0)) : ((originalIndex.get(a.id) || 0) - (originalIndex.get(b.id) || 0)));
+    const sortedCards = [...filtered].sort((a, b) => { const original = (originalIndex.get(a.id) || 0) - (originalIndex.get(b.id) || 0); if (sortMode === 'alphabetical') return stripMath(a.front).localeCompare(stripMath(b.front)); if (sortMode === 'tags') return ((a.tags || []).slice().sort().join(' ') || '~').localeCompare((b.tags || []).slice().sort().join(' ') || '~') || stripMath(a.front).localeCompare(stripMath(b.front)); if (sortMode === 'active') return Number(inactiveSet.has(a.id)) - Number(inactiveSet.has(b.id)) || original; if (sortMode === 'deactivated') return Number(inactiveSet.has(b.id)) - Number(inactiveSet.has(a.id)) || original; if (['known','learning','new'].includes(sortMode)) { const order = sortMode === 'known' ? { known:0, learning:1, new:2 } : sortMode === 'learning' ? { learning:0, known:1, new:2 } : { new:0, learning:1, known:2 }; return order[cardStatus(a)] - order[cardStatus(b)] || original; } return original; });
+    const topicGroupKeys = (() => { const seen = new Set(), order = []; for (const c of sortedCards) { const key = normalizeTopic(c.topic) || '__unassigned__'; if (!seen.has(key)) { seen.add(key); order.push(key); } } return order; })();
     const statusGroups = { known: ['known', 'Know', 'You most recently marked these cards correct.'], learning: ['learning', 'Still learning', 'You marked these cards as still learning.'], new: ['new', 'Not studied', 'You have not graded these cards yet.'] };
     const sortDescription = sortMode === 'original' ? 'Original deck order.' : sortMode === 'alphabetical' ? 'Alphabetical order.' : sortMode === 'tags' ? 'Sorted by tags.' : sortMode === 'active' ? 'Active cards first; deactivated cards remain visible below.' : sortMode === 'deactivated' ? 'Deactivated cards first for quick review.' : 'Current study-progress order.';
     const groups = sortMode === 'known' ? [statusGroups.known, statusGroups.learning, statusGroups.new] : sortMode === 'learning' ? [statusGroups.learning, statusGroups.known, statusGroups.new] : sortMode === 'new' ? [statusGroups.new, statusGroups.learning, statusGroups.known] : [['all', 'Terms', sortDescription]], session = activeDeck ? data.studySessions?.[flashSessionKey([activeDeck.id], selectedTags)] : null;
@@ -3329,6 +3324,8 @@ function DeckPage(p) {
     function selectAllVisible() { setSelectedCardIds(filtered.map(c => c.id)); }
     function setSelectedActivation(active) { if (!selectedCardIds.length)
         return; setCardsDeactivated(activeDeck.id, selectedCardIds, !active); setSelectedCardIds([]); }
+    function toggleTopicPanel(topicKey) { setCollapsedTopics(current => ({ ...current, [topicKey]: !current[topicKey] })); }
+    function setTopicPanelColor(topicKey, color) { updateData(d => ({ ...d, decks: d.decks.map(deck => deck.id !== activeDeck.id ? deck : { ...deck, topicColors: { ...(deck.topicColors || {}), [topicKey]: color }, updatedAt: nowISO() }) })); }
     function reorderDeckCards(sourceIds, targetId, after = false) { const ids = unique(Array.isArray(sourceIds) ? sourceIds : [sourceIds]); if (!ids.length || ids.includes(targetId))
         return; updateData(d => ({ ...d, decks: d.decks.map(deck => { if (deck.id !== activeDeck.id)
             return deck; const moving = deck.cards.filter(c => ids.includes(c.id)), remaining = deck.cards.filter(c => !ids.includes(c.id)); if (!moving.length)
@@ -3442,9 +3439,9 @@ function DeckPage(p) {
             React.createElement("button", { className: "deck-preview-card", onClick: flipPreview, "aria-label": `Flip preview to show ${previewFlipped ? previewFront.label : previewBack.label}` },
                 React.createElement("span", { className: "deck-preview-inner", style: { transform: `rotateY(${previewTurns * 180}deg)`, transitionDuration: '680ms' } },
                     React.createElement("span", { className: "deck-preview-face front" },
-                        React.createElement(CardFaceContent, { text: previewFront.text, images: previewFront.images, fit: true, maxPx: clamp(Number(data.preferences.flashTextPx || 38), 18, 64), minPx: 11, textAlign: data.preferences.flashTextAlignment || 'left', imageAlign: data.preferences.flashImageAlignment || 'center', showImages: data.preferences.flashShowImages !== false, priorityImages: true, tags: data.preferences.flashShowTags !== false && previewFront.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })),
+                        React.createElement(CardFaceContent, { text: previewFront.text, images: previewFront.images, fit: true, maxPx: clamp(Number(data.preferences.flashTextPx || 38), 18, 64), minPx: 11, textAlign: data.preferences.flashTextAlignment || 'left', imageAlign: data.preferences.flashImageAlignment || 'center', showImages: data.preferences.flashShowImages !== false, priorityImages: true, topic: data.preferences.flashShowTopic !== false ? (preview.topic || '') : '', topicLabel: deckTopicSettings(activeDeck).label, tags: data.preferences.flashShowTags !== false && previewFront.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })),
                     React.createElement("span", { className: "deck-preview-face back" },
-                        React.createElement(CardFaceContent, { text: previewBack.text, images: previewBack.images, fit: true, maxPx: clamp(Number(data.preferences.flashTextPx || 38), 18, 64), minPx: 11, textAlign: data.preferences.flashTextAlignment || 'left', imageAlign: data.preferences.flashImageAlignment || 'center', showImages: data.preferences.flashShowImages !== false, priorityImages: true, tags: data.preferences.flashShowTags !== false && previewBack.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })))),
+                        React.createElement(CardFaceContent, { text: previewBack.text, images: previewBack.images, fit: true, maxPx: clamp(Number(data.preferences.flashTextPx || 38), 18, 64), minPx: 11, textAlign: data.preferences.flashTextAlignment || 'left', imageAlign: data.preferences.flashImageAlignment || 'center', showImages: data.preferences.flashShowImages !== false, priorityImages: true, topic: data.preferences.flashShowTopic !== false ? (preview.topic || '') : '', topicLabel: deckTopicSettings(activeDeck).label, tags: data.preferences.flashShowTags !== false && previewBack.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })))),
             React.createElement("div", { className: "deck-preview-controls" },
                 React.createElement("button", { onClick: () => movePreview(-1), disabled: previewCards.length < 2, "aria-label": "Previous card" },
                     React.createElement(Icon, { name: "left" })),
@@ -3515,6 +3512,9 @@ function DeckPage(p) {
                 React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }) },
                     React.createElement(Icon, { name: "importExport", size: 18 }),
                     "Batch create"),
+                React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'topic-settings', deckId: activeDeck.id }) },
+                    React.createElement(Icon, { name: "folder", size: 18 }),
+                    topicSettings.enabled ? `${topicSettings.label} settings` : 'Topics off'),
                 React.createElement("button", { className: "btn btn-secondary", onClick: () => setModal({ type: 'import', deckId: activeDeck.id }) },
                     React.createElement(Icon, { name: "upload", size: 18 }),
                     "Upload material"),
@@ -3576,6 +3576,7 @@ function DeckPage(p) {
                         React.createElement("button", { className: "btn btn-secondary btn-sm bulk-reactivate", disabled: !selectedCardIds.length, onClick: () => setSelectedActivation(true) },
                             React.createElement(Icon, { name: "eye", size: 16 }),
                             "Reactivate"),
+                        React.createElement("button", { className: "btn btn-secondary btn-sm", disabled: !selectedCardIds.length, onClick: () => setModal({ type: 'bulk-classify', deckId: activeDeck.id, cardIds: selectedCardIds }) }, "Assign tags / topic"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm", disabled: !selectedCardIds.length, onClick: () => setModal({ type: 'transfer-card', sourceDeckId: activeDeck.id, cardIds: selectedCardIds }) }, "Move / copy selected"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm", disabled: !selectedCardIds.length, onClick: () => { setReorderSelectedIds(selectedCardIds); setSelectionMode(false); setReorderMode(true); } }, "Arrange selected"),
                         React.createElement("button", { className: "btn btn-ghost btn-sm", onClick: () => setSelectedCardIds([]) }, "Clear"))),
@@ -3588,7 +3589,7 @@ function DeckPage(p) {
                     React.createElement("div", { className: "terms-toolbar" },
                         React.createElement("div", { className: "library-search" },
                             React.createElement(Icon, { name: "search", size: 19 }),
-                            React.createElement("input", { type: "search", value: cardQuery, onChange: e => setCardQuery(e.target.value), placeholder: "Search terms, definitions, or tags", "aria-label": "Search cards in this set" })),
+                            React.createElement("input", { type: "search", value: cardQuery, onChange: e => setCardQuery(e.target.value), placeholder: `Search terms, definitions, ${topicSettings.enabled ? topicSettings.label.toLowerCase() + 's, ' : ''}or tags`, "aria-label": "Search cards in this set" })),
                         React.createElement("label", { className: "card-visibility-filter" },
                             "Show",
                             React.createElement("select", { value: cardVisibility, onChange: e => setCardVisibility(e.target.value) },
@@ -3598,14 +3599,21 @@ function DeckPage(p) {
                         React.createElement("span", { className: "terms-toolbar-status" },
                             starFilter ? 'Starred only · ' : '',
                             realTags.length ? `Tags: ${realTags.map(t => `#${t}`).join(', ')}` : 'All study tags')),
-                    groups.map(([status, title, description]) => { const cards = status === 'all' ? sortedCards : sortedCards.filter(c => cardStatus(c) === status); return cards.length ? React.createElement("section", { className: `term-progress-group ${status}`, key: status },
+                    topicSettings.enabled ? topicGroupKeys.map(topicKey => { const cards = sortedCards.filter(c => (normalizeTopic(c.topic) || '__unassigned__') === topicKey), title = topicKey === '__unassigned__' ? `No ${topicSettings.label}` : topicKey, collapsed = Boolean(collapsedTopics[topicKey]), color = deckTopicColor(activeDeck, topicKey); return cards.length ? React.createElement("section", { className: `topic-panel ${collapsed ? 'collapsed' : ''}`, key: topicKey, style: { '--topic-color': color } },
+                        React.createElement("div", { className: "topic-panel-head" },
+                            React.createElement("button", { className: "topic-panel-toggle", onClick: () => toggleTopicPanel(topicKey), "aria-expanded": !collapsed },
+                                React.createElement(Icon, { name: collapsed ? 'down' : 'up', size: 18 }),
+                                React.createElement("span", null,
+                                    React.createElement("small", null, topicSettings.label.toUpperCase()),
+                                    React.createElement("strong", null, title)),
+                                React.createElement("b", null, cards.length)),
+                            !readOnly && topicKey !== '__unassigned__' && React.createElement("label", { className: "topic-panel-color", title: "Change topic panel color" },
+                                React.createElement("span", null, "Color"),
+                                React.createElement("input", { type: "color", value: color, onChange: e => setTopicPanelColor(topicKey, e.target.value), "aria-label": `Change color for ${title}` }))),
+                        !collapsed && React.createElement("div", { className: "quiz-terms-list topic-panel-cards" }, cards.map(card => React.createElement(DeckTermRow, { key: card.id, card: card, index: originalIndex.get(card.id) || 0, deck: activeDeck, deactivated: inactiveSet.has(card.id), toggleCardDeactivated: toggleCardDeactivated, selectionMode: selectionMode, selected: selectedCardIds.includes(card.id), onSelect: () => toggleSelectedCard(card.id), readOnly: readOnly, hideDefinition: hideDefinitions, toggleStar: toggleStar, ...p })))) : null; }) : groups.map(([status, title, description]) => { const cards = status === 'all' ? sortedCards : sortedCards.filter(c => cardStatus(c) === status); return cards.length ? React.createElement("section", { className: `term-progress-group ${status}`, key: status },
                         React.createElement("div", { className: "term-group-heading" },
                             React.createElement("div", null,
-                                React.createElement("h3", null,
-                                    title,
-                                    " (",
-                                    cards.length,
-                                    ")"),
+                                React.createElement("h3", null, title, " (", cards.length, ")"),
                                 React.createElement("p", null, description))),
                         React.createElement("div", { className: "quiz-terms-list" }, cards.map(card => React.createElement(DeckTermRow, { key: card.id, card: card, index: originalIndex.get(card.id) || 0, deck: activeDeck, deactivated: inactiveSet.has(card.id), toggleCardDeactivated: toggleCardDeactivated, selectionMode: selectionMode, selected: selectedCardIds.includes(card.id), onSelect: () => toggleSelectedCard(card.id), readOnly: readOnly, hideDefinition: hideDefinitions, toggleStar: toggleStar, ...p })))) : null; }),
                     React.createElement("div", { className: "terms-bottom-actions" },
@@ -3619,6 +3627,10 @@ function DeckPage(p) {
                             " cards"))))) : React.createElement(MaterialsPanel, { deck: activeDeck, setModal: setModal }));
 }
 function ReorderCardRow({ card, index, deck, deactivated = false, selected, onToggle, dragging, dragOver, dragAfter, total, onStart, onStep, setModal }) {
+    const frontImages = sideImages(card, 'front'), backImages = sideImages(card, 'back'), topicSettings = deckTopicSettings(deck), topic = normalizeTopic(card.topic);
+    const previewImage = (img, label) => setModal({ type: 'image-viewer', src: img.src, alt: `${label} image from ${stripMath(card.front).slice(0,80)}` });
+    const imageStrip = (images, label) => images.length ? React.createElement("div", { className: "reorder-image-strip" }, images.slice(0, 3).map(img => React.createElement("button", { type: "button", key: img.id, onPointerDown: e => e.stopPropagation(), onClick: () => previewImage(img, label), "aria-label": `Open ${label.toLowerCase()} image` },
+        React.createElement("img", { src: img.src, loading: "lazy", decoding: "async", alt: `${label} attachment` })))) : null;
     return React.createElement("article", { className: `reorder-card ${deactivated ? 'deactivated-card-row' : ''} ${selected ? 'selected' : ''} ${dragging ? 'dragging' : ''} ${dragOver ? (dragAfter ? 'drop-after' : 'drop-before') : ''}`, "data-reorder-card-id": card.id },
         React.createElement("label", { className: "reorder-select", onPointerDown: e => e.stopPropagation() },
             React.createElement("input", { type: "checkbox", checked: selected, onChange: onToggle }),
@@ -3632,10 +3644,13 @@ function ReorderCardRow({ card, index, deck, deactivated = false, selected, onTo
                     React.createElement(Icon, { name: "eyeOff", size: 12 }),
                     "Deactivated"),
                 React.createElement("small", null, "TERM"),
-                React.createElement(MathText, { text: card.front })),
+                topicSettings.enabled && topic && React.createElement("span", { className: "reorder-topic", style: { '--topic-color': deckTopicColor(deck, topic) } }, topic),
+                React.createElement(MathText, { text: card.front }),
+                imageStrip(frontImages, 'Term')),
             React.createElement("div", null,
                 React.createElement("small", null, "DEFINITION"),
-                React.createElement(MathText, { text: card.back }))),
+                React.createElement(MathText, { text: card.back }),
+                imageStrip(backImages, 'Definition'))),
         React.createElement("div", { className: "reorder-card-actions" },
             React.createElement("button", { onClick: () => onStep(card.id, -1), disabled: index === 0, "aria-label": "Move selected cards up" },
                 React.createElement(Icon, { name: "up", size: 18 })),
@@ -3645,7 +3660,7 @@ function ReorderCardRow({ card, index, deck, deactivated = false, selected, onTo
                 React.createElement(Icon, { name: "edit", size: 18 }))));
 }
 function DeckTermRow({ card, index, deck, setModal, duplicateCard, deleteCard, hideDefinition, toggleStar, toggleCardDeactivated, deactivated = false, readOnly = false, selectionMode = false, selected = false, onSelect }) {
-    const progress = normalizeProgress(card), frontImages = sideImages(card, 'front'), backImages = sideImages(card, 'back');
+    const progress = normalizeProgress(card), frontImages = sideImages(card, 'front'), backImages = sideImages(card, 'back'), topicSettings = deckTopicSettings(deck), topic = normalizeTopic(card.topic);
     function speak() { if (!('speechSynthesis' in window))
         return; window.speechSynthesis.cancel(); window.speechSynthesis.speak(new SpeechSynthesisUtterance(stripMath(`${card.front}. ${card.back}`))); }
     const openImage = (img, label) => setModal({ type: 'image-viewer', src: img.src, alt: `${label} image from ${stripMath(card.front).slice(0, 80)}` });
@@ -3658,6 +3673,7 @@ function DeckTermRow({ card, index, deck, setModal, duplicateCard, deleteCard, h
                 React.createElement(Icon, { name: "eyeOff", size: 12 }),
                 "Excluded from study"),
             React.createElement("span", { className: "mobile-side-label term-label" }, "TERM"),
+            topicSettings.enabled && topic && React.createElement("span", { className: "term-topic-label", style: { '--topic-color': deckTopicColor(deck, topic) } }, topicSettings.label, ': ', topic),
             React.createElement(MathText, { text: card.front, wrapLatexText: true }),
             frontImages.length > 0 && React.createElement("div", { className: "term-image-grid" }, frontImages.map(img => React.createElement("button", { type: "button", className: "term-image-button", key: img.id, onClick: () => openImage(img, 'Term'), "aria-label": "Open term image full screen" },
                 React.createElement("img", { src: img.src, loading: "lazy", decoding: "async", style: { maxWidth: `${img.width}%` }, alt: "Front attachment" }))))),
@@ -4007,7 +4023,9 @@ function ModalRouter(p) { const { modal, setModal } = p; if (!modal)
     return null; const close = () => setModal(null); if (modal.type === 'new-folder')
     return React.createElement(NewFolderModal, { ...p, close: close }); if (modal.type === 'new-deck')
     return React.createElement(NewDeckModal, { ...p, close: close }); if (modal.type === 'card')
-    return React.createElement(CardModal, { ...p, close: close }); if (modal.type === 'transfer-card')
+    return React.createElement(CardModal, { ...p, close: close }); if (modal.type === 'bulk-classify')
+    return React.createElement(BulkClassifyModal, { ...p, close: close }); if (modal.type === 'topic-settings')
+    return React.createElement(TopicSettingsModal, { ...p, close: close }); if (modal.type === 'transfer-card')
     return React.createElement(CardTransferModal, { ...p, close: close }); if (modal.type === 'card-io')
     return React.createElement(CardImportExportModal, { ...p, close: close }); if (modal.type === 'access-settings')
     return React.createElement(AccessSettingsModal, { ...p, close: close }); if (modal.type === 'edit-profile')
@@ -4153,8 +4171,8 @@ function NewDeckModal({ data, modal, createDeck, close }) { const [name, setName
                 data.folders.map(f => React.createElement("option", { key: f.id, value: f.id }, folderPath(f.id, data.folders))))))); }
 function CardModal({ data, modal, saveCard, close }) {
     const deck = data.decks.find(d => d.id === modal.deckId), base = modal.mode === 'edit' ? modal.card : makeCard('', '');
-    const [draft, setDraft] = useState(() => ({ ...base, tags: [...(base.tags || [])], tagColors: { ...(deck?.tagColors || {}), ...(base.tagColors || {}) }, frontImages: sideImages(base, 'front'), backImages: sideImages(base, 'back') })), [tagInput, setTagInput] = useState('');
-    const allTags = unique(deck?.cards.flatMap(c => c.tags) || []).filter(t => !draft.tags.includes(t));
+    const [draft, setDraft] = useState(() => ({ ...base, topic: normalizeTopic(base.topic || ''), tags: [...(base.tags || [])], tagColors: { ...(deck?.tagColors || {}), ...(base.tagColors || {}) }, frontImages: sideImages(base, 'front'), backImages: sideImages(base, 'back') })), [tagInput, setTagInput] = useState('');
+    const topicSettings = deckTopicSettings(deck), allTopics = unique((deck?.cards || []).map(c => normalizeTopic(c.topic)).filter(Boolean)).sort((a,b) => a.localeCompare(b)), allTags = unique(deck?.cards.flatMap(c => c.tags) || []).filter(t => !draft.tags.includes(t));
     function addTag(v = tagInput) { const t = normalizeTag(v); if (!t || draft.tags.some(x => x.toLowerCase() === t.toLowerCase()))
         return; setDraft(d => ({ ...d, tags: [...d.tags, t] })); setTagInput(''); }
     function addImages(files, field) { const images = [...(files || [])].filter(file => file?.type?.startsWith('image/')); if (!images.length)
@@ -4166,6 +4184,11 @@ function CardModal({ data, modal, saveCard, close }) {
             React.createElement(EditorSide, { label: "TERM", imageLabel: "FRONT IMAGE", text: draft.front, setText: front => setDraft(d => ({ ...d, front })), images: draft.frontImages || [], setImages: frontImages => setDraft(d => ({ ...d, frontImages })), addImages: files => addImages(files, 'frontImages') }),
             React.createElement("div", { className: "split-divider" }),
             React.createElement(EditorSide, { label: "DEFINITION", imageLabel: "BACK IMAGE", text: draft.back, setText: back => setDraft(d => ({ ...d, back })), images: draft.backImages || [], setImages: backImages => setDraft(d => ({ ...d, backImages })), addImages: files => addImages(files, 'backImages') })),
+        topicSettings.enabled && React.createElement("div", { className: "field classic-topic-editor", style: { marginTop: 18 } },
+            React.createElement("label", null, topicSettings.label.toUpperCase()),
+            React.createElement("input", { value: draft.topic || '', list: `topic-list-${deck?.id || 'deck'}`, onChange: e => setDraft(d => ({ ...d, topic: e.target.value })), placeholder: `Assign a ${topicSettings.label.toLowerCase()} (optional)` }),
+            React.createElement("datalist", { id: `topic-list-${deck?.id || 'deck'}` }, allTopics.map(t => React.createElement("option", { key: t, value: t })) ),
+            React.createElement("span", { className: "muted", style: { fontSize: 12 } }, `Cards with the same ${topicSettings.label.toLowerCase()} are grouped together in Terms in this set.`)),
         React.createElement("div", { className: "field classic-tag-editor", style: { marginTop: 18 } },
             React.createElement("label", null, "TAGS"),
             React.createElement("div", { className: "row" },
@@ -4269,7 +4292,7 @@ function CardImportExportModal({ data, modal, updateData, toast, close }) {
                     React.createElement("button", { className: "btn btn-secondary", onClick: () => exportDeckCards(deck, 'csv') },
                         React.createElement(Icon, { name: "download", size: 18 }),
                         "CSV")),
-                React.createElement("p", { className: "muted", style: { margin: '10px 0 0' } }, "JSON preserves images, tags, and formatting. CSV exports term, definition, and tags.")),
+                React.createElement("p", { className: "muted", style: { margin: '10px 0 0' } }, "JSON preserves images, topics, tags, and formatting. CSV exports term, definition, topic, and tags.")),
             React.createElement("section", { className: "stack" },
                 React.createElement("div", null,
                     React.createElement("h3", { style: { marginBottom: 3 } },
@@ -4283,7 +4306,7 @@ function CardImportExportModal({ data, modal, updateData, toast, close }) {
                     React.createElement("input", { className: "hide", type: "file", accept: ".json,.csv,.tsv,.txt,application/json,text/csv,text/plain", onChange: e => setFile(e.target.files?.[0] || null) })),
                 React.createElement("div", { className: "field" },
                     React.createElement("label", null, "Or paste multiple flashcards"),
-                    React.createElement("textarea", { className: "batch-card-script", value: pasted, onChange: e => setPasted(e.target.value), placeholder: 'Term: {First term}\nDefinition: {First definition}\nTags: {tag1, tag2}\n\nTerm: {Second term}\nDefinition: {$\\frac{PL^3}{48EI}$}\nTags: {formula, beam}' }),
+                    React.createElement("textarea", { className: "batch-card-script", value: pasted, onChange: e => setPasted(e.target.value), placeholder: 'Term: {First term}\nDefinition: {First definition}\nTopic: {Chapter 1}\nTags: {tag1, tag2}\n\nTerm: {Second term}\nDefinition: {$\\frac{PL^3}{48EI}$}\nTopic: {Beam Formulas}\nTags: {formula, beam}' }),
                     React.createElement("div", { className: "command-format-help" },
                         React.createElement("strong", null, "Command format"),
                         React.createElement("code", null,
@@ -4291,9 +4314,11 @@ function CardImportExportModal({ data, modal, updateData, toast, close }) {
                             '{...}',
                             " Definition: ",
                             '{...}',
+                            " Topic: ",
+                            '{...}',
                             " Tags: ",
                             '{tag1, tag2}'),
-                        React.createElement("span", null, "Repeat the three commands for every card. Text and LaTeX braces inside the fields are preserved."))),
+                        React.createElement("span", null, "Repeat Term and Definition for every card. Topic and Tags are optional. Text and LaTeX braces inside the fields are preserved."))),
                 React.createElement("div", { className: "transfer-choice-grid" },
                     React.createElement("label", { className: `transfer-choice ${operation === 'append' ? 'active' : ''}` },
                         React.createElement("input", { type: "radio", name: "card-import-operation", checked: operation === 'append', onChange: () => setOperation('append') }),
@@ -4310,6 +4335,75 @@ function CardImportExportModal({ data, modal, updateData, toast, close }) {
                 error && React.createElement("div", { className: "feedback", style: { border: '1px solid var(--red)' } },
                     React.createElement("strong", null, "Import could not finish"),
                     React.createElement("p", { style: { margin: '5px 0 0' } }, error)))));
+}
+function TopicSettingsModal({ data, updateData, modal, close, toast }) {
+    const deck = data.decks.find(d => d.id === modal.deckId), settings = deckTopicSettings(deck);
+    const [enabled, setEnabled] = useState(settings.enabled), [label, setLabel] = useState(settings.label);
+    const topics = unique((deck?.cards || []).map(c => normalizeTopic(c.topic)).filter(Boolean)).sort((a,b) => a.localeCompare(b));
+    function save() {
+        if (!deck) return;
+        updateData(d => ({ ...d, decks: d.decks.map(x => x.id !== deck.id ? x : { ...x, topicSettings: { enabled, label: clean(label) || 'Topic' }, updatedAt: nowISO() }) }));
+        toast(enabled ? `${clean(label) || 'Topic'} grouping enabled` : 'Topic grouping hidden');
+        close();
+    }
+    if (!deck) return React.createElement(ModalFrame, { title: 'Topic settings', close, small: true }, React.createElement('p', { className:'muted' }, 'Deck not found.'));
+    return React.createElement(ModalFrame, { title: 'Topic category', close, small: true, footer: React.createElement(React.Fragment,null,
+        React.createElement('button',{className:'btn btn-ghost',onClick:close},'Cancel'),
+        React.createElement('button',{className:'btn btn-primary',onClick:save},'Save topic settings')) },
+        React.createElement('div',{className:'stack'},
+            React.createElement('label',{className:'topic-enable-toggle'},
+                React.createElement('span',null,React.createElement('strong',null,'Use topic grouping'),React.createElement('small',null,'Group cards into collapsible panels in Terms in this set. Turning this off does not delete any assigned topics.')),
+                React.createElement('input',{type:'checkbox',checked:enabled,onChange:e=>setEnabled(e.target.checked)})),
+            React.createElement('div',{className:'field'},
+                React.createElement('label',null,'Category name'),
+                React.createElement('input',{value:label,onChange:e=>setLabel(e.target.value),maxLength:40,placeholder:'Topic'}),
+                React.createElement('span',{className:'muted',style:{fontSize:12}},'Rename it to Chapter, Unit, Section, Module, or any label you prefer.')),
+            topics.length ? React.createElement('div',{className:'topic-settings-list'},
+                React.createElement('strong',null,'Panel colors'),
+                topics.map(topic=>React.createElement('label',{className:'topic-color-row',key:topic},
+                    React.createElement('span',{className:'topic-dot',style:{background:deckTopicColor(deck,topic)}}),
+                    React.createElement('span',null,topic),
+                    React.createElement('input',{type:'color',value:deckTopicColor(deck,topic),onChange:e=>updateData(d=>({...d,decks:d.decks.map(x=>x.id!==deck.id?x:{...x,topicColors:{...(x.topicColors||{}),[topic]:e.target.value},updatedAt:nowISO()})}))})))
+            ) : React.createElement('p',{className:'muted',style:{margin:0}},'No topics have been assigned yet. Add a topic while editing a card or use bulk assignment.')));
+}
+function BulkClassifyModal({ data, updateData, modal, close, toast }) {
+    const deck = data.decks.find(d => d.id === modal.deckId), ids = unique(modal.cardIds || []), selected = (deck?.cards || []).filter(c => ids.includes(c.id)), topicSettings = deckTopicSettings(deck);
+    const [topic, setTopic] = useState(''), [clearTopic, setClearTopic] = useState(false), [tagInput, setTagInput] = useState(''), [tags, setTags] = useState([]), [replaceTags, setReplaceTags] = useState(false);
+    const existingTopics = unique((deck?.cards || []).map(c=>normalizeTopic(c.topic)).filter(Boolean)).sort((a,b)=>a.localeCompare(b));
+    const existingTags = unique((deck?.cards || []).flatMap(c=>c.tags||[])).sort((a,b)=>a.localeCompare(b));
+    function addTag(value=tagInput){ const t=normalizeTag(value); if(!t || tags.some(x=>x.toLowerCase()===t.toLowerCase())) return; setTags(v=>[...v,t]); setTagInput(''); }
+    function apply(){
+        if(!deck || !ids.length) return;
+        const normalizedTopic=normalizeTopic(topic);
+        updateData(d => ({ ...d, decks: d.decks.map(x => {
+            if (x.id !== deck.id) return x;
+            const nextTopicColors = normalizedTopic ? { ...(x.topicColors || {}), [normalizedTopic]: x.topicColors?.[normalizedTopic] || topicDefaultColor(normalizedTopic) } : (x.topicColors || {});
+            const nextTagColors = { ...(x.tagColors || {}), ...Object.fromEntries(tags.map(t => [t, x.tagColors?.[t] || tagDefaultColor(t)])) };
+            const cards = x.cards.map(c => {
+                if (!ids.includes(c.id)) return c;
+                const nextTopic = topicSettings.enabled ? (clearTopic ? '' : (normalizedTopic || c.topic || '')) : (c.topic || '');
+                const nextTags = replaceTags ? [...tags] : unique([...(c.tags || []), ...tags]);
+                return { ...c, topic: nextTopic, tags: nextTags, updatedAt: nowISO() };
+            });
+            return { ...x, topicColors: nextTopicColors, tagColors: nextTagColors, cards, updatedAt: nowISO() };
+        }) }));
+        toast(`Updated ${ids.length} selected card${ids.length===1?'':'s'}`);
+        close();
+    }
+    if(!deck) return React.createElement(ModalFrame,{title:'Assign tags / topic',close,small:true},React.createElement('p',{className:'muted'},'Deck not found.'));
+    return React.createElement(ModalFrame,{title:`Assign to ${ids.length} selected card${ids.length===1?'':'s'}`,close,footer:React.createElement(React.Fragment,null,React.createElement('button',{className:'btn btn-ghost',onClick:close},'Cancel'),React.createElement('button',{className:'btn btn-primary',disabled:!ids.length,onClick:apply},'Apply'))},
+        React.createElement('div',{className:'stack'},
+            topicSettings.enabled && React.createElement('section',{className:'bulk-classify-section'},
+                React.createElement('h3',null,topicSettings.label),
+                React.createElement('div',{className:'field'},React.createElement('input',{value:topic,list:`bulk-topic-${deck.id}`,disabled:clearTopic,onChange:e=>setTopic(e.target.value),placeholder:`Set ${topicSettings.label.toLowerCase()} for selected cards`}),React.createElement('datalist',{id:`bulk-topic-${deck.id}`},existingTopics.map(t=>React.createElement('option',{key:t,value:t})))),
+                React.createElement('label',{className:'inline-check'},React.createElement('input',{type:'checkbox',checked:clearTopic,onChange:e=>setClearTopic(e.target.checked)}),` Clear ${topicSettings.label.toLowerCase()} on selected cards`)),
+            React.createElement('section',{className:'bulk-classify-section'},
+                React.createElement('h3',null,'Tags'),
+                React.createElement('div',{className:'row'},React.createElement('input',{style:{flex:1},value:tagInput,onChange:e=>setTagInput(e.target.value),onKeyDown:e=>{if(e.key==='Enter'){e.preventDefault();addTag();}},placeholder:'Add a tag'}),React.createElement('button',{className:'btn btn-secondary',onClick:()=>addTag()},'Add')),
+                React.createElement('div',{className:'row'},tags.map(t=>React.createElement('span',{className:'tag',key:t},'#',t,React.createElement('button',{onClick:()=>setTags(v=>v.filter(x=>x!==t))},'×')))),
+                existingTags.length>0 && React.createElement('div',{className:'bulk-tag-suggestions'},existingTags.slice(0,24).map(t=>React.createElement('button',{className:'tag',key:t,onClick:()=>addTag(t)},'+ #',t))),
+                React.createElement('label',{className:'inline-check'},React.createElement('input',{type:'checkbox',checked:replaceTags,onChange:e=>setReplaceTags(e.target.checked)}),' Replace existing tags instead of adding to them')),
+            React.createElement('p',{className:'muted',style:{margin:0}},`${selected.length} card${selected.length===1?'':'s'} will be updated. Terms, definitions, images, progress, stars, and deactivation state are unchanged.`)));
 }
 function CardTransferModal({ data, modal, transferCards, transferCard, close }) {
     const source = data.decks.find(d => d.id === modal.sourceDeckId), cardIds = unique(modal.cardIds?.length ? modal.cardIds : (modal.cardId ? [modal.cardId] : [])), cards = (source?.cards || []).filter(c => cardIds.includes(c.id));
@@ -4553,6 +4647,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
     const [textPx, setTextPx] = useState(() => clamp(Number(resume.textPx || data.preferences.flashTextPx || 38), 18, 64));
     const [showImages, setShowImages] = useState(() => (resume.showImages ?? data.preferences.flashShowImages) !== false);
     const [fitContent, setFitContent] = useState(() => (resume.fitContent ?? data.preferences.flashFitContent) !== false);
+    const [showTopic, setShowTopic] = useState(() => (resume.showTopic ?? data.preferences.flashShowTopic) !== false);
     const [showTags, setShowTags] = useState(() => (resume.showTags ?? data.preferences.flashShowTags) !== false);
     const [autoSpeak, setAutoSpeak] = useState(() => Boolean(resume.autoSpeak ?? data.preferences.flashAutoSpeak));
     const [shuffleOn, setShuffleOn] = useState(() => Boolean(resume.shuffleOn ?? data.preferences.shuffle));
@@ -4582,13 +4677,13 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
     const firstFace = card ? (firstSide === 'back' ? { text: card.back, images: sideImages(card, 'back'), label: 'definition', isDefinition: true } : { text: card.front, images: sideImages(card, 'front'), label: 'term', isDefinition: false }) : null;
     const secondFace = card ? (firstSide === 'back' ? { text: card.front, images: sideImages(card, 'front'), label: 'term', isDefinition: false } : { text: card.back, images: sideImages(card, 'back'), label: 'definition', isDefinition: true }) : null;
     const visibleFace = flipped ? secondFace : firstFace;
-    const snapshot = () => ({ cardIds: study.cards.map(c => c.id), index, score, wrongIds, completedIds, trackProgress, flipSpeed, firstSide, textAlign, imageAlign, layoutVersion: 3, textPx, showImages, fitContent, showTags, autoSpeak, showHelp, shuffleOn, complete: false });
+    const snapshot = () => ({ cardIds: study.cards.map(c => c.id), index, score, wrongIds, completedIds, trackProgress, flipSpeed, firstSide, textAlign, imageAlign, layoutVersion: 3, textPx, showImages, fitContent, showTopic, showTags, autoSpeak, showHelp, shuffleOn, complete: false });
     latestSnapshotRef.current = snapshot();
     useEffect(() => { if (data.preferences.flashLayoutVersion !== 4 || data.preferences.flashTextAlignment !== textAlign || data.preferences.flashImageAlignment !== imageAlign) {
         updateData(d => ({ ...d, preferences: { ...d.preferences, flashLayoutVersion: 4, flashTextAlignment: textAlign || 'left', flashImageAlignment: imageAlign || 'center' } }));
     } }, []);
     useEffect(() => { if (!study.sessionKey || done)
-        return; clearTimeout(sessionSaveTimer.current); sessionSaveTimer.current = setTimeout(() => saveFlashSession(study.sessionKey, latestSnapshotRef.current || snapshot()), 320); return () => clearTimeout(sessionSaveTimer.current); }, [index, score.correct, score.wrong, wrongIds.join('|'), completedIds.join('|'), trackProgress, flipSpeed, firstSide, textAlign, imageAlign, textPx, showImages, fitContent, showTags, autoSpeak, showHelp, shuffleOn, study.cards]);
+        return; clearTimeout(sessionSaveTimer.current); sessionSaveTimer.current = setTimeout(() => saveFlashSession(study.sessionKey, latestSnapshotRef.current || snapshot()), 320); return () => clearTimeout(sessionSaveTimer.current); }, [index, score.correct, score.wrong, wrongIds.join('|'), completedIds.join('|'), trackProgress, flipSpeed, firstSide, textAlign, imageAlign, textPx, showImages, fitContent, showTopic, showTags, autoSpeak, showHelp, shuffleOn, study.cards]);
     useEffect(() => { const flush = () => { clearTimeout(sessionSaveTimer.current); if (study.sessionKey && latestSnapshotRef.current)
         saveFlashSession(study.sessionKey, { ...latestSnapshotRef.current, complete: doneRef.current || Boolean(latestSnapshotRef.current?.complete) }); }; const visibility = () => document.visibilityState === 'hidden' && flush(); window.addEventListener('pagehide', flush); document.addEventListener('visibilitychange', visibility); return () => { window.removeEventListener('pagehide', flush); document.removeEventListener('visibilitychange', visibility); flush(); }; }, [study.sessionKey]);
     useEffect(() => { const sync = () => setFocusMode(Boolean(document.fullscreenElement)); document.addEventListener('fullscreenchange', sync); return () => { document.removeEventListener('fullscreenchange', sync); clearTimeout(actionTimer.current); clearTimeout(gradeTimer.current); }; }, []);
@@ -4629,6 +4724,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
     function changeTextPx(value) { const next = clamp(Number(value) || 38, 18, 64); setTextPx(next); savePreference('flashTextPx', next); announce(`Card text set to ${next} pixels`); }
     function changeShowImages(value) { setShowImages(value); savePreference('flashShowImages', value); announce(value ? 'Images shown' : 'Images hidden'); }
     function changeFitContent(value) { setFitContent(value); savePreference('flashFitContent', value); announce(value ? 'Automatic fitting emphasized' : 'Safety fitting always stays on so text is never clipped'); }
+    function changeShowTopic(value) { setShowTopic(value); savePreference('flashShowTopic', value); announce(value ? 'Topic shown' : 'Topic hidden'); }
     function changeShowTags(value) { setShowTags(value); savePreference('flashShowTags', value); announce(value ? 'Tags shown' : 'Tags hidden'); }
     function changeAutoSpeak(value) { setAutoSpeak(value); savePreference('flashAutoSpeak', value); announce(value ? 'Automatic read-aloud enabled' : 'Automatic read-aloud disabled'); }
     function finish(correct) {
@@ -4855,7 +4951,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
     const sources = unique(study.cards.map(c => c.sourceDeckName)).join(' + ') || 'Flashcard set';
     const faceClass = `content-${textAlign}`;
     const renderFace = (face, sideClass) => React.createElement("div", { className: `flash-face ${sideClass} ${faceClass} fit-card-content` },
-        React.createElement(CardFaceContent, { text: face.text, images: face.images || [], fit: true, maxPx: textPx, minPx: 10, textAlign: textAlign, imageAlign: imageAlign, showImages: showImages, priorityImages: true, tags: showTags && face.isDefinition ? (card.tags || []) : [], deck: data.decks.find(d => d.id === card.sourceDeckId) }));
+        React.createElement(CardFaceContent, { text: face.text, images: face.images || [], fit: true, maxPx: textPx, minPx: 10, textAlign: textAlign, imageAlign: imageAlign, showImages: showImages, priorityImages: true, topic: showTopic ? (card.topic || '') : '', topicLabel: deckTopicSettings(data.decks.find(d => d.id === card.sourceDeckId)).label, tags: showTags && face.isDefinition ? (card.tags || []) : [], deck: data.decks.find(d => d.id === card.sourceDeckId) }));
     return React.createElement("div", { ref: studyRoot, className: `study-shell quiz-study ${focusMode ? 'focus-mode' : ''}` },
         React.createElement(StudyHeader, { title: "Flashcards", deckTitle: sources, index: index, total: study.cards.length, onExit: exit, onSettings: () => setShowSettings(true) }),
         React.createElement("main", { className: "quiz-study-main centered-study-main flash-study-main" },
@@ -4986,8 +5082,13 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
                         React.createElement("input", { type: "checkbox", checked: fitContent, onChange: e => changeFitContent(e.target.checked) })),
                     React.createElement("label", { className: "settings-toggle" },
                         React.createElement("span", null,
+                            React.createElement("strong", null, "Show topic label"),
+                            React.createElement("small", null, "Show the card topic as a larger, clean label on both sides.")),
+                        React.createElement("input", { type: "checkbox", checked: showTopic, onChange: e => changeShowTopic(e.target.checked) })),
+                    React.createElement("label", { className: "settings-toggle" },
+                        React.createElement("span", null,
                             React.createElement("strong", null, "Show tags on definitions"),
-                            React.createElement("small", null, "Display tags after the definition.")),
+                            React.createElement("small", null, "Display smaller tag labels after the definition.")),
                         React.createElement("input", { type: "checkbox", checked: showTags, onChange: e => changeShowTags(e.target.checked) })),
                     React.createElement("label", { className: "settings-toggle" },
                         React.createElement("span", null,

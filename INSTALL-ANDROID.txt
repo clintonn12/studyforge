@@ -1,4 +1,4 @@
-StudyForge PWA v1.11.2 — Android install
+StudyForge PWA v1.11.3 — Android install
 ===========================================
 
 1. Upload the COMPLETE contents of this folder to one HTTPS location. Keep index.html, sw.js, manifest.webmanifest, and icons/ together.

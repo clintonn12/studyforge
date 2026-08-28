@@ -1,0 +1,27 @@
+StudyForge PWA v1.11.3 validation
+=================================
+
+Checks performed:
+- All embedded JavaScript blocks parsed successfully with Node/V8 syntax checking.
+- sw.js parsed successfully with Node/V8 syntax checking.
+- manifest.webmanifest parsed as valid JSON.
+- Compared named functions against v1.11.2: no existing named function was removed.
+- Legacy-library migration simulation preserved:
+  * deck/card count
+  * card IDs
+  * term and definition
+  * embedded image data
+  * progress/star values
+  * deactivated-card IDs
+  * unknown/custom card fields
+  while adding topic="" and default Topic settings.
+- Batch command parser tested with nested LaTeX braces plus Topic and Tags.
+- Batch command parser tested with cards that omit Topic.
+- Topic/category data is included in card JSON and CSV export paths.
+- Existing multi-card Move/Copy path retained and now carries topic colors.
+- Rearrange mode includes clickable term/definition image thumbnails.
+- Study mode contains independent showTopic/showTags session preferences.
+- Mobile CSS rules added for topic panels, topic labels, bulk modal, and rearrange thumbnails.
+- PWA cache version bumped to v1.11.3; storage/database keys were not changed.
+
+Note: Updating files at the same origin preserves browser storage. Clearing browser site data is a separate destructive browser action and should not be done when relying on local-only cards.

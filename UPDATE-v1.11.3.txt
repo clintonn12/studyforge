@@ -1,0 +1,23 @@
+StudyForge PWA v1.11.3 — Topics & Bulk Card Tools
+
+NEW
+- Per-card Topic category, enabled by default for every deck.
+- Topic category can be disabled or renamed (Topic / Chapter / Unit / Section / etc.) without deleting assignments.
+- Terms in this set groups cards into collapsible topic panels.
+- Each topic panel has an editable color.
+- Multi-select cards can assign a topic and tags in one action.
+- Multi-select Move / Copy to another deck remains supported.
+- Rearrange view now shows card images; tap a thumbnail to open it full-screen.
+- Batch create accepts Topic: {...} in addition to Term, Definition, and Tags.
+- Flashcard study settings independently control Topic label and Tags labels.
+- Topic label is visually larger than tags and works on mobile/Android.
+
+DATA SAFETY
+- Existing StudyForge library version remains compatible.
+- Existing cards without topics are migrated in place with topic="".
+- Existing localStorage/IndexedDB storage keys are unchanged.
+- Updating the PWA shell/service worker does not clear browser site data.
+- Turning Topics off hides topic UI/grouping but never removes saved topic assignments.
+
+PWA
+- Service worker cache bumped to v1.11.3 so GitHub Pages clients receive the new shell.

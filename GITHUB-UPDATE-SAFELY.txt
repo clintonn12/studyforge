@@ -1,0 +1,21 @@
+SAFE UPDATE FROM v1.11.2 TO v1.11.3
+
+1. In your current StudyForge, optionally go to Settings → Local data & backups → Download complete backup.
+2. In GitHub, open the ROOT of your studyforge repository.
+3. Replace/upload:
+   index.html
+   manifest.webmanifest
+   sw.js
+   icons/
+   .nojekyll
+4. Commit changes to main.
+5. Wait for GitHub Pages Actions to finish with a green check.
+6. Open the SAME https://<username>.github.io/studyforge/ URL.
+7. Reload once. If installed on Android, close and reopen the StudyForge app after the reload.
+
+DO NOT:
+- Clear Chrome site storage.
+- Change to a different domain if you expect the same local browser database to appear automatically.
+- Delete your backup before confirming the update works.
+
+Topics are an additive migration. Existing cards are kept and cards that never had a topic simply appear under “No Topic” until assigned.
