@@ -1,63 +1,29 @@
-StudyForge PWA v1.11.6 — UI, Settings & Mobile LaTeX Cleanup
-============================================================
+StudyForge PWA v1.11.7 — Classic + Spaced Repetition + Performance
 
-This release is built directly on StudyForge PWA v1.11.5. It keeps the same local library data version and the same browser-storage key. Updating these app files at the SAME GitHub Pages URL does NOT intentionally reset, replace, or delete your local flashcards.
+IMPORTANT — KEEP YOUR LOCAL CARDS
+StudyForge remains local-first and keeps the same site-storage key (studyforge.v4) and library data version (12). Updating the GitHub Pages files at the SAME URL does not intentionally clear your cards.
 
-MAIN CHANGES
-- Fixed Android/mobile inline LaTeX in Terms in this set. Inline math stays in the surrounding sentence; display math can scroll horizontally when it is wider than the phone.
-- Reworked tool icons so study, batch create/import, selection, rearranging, move/copy, and include/exclude-from-study actions are more visually distinct.
-- Removed the duplicate hover-label behavior. Desktop icon controls use one StudyForge tooltip; mobile does not depend on hover.
-- Reduced repeated per-card buttons. Primary actions stay visible; Duplicate, Move/Copy, and Delete are grouped under one More menu.
-- Consolidated set-specific controls under one Flashcard Set Settings panel. The redundant deck-header and preview settings gears were removed; the sticky Terms gear is the single deck-settings entry point.
-- Flashcard Set Settings now includes:
-  * first side (Definition first / Term first)
-  * shuffle new sessions
-  * show/hide card images
-  * fit content automatically
-  * automatic read aloud
-  * show Topic in study
-  * show tags in study
-  * study text size
-  * flip animation speed
-  * mobile swipe sensitivity (Easy / Normal / Firm)
-  * text alignment
-  * image alignment
-  * show/hide tags in Terms in this set
-  * show/hide Topic label on each term
-  * Topic grouping, category name, topic order, and topic panel colors
-  * mark the set 100% studied
-  * reset progress
-- Existing Topics, study-by-topic filters, bulk selection, bulk tags/topics, move/copy, image-aware rearranging, PWA/offline shell, and Android swipe remain.
+Before updating:
+1. Open your current StudyForge.
+2. Make a Complete JSON Backup.
+3. Do NOT clear Chrome/site data and do NOT change the GitHub Pages URL.
 
-LOCAL DATA SAFETY
-- Library data version remains 12.
-- Main localStorage key remains studyforge.v4.
-- Existing cards/decks are migrated additively; unknown older fields are spread back into each object rather than discarded.
-- Existing IDs, Terms, Definitions, LaTeX, images, tags, Topics, progress, stars, deactivation state, card order, folders, and study sessions are not intentionally replaced by this update.
-- The service worker only updates cached app-shell files. It does not call localStorage.clear() or indexedDB.deleteDatabase().
+GitHub Pages update:
+1. Extract this ZIP.
+2. Upload the CONTENTS of this folder directly to the root of your existing studyforge repository.
+3. Replace/overwrite index.html, sw.js, manifest.webmanifest, .nojekyll, and icons as needed.
+4. Commit to main and wait for the GitHub Pages deployment green check.
+5. Open the same https://...github.io/studyforge/ URL in Chrome and reload once.
+6. Close and reopen the installed Android PWA.
 
-SAFE GITHUB UPDATE
-1. In your currently working StudyForge, make a Complete JSON Backup first.
-2. Keep the SAME repository and SAME GitHub Pages URL, for example:
-   https://clintonn12.github.io/studyforge/
-3. Extract this ZIP.
-4. Upload the CONTENTS directly to the repository ROOT, replacing matching files such as index.html, sw.js, manifest.webmanifest, and icons.
-5. Commit to main. GitHub Pages redeploys automatically.
-6. Wait for the Pages deployment to show a green check.
-7. Open the StudyForge website in Chrome and reload once so the v1.11.6 service worker/app shell becomes active.
-8. Close and reopen the installed Android PWA.
-9. Do NOT clear Chrome site data/storage.
+WHAT IS NEW
+• Classic desktop study counters now use the requested Still learning / Know layout with colored outlined count pills.
+• New Start Flashcards chooser: Classic or Spaced repetition. It can remember the default per set.
+• Spaced repetition UI: New/Learning/Review status, progress bar, Repeat / Hard / Okay / Easy rating buttons, and live next-review interval labels.
+• SRS settings per set: new-card limit, review limit, include-new, due-only, Repeat/Hard/Okay learning steps, graduating interval, Easy interval, starting ease, Hard interval factor, Easy bonus, and maximum interval.
+• Performance path rebuilt for study mode: swipe movement is rendered directly with requestAnimationFrame instead of rerendering React/LaTeX on every touch move; card faces are memoized; transforms are compositor-friendly.
+• Images are preloaded and decoded ahead of the current card. The first study window is prepared before the session appears, then a bounded rolling window is warmed in the background.
+• SRS progress is additive inside each card's existing progress object. Existing card IDs, images, topics, tags, stars, Classic progress and custom fields remain compatible.
 
-GITHUB ROOT SHOULD LOOK LIKE
-studyforge/
-  index.html
-  manifest.webmanifest
-  sw.js
-  .nojekyll
-  icons/
-    icon-192.png
-    icon-512.png
-    maskable-512.png
-
-ANDROID UPDATE NOTE
-If StudyForge is already installed, do not uninstall it just to update. Keep the same HTTPS URL, publish v1.11.6 there, reload that URL once in Chrome, then reopen the installed StudyForge PWA.
+IMAGE PERFORMANCE NOTE
+The app prepares current/upcoming card images before displaying them and uses decoded browser cache for fast card changes. No browser can guarantee literal zero milliseconds for every extremely large/corrupt image or a device under severe memory pressure, but this build is designed to avoid visible image-loading flashes during normal local StudyForge use.

@@ -1,0 +1,31 @@
+StudyForge v1.11.7 update summary
+
+CLASSIC STUDY
+- Desktop Still learning and Know counters redesigned to match the supplied reference.
+- Legacy default 680 ms flip duration is treated as 320 ms when a set has no explicit flip-speed override; explicit per-set values remain respected.
+
+SPACED REPETITION
+- Start Flashcards modal lets the user choose Classic or Spaced repetition.
+- Optional Remember for this set stores the preferred mode on that set only.
+- New/Learning/Review card state badge.
+- Repeat, Hard, Okay and Easy rating row with calculated next interval labels.
+- Due/new session queue and per-card next-review scheduling.
+- Keyboard: 1 Repeat, 2 Hard, 3 Okay, 4 Easy.
+- Swipe left = Repeat; swipe right = Okay.
+- SRS settings: new/session, review limit, include new, due only, Repeat/Hard/Okay steps, graduation, Easy interval, starting ease, Hard factor, Easy bonus, max interval.
+- SRS ratings save scheduling automatically.
+
+PERFORMANCE
+- Swipe move no longer causes a full React render each frame.
+- requestAnimationFrame + translate3d is used for drag feedback.
+- Flashcard face content is memoized so a flip does not rebuild LaTeX/images.
+- Image decoding is asynchronous and prewarmed in a bounded cache.
+- First five upcoming cards are prepared before the study session appears (subject to a safety timeout).
+- A larger rolling window is preloaded in idle time.
+
+DATA SAFETY
+- storage key remains studyforge.v4.
+- library version remains 12.
+- SRS data is added under progress.spacedRepetition.
+- migration spreads existing card/progress fields before adding normalized SRS defaults.
+- service worker update changes only app-shell cache version; it does not clear localStorage or IndexedDB.
