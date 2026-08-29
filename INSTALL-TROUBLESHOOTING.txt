@@ -1,4 +1,4 @@
-StudyForge PWA v1.11.5 — Android install troubleshooting
+StudyForge PWA v1.11.6 — Android install troubleshooting
 =========================================================
 
 A PWA cannot be installed from a downloaded file:// HTML page. The complete app (index.html, manifest.webmanifest, sw.js, icons/) must be served from one HTTPS origin.
@@ -17,7 +17,7 @@ Chrome ⋮ → Add to Home screen → Install app
 StudyForge's in-app install/check control is now located in:
 Settings & comfort → Install StudyForge
 
-The duplicate sidebar Install StudyForge button was intentionally removed in v1.11.5.
+The duplicate sidebar Install StudyForge button was intentionally removed in v1.11.6.
 
 If the checker says the service worker is not active yet:
 1. Reload once.

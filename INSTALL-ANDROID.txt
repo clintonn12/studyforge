@@ -1,4 +1,4 @@
-StudyForge PWA v1.11.5 — Android install/update
+StudyForge PWA v1.11.6 — Android install/update
 ================================================
 
 FIRST-TIME INSTALL
@@ -10,10 +10,10 @@ FIRST-TIME INSTALL
    - Chrome ⋮ → Add to Home screen → Install app
    Wording varies by Chrome/device.
 
-ALREADY INSTALLED — UPDATING TO v1.11.5
+ALREADY INSTALLED — UPDATING TO v1.11.6
 1. Keep the SAME GitHub repository and SAME StudyForge URL.
 2. Make a Complete JSON Backup from StudyForge first.
-3. Replace the GitHub-root app files with the v1.11.5 files and commit.
+3. Replace the GitHub-root app files with the v1.11.6 files and commit.
 4. Wait for GitHub Pages deployment to finish successfully.
 5. Open the StudyForge HTTPS URL in Chrome and reload once.
 6. Close and reopen the installed StudyForge app.
@@ -22,4 +22,4 @@ IMPORTANT LOCAL-DATA RULES
 - Do not clear Chrome/StudyForge site storage.
 - Do not move to a different domain/origin if you expect the same local library to appear automatically.
 - Do not uninstall the PWA as a troubleshooting step unless you already have a verified backup and understand your device/browser's storage behavior.
-- v1.11.5 keeps the same StudyForge local data version and storage keys as v1.11.4.
+- v1.11.6 keeps the same StudyForge local data version and storage keys as v1.11.4.

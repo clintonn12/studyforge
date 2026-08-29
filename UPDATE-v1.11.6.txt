@@ -1,0 +1,22 @@
+StudyForge PWA v1.11.6
+======================
+
+UI + settings cleanup release based on v1.11.5.
+
+WHAT CHANGED
+- Fixed Android/mobile inline LaTeX in Terms in this set. Inline math such as ($t$) now remains inline with the surrounding sentence instead of being forced onto its own lines. Display math remains horizontally scrollable when needed.
+- Simplified tool icons and added clearer semantic icons for study, batch create/import, select cards, rearrange, move/copy, exclude from study, and include in study.
+- Removed duplicate hover-label behavior. Icon controls use one StudyForge tooltip system on desktop; mobile does not depend on hover tooltips.
+- Simplified each term card to primary actions plus one More menu for Duplicate, Move/Copy, and Delete.
+- Consolidated set controls into one Flashcard Set Settings panel instead of separate preview/topic/progress settings, and removed redundant deck-header/preview settings buttons.
+- Added per-set defaults for flip speed and mobile swipe sensitivity (Easy / Normal / Firm).
+- Existing per-set controls remain for first side, shuffle, images, fit-to-card, auto read aloud, Topic/tags in study, text size/alignment, image alignment, term-list labels, Topic grouping/order/colors, mark 100% studied, and reset progress.
+
+DATA SAFETY
+- STORAGE_KEY remains: studyforge.v4
+- Library data version remains: 12
+- Existing card/deck fields are preserved by migration.
+- The service worker does not clear localStorage or delete IndexedDB.
+- Updating files at the SAME GitHub Pages URL does not intentionally erase local cards.
+
+Before updating, exporting a Complete JSON Backup is still recommended.

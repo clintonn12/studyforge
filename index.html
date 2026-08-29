@@ -1084,13 +1084,13 @@
     .flash-study-main{overflow:hidden!important;overscroll-behavior:none!important}
   
 
-    /* StudyForge PWA v1.11.5 (data format unchanged) */
+    /* StudyForge PWA v1.11.6 (data format unchanged) */
     .katex{display:inline-block;max-width:100%;vertical-align:middle}.katex math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-size:1em}.katex-display,.math-block{display:block;width:100%;text-align:center;margin:.38em 0}.math-inline{display:inline-block;max-width:100%}.math-wrap-composite{max-width:100%}.standalone-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--surface-2);border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800;color:var(--muted)}
 
 #standalone-boot{min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg,#f7f8fc);color:var(--text,#172033);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}#standalone-boot>div{padding:18px 22px;border:1px solid #d9deea;border-radius:16px;background:#fff;box-shadow:0 10px 35px rgba(16,24,40,.08);font-weight:800}
 
 
-    /* StudyForge PWA v1.11.5 — flashcard-only UI, topic study filters, sticky term tools */
+    /* StudyForge PWA v1.11.6 — flashcard-only UI, topic study filters, sticky term tools */
     .flash-drag{
       touch-action:pan-y!important;
       overscroll-behavior:none!important;
@@ -1127,7 +1127,7 @@
     .pwa-install-state.warn{color:var(--orange)}.pwa-install-state.good{color:var(--green)}
     @media(max-width:780px){.pwa-install-row>.row{display:grid;grid-template-columns:1fr;gap:8px}.pwa-install-row>.row .btn{width:100%}}
 
-    /* StudyForge v1.11.5 — topic ordering, sticky controls, compact term actions */
+    /* StudyForge v1.11.6 — topic ordering, sticky controls, compact term actions */
     .topic-panel{margin:18px 0;border:1px solid color-mix(in srgb,var(--topic-color) 38%,var(--border));border-radius:16px;background:color-mix(in srgb,var(--topic-color) 7%,var(--surface));overflow:hidden;contain:layout style}
     .topic-panel-head{min-height:64px;display:flex;align-items:center;gap:10px;padding:8px 12px;background:color-mix(in srgb,var(--topic-color) 12%,var(--surface));border-bottom:1px solid color-mix(in srgb,var(--topic-color) 32%,var(--border))}
     .topic-panel.collapsed .topic-panel-head{border-bottom:0}.topic-panel-toggle{flex:1;min-width:0;border:0;background:transparent;color:var(--text);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:11px;text-align:left;padding:6px 4px;border-radius:10px}.topic-panel-toggle:hover{background:color-mix(in srgb,var(--topic-color) 10%,transparent)}
@@ -1141,7 +1141,7 @@
 
 
 
-    /* StudyForge PWA v1.11.5 — flashcard-only, sticky term controls, topic ordering, compact responsive UI */
+    /* StudyForge PWA v1.11.6 — flashcard-only, sticky term controls, topic ordering, compact responsive UI */
     .flashcard-only-mode{grid-template-columns:minmax(0,1fr)!important}.flashcard-only-mode>button{max-width:520px;width:100%}
     .flashcard-only-tabs .deck-tab{cursor:default}.flashcard-only-quick{grid-template-columns:repeat(2,minmax(0,1fr))}
     .deck-tools{flex-wrap:wrap}.topic-study-filter{flex:1 1 100%;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:2px}.topic-study-filter>strong{margin-right:3px;font-size:13px}.topic-filter-chip{position:relative;border-color:color-mix(in srgb,var(--topic-color,var(--border)) 45%,var(--border))}.topic-filter-chip.active{background:color-mix(in srgb,var(--topic-color,var(--primary)) 22%,var(--surface));border-color:var(--topic-color,var(--primary));color:var(--text)}
@@ -1155,8 +1155,8 @@
     .page,.deck-page{overflow-x:clip!important}
     /* Immediate hover labels for compact desktop controls. Native title remains as fallback/accessibility. */
     .deck-icon-action[data-tooltip],.compact-icon-btn[data-tooltip]{position:relative}
-    .deck-icon-action[data-tooltip]::after,.compact-icon-btn[data-tooltip]::after{content:attr(data-tooltip);position:absolute;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%) translateY(3px);z-index:160;pointer-events:none;opacity:0;visibility:hidden;white-space:nowrap;max-width:220px;padding:6px 9px;border-radius:8px;background:var(--text);color:var(--canvas);font-size:11px;font-weight:760;line-height:1.2;box-shadow:var(--shadow-soft);transition:opacity .12s ease,transform .12s ease,visibility .12s ease}
-    .deck-icon-action[data-tooltip]:hover::after,.deck-icon-action[data-tooltip]:focus-visible::after,.compact-icon-btn[data-tooltip]:hover::after,.compact-icon-btn[data-tooltip]:focus-visible::after{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+    .legacy-tooltip-disabled.deck-icon-action[data-tooltip]::after,.legacy-tooltip-disabled.compact-icon-btn[data-tooltip]::after{content:attr(data-tooltip);position:absolute;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%) translateY(3px);z-index:160;pointer-events:none;opacity:0;visibility:hidden;white-space:nowrap;max-width:220px;padding:6px 9px;border-radius:8px;background:var(--text);color:var(--canvas);font-size:11px;font-weight:760;line-height:1.2;box-shadow:var(--shadow-soft);transition:opacity .12s ease,transform .12s ease,visibility .12s ease}
+    .legacy-tooltip-disabled.deck-icon-action[data-tooltip]:hover::after,.legacy-tooltip-disabled.deck-icon-action[data-tooltip]:focus-visible::after,.legacy-tooltip-disabled.compact-icon-btn[data-tooltip]:hover::after,.legacy-tooltip-disabled.compact-icon-btn[data-tooltip]:focus-visible::after{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
     @media(max-width:780px){
       .flashcard-only-quick{grid-template-columns:1fr}.flashcard-only-mode>button{max-width:none}
       .terms-heading{top:62px;padding:8px 9px;border-radius:12px;display:block!important}.terms-heading-helper{display:none!important}.terms-heading-actions{width:100%;display:flex!important;justify-content:flex-start!important;flex-wrap:nowrap!important;overflow-x:auto!important;overscroll-behavior-x:contain;padding:1px 0 3px;scrollbar-width:none}.terms-heading-actions::-webkit-scrollbar{display:none}.terms-heading-actions>*{flex:0 0 auto}.terms-heading-actions .terms-sort{min-width:170px}.bulk-card-bar{top:118px!important}
@@ -1167,7 +1167,7 @@
     }
 
 
-    /* StudyForge PWA v1.11.5 — mobile terms, compact topic chips, sticky creation tools, progress settings */
+    /* StudyForge PWA v1.11.6 — mobile terms, compact topic chips, sticky creation tools, progress settings */
     .rail-save-note{display:grid!important;gap:7px!important;padding:11px 12px!important}.rail-save-line{display:flex;align-items:center;gap:8px}.rail-save-line strong{margin:0!important}.rail-save-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px color-mix(in srgb,var(--green) 14%,transparent);flex:0 0 auto}
     .card-face-topic{width:max-content!important;max-width:min(86%,440px)!important;flex:0 1 auto!important;align-self:center!important;padding:6px 10px!important;gap:8px!important;border-radius:9px!important}.card-face-topic strong{display:block!important;max-width:340px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}.deck-preview-face .card-face-topic{max-width:min(76%,380px)!important}
     .topic-select-action{height:36px;border:1px solid color-mix(in srgb,var(--topic-color) 38%,var(--border));border-radius:9px;background:transparent;color:var(--muted);display:inline-flex;align-items:center;gap:6px;padding:0 9px;font-size:11px;font-weight:800;white-space:nowrap}.topic-select-action:hover,.topic-select-action.active{background:color-mix(in srgb,var(--topic-color) 18%,var(--surface));color:var(--text)}
@@ -1189,6 +1189,33 @@
       .quiz-term-row .math-inline,.quiz-term-row .math-block,.quiz-term-row .katex-display{max-width:100%!important;overflow-x:auto!important;overflow-y:hidden!important}
       .quiz-term-row .term-image-grid{display:grid!important;grid-template-columns:1fr!important;place-items:center!important;width:100%!important;max-width:100%!important;gap:9px!important;margin-top:10px!important;overflow:visible!important}.quiz-term-row .term-image-button{display:flex!important;width:100%!important;max-width:100%!important;min-height:110px!important;align-items:center!important;justify-content:center!important;overflow:visible!important}.quiz-term-row .term-image-button img{display:block!important;width:auto!important;height:auto!important;min-width:min(48vw,160px)!important;max-width:100%!important;max-height:330px!important;object-fit:contain!important;margin:0 auto!important}
       .deck-settings-action-card{grid-template-columns:1fr!important}.deck-settings-action-card .btn{width:100%!important}.terms-end-spacer{height:118px}
+    }
+
+
+    /* StudyForge PWA v1.11.6 — unified set settings, semantic icons, one-tooltip system, inline mobile LaTeX */
+    .tool-icon[data-tooltip],.deck-icon-action[data-tooltip],.compact-icon-btn[data-tooltip],.term-actions button[data-tooltip],.prestudy-toolbar button[data-tooltip]{position:relative}
+    .tool-icon[data-tooltip]::after,.deck-icon-action[data-tooltip]::after,.compact-icon-btn[data-tooltip]::after,.term-actions button[data-tooltip]::after,.prestudy-toolbar button[data-tooltip]::after{content:attr(data-tooltip);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%) translateY(3px);z-index:260;pointer-events:none;opacity:0;visibility:hidden;white-space:nowrap;max-width:230px;padding:6px 9px;border-radius:8px;background:#101528;color:#fff;font-size:11px;font-weight:760;line-height:1.2;box-shadow:0 8px 24px rgba(0,0,0,.34);transition:opacity .11s ease,transform .11s ease,visibility .11s ease}
+    .tool-icon[data-tooltip]:hover::after,.tool-icon[data-tooltip]:focus-visible::after,.deck-icon-action[data-tooltip]:hover::after,.deck-icon-action[data-tooltip]:focus-visible::after,.compact-icon-btn[data-tooltip]:hover::after,.compact-icon-btn[data-tooltip]:focus-visible::after,.term-actions button[data-tooltip]:hover::after,.term-actions button[data-tooltip]:focus-visible::after,.prestudy-toolbar button[data-tooltip]:hover::after,.prestudy-toolbar button[data-tooltip]:focus-visible::after{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+    .deck-location-control{display:flex;align-items:center;gap:8px;min-width:min(330px,100%);margin-left:auto;color:var(--muted)}.deck-location-control select{min-width:220px;width:auto;background:var(--surface-2);border-color:transparent}.deck-location-control svg{flex:0 0 auto}
+    .term-actions{overflow:visible!important}.term-actions button{isolation:isolate}.term-more-menu{position:relative;flex:0 0 auto}.term-more-menu>summary{list-style:none;width:34px;height:34px;border:0;border-radius:50%;background:transparent;color:var(--muted);display:grid;place-items:center;cursor:pointer}.term-more-menu>summary::-webkit-details-marker{display:none}.term-more-menu>summary:hover,.term-more-menu[open]>summary{background:var(--surface-3);color:var(--text)}.term-more-menu-panel{position:absolute;right:0;top:calc(100% + 7px);z-index:120;min-width:184px;padding:6px;border:1px solid var(--border);border-radius:11px;background:var(--surface);box-shadow:var(--shadow);display:grid;gap:3px}.term-more-menu-panel button{width:100%!important;height:38px!important;border:0!important;border-radius:8px!important;background:transparent!important;color:var(--text)!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important;padding:0 10px!important;font-size:12px!important;font-weight:700!important;white-space:nowrap}.term-more-menu-panel button:hover{background:var(--surface-2)!important;transform:none!important}.term-more-menu-panel button.danger{color:var(--red)!important}
+    .unified-settings{display:grid;gap:14px}.settings-card{border:1px solid var(--border);border-radius:14px;background:var(--surface-2);padding:14px;display:grid;gap:12px}.settings-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.settings-card-head>div{display:grid;gap:3px}.settings-card-head h3{margin:0;font-size:16px}.settings-card-head p{margin:0;color:var(--muted);font-size:12px}.set-settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.set-setting-tile{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;min-height:64px;padding:10px 11px;border:1px solid var(--border);border-radius:11px;background:var(--surface)}.set-setting-tile>span{display:grid;gap:2px}.set-setting-tile strong{font-size:13px}.set-setting-tile small{font-size:11px;color:var(--muted);line-height:1.35}.set-setting-tile input[type=checkbox]{width:19px;height:19px;min-height:19px;flex:0 0 auto;accent-color:var(--primary)}.settings-segment{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.settings-segment button{min-height:40px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-weight:750}.settings-segment button.active{background:var(--primary);border-color:var(--primary);color:#fff}.settings-range-row{display:grid;grid-template-columns:minmax(0,1fr) 58px;gap:10px;align-items:center}.settings-range-row input{min-height:24px;padding:0;border:0;background:transparent;accent-color:var(--primary)}.settings-range-row strong{text-align:right}.settings-topic-grid{display:grid;gap:8px}.settings-progress-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.settings-progress-actions .btn{width:100%}
+    .prestudy-toolbar .preview-settings-redirect{background:var(--surface-2)}
+    .terms-heading-actions .settings-primary{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--primary) 38%,transparent)}
+    .term-tags.hidden-by-set{display:none!important}
+
+    @media(max-width:780px){
+      /* Text pieces and inline KaTeX must stay in the same paragraph line. */
+      .quiz-term-row .rich-text{display:block!important;width:100%!important;max-width:100%!important;white-space:normal!important;overflow:visible!important}
+      .quiz-term-row .rich-text-segment{display:inline!important;width:auto!important;max-width:none!important;white-space:normal!important;overflow:visible!important;overflow-wrap:normal!important;word-break:normal!important}
+      .quiz-term-row .math-inline{display:inline-block!important;width:auto!important;max-width:none!important;white-space:nowrap!important;overflow:visible!important;vertical-align:baseline!important;margin:0 .03em!important}
+      .quiz-term-row .math-inline .katex,.quiz-term-row .math-inline math{display:inline!important;white-space:nowrap!important}
+      .quiz-term-row .math-wrap-composite:not(.math-wrap-block){display:inline!important;width:auto!important;max-width:none!important;white-space:nowrap!important;overflow:visible!important}
+      .quiz-term-row .math-wrap-composite:not(.math-wrap-block) .math-fragment{display:inline-block!important;max-width:none!important;white-space:nowrap!important}
+      .quiz-term-row .math-block,.quiz-term-row .katex-display{display:block!important;max-width:100%!important;overflow-x:auto!important;white-space:nowrap!important}
+      .tool-icon[data-tooltip]::after,.deck-icon-action[data-tooltip]::after,.compact-icon-btn[data-tooltip]::after,.term-actions button[data-tooltip]::after,.prestudy-toolbar button[data-tooltip]::after{display:none!important}
+      .deck-location-control{width:100%;margin-left:0}.deck-location-control select{min-width:0;width:100%}
+      .set-settings-grid,.settings-progress-actions{grid-template-columns:1fr}.settings-card{padding:12px}.settings-card-head{display:grid}.settings-segment{grid-template-columns:1fr 1fr}
+      .term-actions{overflow-x:visible!important;overflow-y:visible!important}.term-more-menu-panel{position:fixed;left:16px;right:16px;top:auto;bottom:calc(78px + var(--safe-bottom));min-width:0;max-height:45vh;overflow:auto;border-radius:14px}.term-more-menu-panel button{height:44px!important;font-size:13px!important}
     }
 
 </style>
@@ -1856,9 +1883,10 @@ function warmDeckImages(cards, count = 14) { const list = Array.isArray(cards) ?
 const normalizeTopic = value => clean(String(value || '')).slice(0, 120);
 function topicDefaultColor(topic) { const palette = ['#6d7cff', '#00b894', '#ff9f43', '#e056fd', '#2e86de', '#ee5253', '#10ac84', '#f368e0', '#5f27cd', '#54a0ff', '#ff6b6b', '#1dd1a1']; let n = 0; for (const ch of String(topic || 'Unassigned')) n = (n * 33 + ch.charCodeAt(0)) >>> 0; return palette[n % palette.length]; }
 function deckTopicSettings(deck) { const raw = deck?.topicSettings && typeof deck.topicSettings === 'object' ? deck.topicSettings : {}; return { enabled: raw.enabled !== false, label: clean(raw.label) || 'Topic', showInTerms: raw.showInTerms === true, order: unique((Array.isArray(raw.order) ? raw.order : []).map(normalizeTopic).filter(Boolean)) }; }
+function deckFlashcardSettings(deck, preferences = {}) { const raw = deck?.flashcardSettings && typeof deck.flashcardSettings === 'object' ? deck.flashcardSettings : {}; return { firstSide: ['front','back'].includes(raw.firstSide) ? raw.firstSide : (preferences.firstSide || 'back'), shuffle: raw.shuffle ?? Boolean(preferences.shuffle), showImages: raw.showImages ?? (preferences.flashShowImages !== false), fitContent: raw.fitContent ?? (preferences.flashFitContent !== false), showTopic: raw.showTopic ?? (preferences.flashShowTopic !== false), showTags: raw.showTags ?? (preferences.flashShowTags !== false), autoSpeak: raw.autoSpeak ?? Boolean(preferences.flashAutoSpeak), textAlignment: ['left','center','right','justify'].includes(raw.textAlignment) ? raw.textAlignment : (preferences.flashTextAlignment || 'left'), imageAlignment: ['left','center','right'].includes(raw.imageAlignment) ? raw.imageAlignment : (preferences.flashImageAlignment || 'center'), textPx: clamp(Number(raw.textPx ?? preferences.flashTextPx ?? 38), 18, 64), flipSpeed: clamp(Number(raw.flipSpeed ?? preferences.flipSpeed ?? 680), 150, 2500), swipeSensitivity: ['easy','normal','firm'].includes(raw.swipeSensitivity) ? raw.swipeSensitivity : 'normal', showTagsInTerms: raw.showTagsInTerms !== false }; }
 function deckTopicColor(deck, topic) { const key = normalizeTopic(topic) || '__unassigned__'; return deck?.topicColors?.[key] || topicDefaultColor(key); }
 const makeCard = (front, back, tags = [], extra = {}) => ({ id: uid('card'), front, back, frontImage: null, backImage: null, frontImageWidth: 320, backImageWidth: 320, frontImages: [], backImages: [], tags: unique(tags.map(normalizeTag)), tagColors: {}, topic: '', createdAt: nowISO(), updatedAt: nowISO(), progress: defaultProgress(), ...extra });
-const makeDeck = (name, folderId = null, cards = [], extra = {}) => ({ id: uid('deck'), name, folderId, cards, deactivatedCardIds: [], materials: [], notes: '', tagColors: {}, topicSettings: { enabled: true, label: 'Topic', showInTerms: false, order: [] }, topicColors: {}, creatorId: 'local_user', visibility: 'private', createdAt: nowISO(), updatedAt: nowISO(), ...extra });
+const makeDeck = (name, folderId = null, cards = [], extra = {}) => ({ id: uid('deck'), name, folderId, cards, deactivatedCardIds: [], materials: [], notes: '', tagColors: {}, topicSettings: { enabled: true, label: 'Topic', showInTerms: false, order: [] }, topicColors: {}, flashcardSettings: {}, creatorId: 'local_user', visibility: 'private', createdAt: nowISO(), updatedAt: nowISO(), ...extra });
 const makeFolder = (name, parentId = null, color = '#6d7cff') => ({ id: uid('folder'), name, parentId, color: color || '#6d7cff', creatorId: 'local_user', visibility: 'private', expanded: true, createdAt: nowISO(), updatedAt: nowISO() });
 const cardStatus = card => { const p = normalizeProgress(card); if (!p.studied)
     return 'new'; return p.lastResult === false ? 'learning' : 'known'; };
@@ -2303,6 +2331,31 @@ function Icon({ name, size = 22, className = '', strokeWidth = 1.9 }) {
             React.createElement("path", { d: "m3 3 18 18" }),
             React.createElement("path", { d: "M10.6 6.2A10.6 10.6 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3.1 3.8M6.1 6.1C3.7 7.8 2.5 12 2.5 12s3.4 6 9.5 6c1.5 0 2.8-.3 4-.8" }),
             React.createElement("path", { d: "M9.9 9.9a3 3 0 0 0 4.2 4.2" })),
+        batch: React.createElement(React.Fragment, null,
+            React.createElement("path", { d: "M5 6h8M5 10h8M5 14h5" }),
+            React.createElement("path", { d: "M17 11v8M13 15h8" })),
+        study: React.createElement(React.Fragment, null,
+            React.createElement("rect", { x: "4", y: "5", width: "12", height: "14", rx: "2" }),
+            React.createElement("path", { d: "M8 8v8" }),
+            React.createElement("path", { d: "m17 9 4 3-4 3z" })),
+        selectCards: React.createElement(React.Fragment, null,
+            React.createElement("rect", { x: "4", y: "4", width: "16", height: "16", rx: "2" }),
+            React.createElement("path", { d: "m8 12 2.5 2.5L16 9" })),
+        reorder: React.createElement(React.Fragment, null,
+            React.createElement("circle", { cx: "8", cy: "7", r: "1", fill: "currentColor", stroke: "none" }),
+            React.createElement("circle", { cx: "8", cy: "12", r: "1", fill: "currentColor", stroke: "none" }),
+            React.createElement("circle", { cx: "8", cy: "17", r: "1", fill: "currentColor", stroke: "none" }),
+            React.createElement("path", { d: "M12 7h8M12 12h8M12 17h8" })),
+        moveCopy: React.createElement(React.Fragment, null,
+            React.createElement("rect", { x: "3", y: "5", width: "7", height: "10", rx: "1.5" }),
+            React.createElement("rect", { x: "14", y: "9", width: "7", height: "10", rx: "1.5" }),
+            React.createElement("path", { d: "M9 18h4m0 0-2-2m2 2-2 2" })),
+        studyOff: React.createElement(React.Fragment, null,
+            React.createElement("rect", { x: "5", y: "4", width: "14", height: "16", rx: "2" }),
+            React.createElement("path", { d: "M3.5 3.5 20.5 20.5" })),
+        studyOn: React.createElement(React.Fragment, null,
+            React.createElement("rect", { x: "5", y: "4", width: "14", height: "16", rx: "2" }),
+            React.createElement("path", { d: "m8.5 12 2.2 2.2 4.8-5" })),
         accessibility: React.createElement(React.Fragment, null,
             React.createElement("circle", { cx: "12", cy: "4.5", r: "1.7" }),
             React.createElement("path", { d: "M5 8.5h14M12 8.5V21M8.2 21 12 14l3.8 7" }))
@@ -2338,7 +2391,7 @@ function migrate(raw) {
     const oldProfile = raw.profile && typeof raw.profile === 'object' ? raw.profile : {};
     const legacyTeamRejects = clean(oldProfile.name).toLowerCase() === 'team rejects' || clean(oldProfile.username).toLowerCase() === 'team_rejects';
     const profile = legacyTeamRejects ? defaultProfile() : { ...defaultProfile(), ...oldProfile, profilePublic: oldProfile.profilePublic === true };
-    let decks = Array.isArray(raw.decks) ? raw.decks.map(d => { const cards = Array.isArray(d.cards) ? d.cards.map(c => { const next = { ...makeCard('', ''), ...c, tags: Array.isArray(c.tags) ? c.tags : [], tagColors: c.tagColors && typeof c.tagColors === 'object' ? c.tagColors : {}, topic: normalizeTopic(c.topic || ''), frontImages: Array.isArray(c.frontImages) ? c.frontImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'front'), backImages: Array.isArray(c.backImages) ? c.backImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'back'), progress: normalizeProgress(c) }; delete next.srs; return next; }) : []; const validIds = new Set(cards.map(c => c.id)); return { ...d, folderId: d.folderId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (d.visibility || 'private'), materials: Array.isArray(d.materials) ? d.materials : [], notes: d.notes || '', tagColors: d.tagColors && typeof d.tagColors === 'object' ? d.tagColors : {}, topicSettings: { enabled: d.topicSettings?.enabled !== false, label: clean(d.topicSettings?.label) || 'Topic', showInTerms: d.topicSettings?.showInTerms === true, order: unique((Array.isArray(d.topicSettings?.order) ? d.topicSettings.order : []).map(normalizeTopic).filter(Boolean)) }, topicColors: d.topicColors && typeof d.topicColors === 'object' ? d.topicColors : {}, sharedPermission: d.sharedPermission || null, sharedOwnerName: d.sharedOwnerName || '', cards, deactivatedCardIds: unique((Array.isArray(d.deactivatedCardIds) ? d.deactivatedCardIds : []).filter(id => validIds.has(id))) }; }) : demo.decks;
+    let decks = Array.isArray(raw.decks) ? raw.decks.map(d => { const cards = Array.isArray(d.cards) ? d.cards.map(c => { const next = { ...makeCard('', ''), ...c, tags: Array.isArray(c.tags) ? c.tags : [], tagColors: c.tagColors && typeof c.tagColors === 'object' ? c.tagColors : {}, topic: normalizeTopic(c.topic || ''), frontImages: Array.isArray(c.frontImages) ? c.frontImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'front'), backImages: Array.isArray(c.backImages) ? c.backImages.map(normalizeImageItem).filter(Boolean) : sideImages(c, 'back'), progress: normalizeProgress(c) }; delete next.srs; return next; }) : []; const validIds = new Set(cards.map(c => c.id)); return { ...d, folderId: d.folderId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (d.visibility || 'private'), materials: Array.isArray(d.materials) ? d.materials : [], notes: d.notes || '', tagColors: d.tagColors && typeof d.tagColors === 'object' ? d.tagColors : {}, topicSettings: { enabled: d.topicSettings?.enabled !== false, label: clean(d.topicSettings?.label) || 'Topic', showInTerms: d.topicSettings?.showInTerms === true, order: unique((Array.isArray(d.topicSettings?.order) ? d.topicSettings.order : []).map(normalizeTopic).filter(Boolean)) }, topicColors: d.topicColors && typeof d.topicColors === 'object' ? d.topicColors : {}, flashcardSettings: d.flashcardSettings && typeof d.flashcardSettings === 'object' ? { ...d.flashcardSettings } : {}, sharedPermission: d.sharedPermission || null, sharedOwnerName: d.sharedOwnerName || '', cards, deactivatedCardIds: unique((Array.isArray(d.deactivatedCardIds) ? d.deactivatedCardIds : []).filter(id => validIds.has(id))) }; }) : demo.decks;
     decks = decks.filter(d => !isLegacyDemoDeck(d));
     const usedFolderIds = new Set(decks.map(d => d.folderId).filter(Boolean));
     let folders = (Array.isArray(raw.folders) ? raw.folders.map(f => ({ ...f, parentId: f.parentId ?? null, creatorId: profile.id, visibility: legacyTeamRejects ? 'private' : (f.visibility || 'private'), expanded: f.expanded !== false, updatedAt: f.updatedAt || f.createdAt || nowISO(), color: f.color || '#6d7cff' })) : demo.folders).filter(f => !(['Health Sciences', 'Core Sciences', 'Cardiology'].includes(f.name) && !usedFolderIds.has(f.id)));
@@ -2963,7 +3016,7 @@ function App() {
     function saveFlashSession(key, payload) { updateData(d => ({ ...d, studySessions: { ...(d.studySessions || {}), [key]: { ...(d.studySessions?.[key] || {}), ...payload, updatedAt: nowISO() } } })); }
     function clearFlashSession(key) { updateData(d => { const next = { ...(d.studySessions || {}) }; delete next[key]; return { ...d, studySessions: next }; }); }
     async function launchStudy(mode, deckIds = data.selectedDeckIds.length ? data.selectedDeckIds : (activeDeck ? [activeDeck.id] : []), tags = [], topics = []) {
-        const available = collectCards(data.decks, deckIds, tags, topics);
+        const available = collectCards(data.decks, deckIds, tags, topics), singleDeck = deckIds.length === 1 ? data.decks.find(d => d.id === deckIds[0]) : null, flashDefaults = deckFlashcardSettings(singleDeck, data.preferences);
         if (!available.length) {
             const rawCount = data.decks.filter(d => deckIds.includes(d.id)).reduce((n, d) => n + (d.cards?.length || 0), 0);
             toast(rawCount ? 'No active cards match this study selection. Reactivate cards to include them.' : (tags.length ? 'No cards match the selected tags' : 'Select a deck containing cards'));
@@ -2982,13 +3035,13 @@ function App() {
                 cards.push(...available.filter(c => !present.has(c.id)));
             }
             else
-                cards = data.preferences.shuffle ? shuffle(available) : [...available];
+                cards = flashDefaults.shuffle ? shuffle(available) : [...available];
             const validIds = new Set(cards.map(c => c.id));
             const resume = resumable ? { ...resumable, completedIds: (resumable.completedIds || []).filter(id => validIds.has(id)), wrongIds: (resumable.wrongIds || []).filter(id => validIds.has(id)), index: clamp(Number(resumable.index) || 0, 0, Math.max(0, cards.length - 1)) } : null;
             const startIndex = resume ? resume.index : 0;
             primeStudyImages(cards, startIndex, Math.min(12, cards.length));
             await ensureCardImagesReady(cards[startIndex], 1800);
-            setStudy({ mode, deckIds, tags, topics, cards, originalCardIds: available.map(c => c.id), sessionKey, resume, key: uid('study') });
+            setStudy({ mode, deckIds, tags, topics, cards, originalCardIds: available.map(c => c.id), sessionKey, resume, defaults: flashDefaults, key: uid('study') });
             return;
         }
         const studyCards = data.preferences.shuffle ? shuffle(available) : available;
@@ -3052,7 +3105,7 @@ function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, se
             React.createElement("button", { className: "rail-logo", onClick: openHome, "aria-label": "StudyForge home" },
                 React.createElement(BrandMark, null),
                 React.createElement("span", null, "StudyForge")),
-            React.createElement("span", { className: "rail-version" }, "PWA v1.11.5")),
+            React.createElement("span", { className: "rail-version" }, "PWA v1.11.6")),
         React.createElement("div", { className: "rail-profile-card" },
             React.createElement("span", { className: "rail-profile-avatar" }, profile.avatar ? React.createElement("img", { src: profile.avatar, alt: "" }) : profileInitials(profile)),
             React.createElement("button", { className: "rail-profile-copy", onClick: () => setModal({ type: 'edit-profile' }), "aria-label": "Edit creator profile" },
@@ -3332,15 +3385,15 @@ function FlatLibraryDeckRow({ deck, data, toggleSelected, chooseDeck }) {
 function DeckPage(p) {
     const { activeDeck, data, updateData, setModal, deleteDeck, launchStudy, libraryTab, setLibraryTab, openLibrary, openCreator, setDeckVisibility, resetDeckProgress, markDeckComplete, setCardsDeactivated, toggleCardDeactivated } = p;
     const readOnly = Boolean(activeDeck?.sharedPermission && activeDeck.sharedPermission !== 'copy');
-    const [selectedTags, setSelectedTags] = useState([]), [selectedTopics, setSelectedTopics] = useState([]), [cardQuery, setCardQuery] = useState(''), [previewIndex, setPreviewIndex] = useState(0), [previewTurns, setPreviewTurns] = useState(0), [previewOrder, setPreviewOrder] = useState([]), [autoPlay, setAutoPlay] = useState(false), [previewSettings, setPreviewSettings] = useState(false), [previewFirstSide, setPreviewFirstSide] = useState(() => data.preferences.firstSide || 'back'), [previewShuffled, setPreviewShuffled] = useState(() => Boolean(data.preferences.shuffle)), [sortMode, setSortMode] = useState('original'), [cardVisibility, setCardVisibility] = useState('all'), [hideDefinitions, setHideDefinitions] = useState(false), [hideTerms, setHideTerms] = useState(false), [reorderMode, setReorderMode] = useState(false), [selectionMode, setSelectionMode] = useState(false), [selectedCardIds, setSelectedCardIds] = useState([]), [reorderSelectedIds, setReorderSelectedIds] = useState([]), [draggingCardId, setDraggingCardId] = useState(null), [dragOverCardId, setDragOverCardId] = useState(null), [dragAfter, setDragAfter] = useState(false), [collapsedTopics, setCollapsedTopics] = useState({});
+    const [selectedTags, setSelectedTags] = useState([]), [selectedTopics, setSelectedTopics] = useState([]), [cardQuery, setCardQuery] = useState(''), [previewIndex, setPreviewIndex] = useState(0), [previewTurns, setPreviewTurns] = useState(0), [previewOrder, setPreviewOrder] = useState([]), [autoPlay, setAutoPlay] = useState(false), [previewSettings, setPreviewSettings] = useState(false), [previewFirstSide, setPreviewFirstSide] = useState(() => deckFlashcardSettings(activeDeck, data.preferences).firstSide), [previewShuffled, setPreviewShuffled] = useState(() => deckFlashcardSettings(activeDeck, data.preferences).shuffle), [sortMode, setSortMode] = useState('original'), [cardVisibility, setCardVisibility] = useState('all'), [hideDefinitions, setHideDefinitions] = useState(false), [hideTerms, setHideTerms] = useState(false), [reorderMode, setReorderMode] = useState(false), [selectionMode, setSelectionMode] = useState(false), [selectedCardIds, setSelectedCardIds] = useState([]), [reorderSelectedIds, setReorderSelectedIds] = useState([]), [draggingCardId, setDraggingCardId] = useState(null), [dragOverCardId, setDragOverCardId] = useState(null), [dragAfter, setDragAfter] = useState(false), [collapsedTopics, setCollapsedTopics] = useState({});
     const dragCardRef = useRef(null), previewSection = useRef(null);
-    useEffect(() => { setSelectedTags([]); setSelectedTopics([]); setCardQuery(''); setPreviewIndex(0); setPreviewTurns(0); setCardVisibility('all'); setHideTerms(false); setReorderMode(false); setSelectionMode(false); setSelectedCardIds([]); setReorderSelectedIds([]); setDraggingCardId(null); setDragOverCardId(null); setCollapsedTopics({}); const ids = studyableDeckCards(activeDeck).map(c => c.id); setPreviewOrder(data.preferences.shuffle ? shuffle(ids) : ids); setPreviewShuffled(Boolean(data.preferences.shuffle)); setPreviewFirstSide(data.preferences.firstSide || 'back'); setAutoPlay(false); }, [activeDeck?.id]);
+    useEffect(() => { setSelectedTags([]); setSelectedTopics([]); setCardQuery(''); setPreviewIndex(0); setPreviewTurns(0); setCardVisibility('all'); setHideTerms(false); setReorderMode(false); setSelectionMode(false); setSelectedCardIds([]); setReorderSelectedIds([]); setDraggingCardId(null); setDragOverCardId(null); setCollapsedTopics({}); const ids = studyableDeckCards(activeDeck).map(c => c.id), defaults = deckFlashcardSettings(activeDeck, data.preferences); setPreviewOrder(defaults.shuffle ? shuffle(ids) : ids); setPreviewShuffled(defaults.shuffle); setPreviewFirstSide(defaults.firstSide); setAutoPlay(false); }, [activeDeck?.id]);
     useEffect(() => { const cards = studyableDeckCards(activeDeck); if (!cards.length)
         return; let handle = null; primeStudyImages(cards, 0, Math.min(8, cards.length)); const warm = () => primeStudyImages(cards, 0, Math.min(24, cards.length)); handle = 'requestIdleCallback' in window ? requestIdleCallback(warm, { timeout: 650 }) : setTimeout(warm, 90); return () => { if (!handle) return; if ('cancelIdleCallback' in window) cancelIdleCallback(handle); else clearTimeout(handle); }; }, [activeDeck?.id]);
-    const activeCards = activeDeck?.cards || [], stats = deckStats(activeDeck), inactiveSet = deactivatedIds(activeDeck), studyableCount = activeCards.length - inactiveSet.size, topicSettings = deckTopicSettings(activeDeck), tags = unique(activeCards.flatMap(c => c.tags)).sort(), rawTopics = unique(activeCards.map(c => normalizeTopic(c.topic)).filter(Boolean)), topics = [...topicSettings.order.filter(t => rawTopics.includes(t)), ...rawTopics.filter(t => !topicSettings.order.includes(t)).sort((a,b) => a.localeCompare(b))], hasUnassignedTopic = activeCards.some(c => !normalizeTopic(c.topic)), starFilter = selectedTags.includes('__starred__'), startedFilter = selectedTags.includes('__started__'), realTags = selectedTags.filter(t => !['__starred__', '__started__'].includes(t)), deferredCardQuery = useDeferredValue(cardQuery), normalizedCardQuery = clean(deferredCardQuery).toLowerCase();
+    const activeCards = activeDeck?.cards || [], stats = deckStats(activeDeck), inactiveSet = deactivatedIds(activeDeck), deckStudyPrefs = deckFlashcardSettings(activeDeck, data.preferences), studyableCount = activeCards.length - inactiveSet.size, topicSettings = deckTopicSettings(activeDeck), tags = unique(activeCards.flatMap(c => c.tags)).sort(), rawTopics = unique(activeCards.map(c => normalizeTopic(c.topic)).filter(Boolean)), topics = [...topicSettings.order.filter(t => rawTopics.includes(t)), ...rawTopics.filter(t => !topicSettings.order.includes(t)).sort((a,b) => a.localeCompare(b))], hasUnassignedTopic = activeCards.some(c => !normalizeTopic(c.topic)), starFilter = selectedTags.includes('__starred__'), startedFilter = selectedTags.includes('__started__'), realTags = selectedTags.filter(t => !['__starred__', '__started__'].includes(t)), deferredCardQuery = useDeferredValue(cardQuery), normalizedCardQuery = clean(deferredCardQuery).toLowerCase();
     const originalIndex = useMemo(() => new Map(activeCards.map((card, index) => [card.id, index])), [activeDeck?.id, activeCards]), searchIndex = useMemo(() => new Map(activeCards.map(card => [card.id, `${stripMath(card.front).toLowerCase()}\n${stripMath(card.back).toLowerCase()}\n${normalizeTopic(card.topic).toLowerCase()}\n${(card.tags || []).join(' ').toLowerCase()}`])), [activeDeck?.id, activeCards]);
     const filtered = activeCards.filter(c => { const inactive = inactiveSet.has(c.id), visibilityOk = cardVisibility === 'all' || (cardVisibility === 'active' && !inactive) || (cardVisibility === 'deactivated' && inactive); const qOk = !normalizedCardQuery || (searchIndex.get(c.id) || '').includes(normalizedCardQuery); const tagOk = !realTags.length || realTags.some(t => c.tags.includes(t)); const topicKey = normalizeTopic(c.topic) || '__unassigned__', topicOk = !selectedTopics.length || selectedTopics.includes(topicKey); return visibilityOk && qOk && tagOk && topicOk && (!starFilter || normalizeProgress(c).starred) && (!startedFilter || cardStatus(c) !== 'new'); });
-    const previewEligible = filtered.filter(c => !inactiveSet.has(c.id)), byId = new Map(previewEligible.map(c => [c.id, c])), previewOrderSet = new Set(previewOrder), previewCards = [...previewOrder.map(id => byId.get(id)).filter(Boolean), ...previewEligible.filter(c => !previewOrderSet.has(c.id))], preview = previewCards[previewIndex] || previewEligible[0] || null, previewFlipped = previewTurns % 2 === 1, fitPreview = data.preferences.flashFitContent !== false;
+    const previewEligible = filtered.filter(c => !inactiveSet.has(c.id)), byId = new Map(previewEligible.map(c => [c.id, c])), previewOrderSet = new Set(previewOrder), previewCards = [...previewOrder.map(id => byId.get(id)).filter(Boolean), ...previewEligible.filter(c => !previewOrderSet.has(c.id))], preview = previewCards[previewIndex] || previewEligible[0] || null, previewFlipped = previewTurns % 2 === 1, fitPreview = deckStudyPrefs.fitContent;
     useEffect(() => { if (!previewCards.length) {
         setPreviewIndex(0);
         return;
@@ -3359,8 +3412,8 @@ function DeckPage(p) {
     function movePreview(dir) { if (!previewCards.length)
         return; setPreviewIndex(i => (i + dir + previewCards.length) % previewCards.length); resetPreviewFace(); }
     function flipPreview() { setPreviewTurns(t => t + 1); }
-    function togglePreviewShuffle() { const next = !previewShuffled; setPreviewShuffled(next); const currentId = preview?.id, ids = next ? shuffle(previewEligible.map(c => c.id)) : activeCards.filter(c => !inactiveSet.has(c.id) && previewEligible.some(f => f.id === c.id)).map(c => c.id); setPreviewOrder(ids); setPreviewIndex(Math.max(0, ids.indexOf(currentId))); resetPreviewFace(); updateData(d => ({ ...d, preferences: { ...d.preferences, shuffle: next } })); }
-    function changePreviewFirstSide(value) { setPreviewFirstSide(value); resetPreviewFace(); updateData(d => ({ ...d, preferences: { ...d.preferences, firstSide: value, definitionFirstV16: true } })); }
+    function togglePreviewShuffle() { const next = !previewShuffled; setPreviewShuffled(next); const currentId = preview?.id, ids = next ? shuffle(previewEligible.map(c => c.id)) : activeCards.filter(c => !inactiveSet.has(c.id) && previewEligible.some(f => f.id === c.id)).map(c => c.id); setPreviewOrder(ids); setPreviewIndex(Math.max(0, ids.indexOf(currentId))); resetPreviewFace(); updateData(d => ({ ...d, decks: d.decks.map(x => x.id === activeDeck.id ? { ...x, flashcardSettings: { ...(x.flashcardSettings || {}), shuffle: next }, updatedAt: nowISO() } : x) })); }
+    function changePreviewFirstSide(value) { setPreviewFirstSide(value); resetPreviewFace(); updateData(d => ({ ...d, decks: d.decks.map(x => x.id === activeDeck.id ? { ...x, flashcardSettings: { ...(x.flashcardSettings || {}), firstSide: value }, updatedAt: nowISO() } : x) })); }
     function speakPreview() { if (!preview || !('speechSynthesis' in window))
         return; window.speechSynthesis.cancel(); window.speechSynthesis.speak(new SpeechSynthesisUtterance(stripMath(previewFlipped ? previewBack.text : previewFront.text))); }
     async function fullPreview() { try {
@@ -3427,12 +3480,6 @@ function DeckPage(p) {
             React.createElement("div", { className: "deck-title-line" },
                 React.createElement("input", { className: "deck-title-edit", value: activeDeck.name, readOnly: readOnly, onChange: e => !readOnly && rename(e.target.value), onBlur: e => !readOnly && rename(clean(e.target.value) || 'Untitled deck'), "aria-label": "Deck title" }),
                 !readOnly && React.createElement(React.Fragment, null,
-                    React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }), "aria-label": "Add card" },
-                        React.createElement(Icon, { name: "plus" })),
-                    React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), "aria-label": "Import or export flashcards" },
-                        React.createElement(Icon, { name: "importExport" })),
-                    React.createElement("button", { className: "circle-action", onClick: () => setModal({ type: 'deck-settings', deckId: activeDeck.id }), "aria-label": "Flashcard set settings", title: "Set settings" },
-                        React.createElement(Icon, { name: "settings" })),
                     React.createElement("button", { className: "circle-action", onClick: () => p.shareResource('deck', activeDeck.id), "aria-label": "Access settings" },
                         React.createElement(Icon, { name: "share" })),
                     React.createElement("button", { className: "circle-action danger-icon", onClick: () => deleteDeck(activeDeck.id), "aria-label": "Delete deck" },
@@ -3471,9 +3518,9 @@ function DeckPage(p) {
             React.createElement("button", { className: "deck-preview-card", onClick: flipPreview, "aria-label": `Flip preview to show ${previewFlipped ? previewFront.label : previewBack.label}` },
                 React.createElement("span", { className: "deck-preview-inner", style: { transform: `rotateY(${previewTurns * 180}deg)`, transitionDuration: '680ms' } },
                     React.createElement("span", { className: "deck-preview-face front" },
-                        React.createElement(CardFaceContent, { text: previewFront.text, images: previewFront.images, fit: true, maxPx: clamp(Number(data.preferences.flashTextPx || 38), 18, 64), minPx: 11, textAlign: data.preferences.flashTextAlignment || 'left', imageAlign: data.preferences.flashImageAlignment || 'center', showImages: data.preferences.flashShowImages !== false, priorityImages: true, topic: data.preferences.flashShowTopic !== false ? (preview.topic || '') : '', topicLabel: deckTopicSettings(activeDeck).label, tags: data.preferences.flashShowTags !== false && previewFront.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })),
+                        React.createElement(CardFaceContent, { text: previewFront.text, images: previewFront.images, fit: true, maxPx: deckStudyPrefs.textPx, minPx: 11, textAlign: deckStudyPrefs.textAlignment, imageAlign: deckStudyPrefs.imageAlignment, showImages: deckStudyPrefs.showImages, priorityImages: true, topic: deckStudyPrefs.showTopic ? (preview.topic || '') : '', topicLabel: deckTopicSettings(activeDeck).label, tags: deckStudyPrefs.showTags && previewFront.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })),
                     React.createElement("span", { className: "deck-preview-face back" },
-                        React.createElement(CardFaceContent, { text: previewBack.text, images: previewBack.images, fit: true, maxPx: clamp(Number(data.preferences.flashTextPx || 38), 18, 64), minPx: 11, textAlign: data.preferences.flashTextAlignment || 'left', imageAlign: data.preferences.flashImageAlignment || 'center', showImages: data.preferences.flashShowImages !== false, priorityImages: true, topic: data.preferences.flashShowTopic !== false ? (preview.topic || '') : '', topicLabel: deckTopicSettings(activeDeck).label, tags: data.preferences.flashShowTags !== false && previewBack.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })))),
+                        React.createElement(CardFaceContent, { text: previewBack.text, images: previewBack.images, fit: true, maxPx: deckStudyPrefs.textPx, minPx: 11, textAlign: deckStudyPrefs.textAlignment, imageAlign: deckStudyPrefs.imageAlignment, showImages: deckStudyPrefs.showImages, priorityImages: true, topic: deckStudyPrefs.showTopic ? (preview.topic || '') : '', topicLabel: deckTopicSettings(activeDeck).label, tags: deckStudyPrefs.showTags && previewBack.label === 'definition' ? (preview.tags || []) : [], deck: activeDeck })))),
             React.createElement("div", { className: "deck-preview-controls" },
                 React.createElement("button", { onClick: () => movePreview(-1), disabled: previewCards.length < 2, "aria-label": "Previous card" },
                     React.createElement(Icon, { name: "left" })),
@@ -3488,33 +3535,10 @@ function DeckPage(p) {
                     React.createElement(Icon, { name: "speaker" })),
                 React.createElement("button", { onClick: () => setAutoPlay(v => !v), className: autoPlay ? 'active' : '', "aria-pressed": autoPlay, "aria-label": autoPlay ? 'Pause automatic preview' : 'Play automatic preview' },
                     React.createElement(Icon, { name: autoPlay ? 'pause' : 'play' })),
-                React.createElement("button", { onClick: togglePreviewShuffle, className: previewShuffled ? 'active' : '', "aria-pressed": previewShuffled, "aria-label": previewShuffled ? 'Turn shuffle off' : 'Turn shuffle on' },
-                    React.createElement(Icon, { name: previewShuffled ? 'shuffleOn' : 'shuffle' }),
-                    previewShuffled && React.createElement("span", { className: "shuffle-indicator" })),
-                React.createElement("button", { onClick: () => changePreviewFirstSide(previewFirstSide === 'front' ? 'back' : 'front'), className: previewFirstSide === 'back' ? 'active' : '', "aria-pressed": previewFirstSide === 'back', "aria-label": previewFirstSide === 'front' ? 'Show definitions first' : 'Show terms first' },
-                    React.createElement(Icon, { name: "swap" })),
-                React.createElement("button", { onClick: () => setPreviewSettings(v => !v), className: previewSettings ? 'active' : '', "aria-pressed": previewSettings, "aria-label": "Preview settings" },
-                    React.createElement(Icon, { name: "settings" })),
                 React.createElement("button", { onClick: fullPreview, "aria-label": "Fullscreen preview" },
                     React.createElement(Icon, { name: "fullscreen" })),
-                React.createElement("button", { className: "preview-study", onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics) }, session && !session.complete ? 'Continue' : 'Study')),
-            previewSettings && React.createElement("div", { className: "prestudy-settings" },
-                React.createElement("strong", null, "Preview and study settings"),
-                React.createElement("span", null, "New sessions start with the definition first."),
-                React.createElement("div", { className: "prestudy-settings-grid" },
-                    React.createElement("div", { className: "prestudy-setting-card" },
-                        React.createElement("strong", null, "First side"),
-                        React.createElement("div", { className: "settings-choice-row" },
-                            React.createElement("button", { className: previewFirstSide === 'back' ? 'active' : '', onClick: () => changePreviewFirstSide('back') }, "Definition first"),
-                            React.createElement("button", { className: previewFirstSide === 'front' ? 'active' : '', onClick: () => changePreviewFirstSide('front') }, "Term first"))),
-                    React.createElement("div", { className: "prestudy-setting-card" },
-                        React.createElement("strong", null, "Card order"),
-                        React.createElement("div", { className: "settings-choice-row" },
-                            React.createElement("button", { className: !previewShuffled ? 'active' : '', onClick: () => previewShuffled && togglePreviewShuffle() }, "Original"),
-                            React.createElement("button", { className: previewShuffled ? 'active' : '', onClick: () => !previewShuffled && togglePreviewShuffle() }, "Shuffled")))),
-                React.createElement("label", null,
-                    React.createElement("input", { type: "checkbox", checked: hideDefinitions, onChange: e => setHideDefinitions(e.target.checked) }),
-                    " Hide definitions in the term list"))) : activeDeck.cards.length ? React.createElement("div", { className: "no-active-cards" },
+                React.createElement("button", { className: "preview-study", onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics) }, session && !session.complete ? 'Continue' : 'Study')))
+        : activeDeck.cards.length ? React.createElement("div", { className: "no-active-cards" },
             React.createElement(Icon, { name: "eyeOff", size: 28 }),
             React.createElement("h3", null, "No active cards to preview"),
             React.createElement("p", null, inactiveSet.size === activeDeck.cards.length ? 'Every card in this set is deactivated. Reactivate any card below to study it again.' : 'No active cards match the current Study only filters.')) : React.createElement(Empty, { title: "No terms yet", text: "Add a card or use Batch create to add several cards at once.", action: React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }) }, "Add a card") }),
@@ -3542,18 +3566,9 @@ function DeckPage(p) {
                 React.createElement("button", { className: `tag ${!selectedTopics.length ? 'active' : ''}`, onClick: () => setSelectedTopics([]) }, "All"),
                 topics.map(topic => React.createElement("button", { key: topic, style: { '--topic-color': deckTopicColor(activeDeck, topic) }, className: `tag topic-filter-chip ${selectedTopics.includes(topic) ? 'active' : ''}`, onClick: () => setSelectedTopics(a => a.includes(topic) ? a.filter(x => x !== topic) : [...a, topic]) }, topic)),
                 hasUnassignedTopic && React.createElement("button", { className: `tag topic-filter-chip ${selectedTopics.includes('__unassigned__') ? 'active' : ''}`, onClick: () => setSelectedTopics(a => a.includes('__unassigned__') ? a.filter(x => x !== '__unassigned__') : [...a, '__unassigned__']) }, `No ${topicSettings.label}`)),
-            !readOnly && React.createElement("div", { className: "deck-actions-row" },
-                React.createElement("button", { className: "btn btn-primary", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }) },
-                    React.createElement(Icon, { name: "plus", size: 18 }),
-                    "Add card"),
-                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), title: "Batch create / import flashcards", "aria-label": "Batch create / import flashcards", "data-tooltip": "Batch create" },
-                    React.createElement(Icon, { name: "importExport", size: 19 })),
-                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'topic-settings', deckId: activeDeck.id }), title: topicSettings.enabled ? `${topicSettings.label} settings` : 'Topic settings', "aria-label": topicSettings.enabled ? `${topicSettings.label} settings` : 'Topic settings', "data-tooltip": `${topicSettings.label} settings` },
-                    React.createElement(Icon, { name: "folder", size: 19 })),
-                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), title: "Import / export flashcards", "aria-label": "Import / export flashcards", "data-tooltip": "Import / export" },
-                    React.createElement(Icon, { name: "download", size: 19 })),
-                React.createElement("button", { className: "btn btn-secondary deck-icon-action", onClick: () => setModal({ type: 'deck-settings', deckId: activeDeck.id }), title: "Flashcard set settings", "aria-label": "Flashcard set settings", "data-tooltip": "Set settings" }, React.createElement(Icon, { name: "settings", size: 19 })),
-                React.createElement("select", { value: activeDeck.folderId || '', onChange: e => moveFolder(e.target.value), "aria-label": "Move deck to folder" },
+            !readOnly && React.createElement("label", { className: "deck-location-control" },
+                React.createElement(Icon, { name: "folder", size: 17 }),
+                React.createElement("select", { value: activeDeck.folderId || '', onChange: e => moveFolder(e.target.value), "aria-label": "Move flashcard set to folder" },
                     React.createElement("option", { value: "" }, "Main library"),
                     data.folders.map(f => React.createElement("option", { key: f.id, value: f.id }, folderPath(f.id, data.folders)))))),
         React.createElement("div", { className: "deck-tabs quiz-deck-tabs flashcard-only-tabs" },
@@ -3565,18 +3580,17 @@ function DeckPage(p) {
             React.createElement("div", { className: "terms-heading" },
                 React.createElement("span", { className: "terms-heading-helper" }, reorderMode ? (reorderSelectedIds.length ? `${reorderSelectedIds.length} selected — drag any selected card to move the group.` : 'Select one or more cards, then drag a handle.') : `${filtered.length} of ${activeDeck.cards.length} cards shown · ${inactiveSet.size} deactivated`),
                 React.createElement("div", { className: "terms-heading-actions" },
-                    !readOnly && React.createElement("button", { className: "btn btn-primary btn-sm compact-icon-btn sticky-create-action", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }), title: "Add card", "aria-label": "Add card", "data-tooltip": "Add card" }, React.createElement(Icon, { name: "plus", size: 18 })),
-                    !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), title: "Batch create / import", "aria-label": "Batch create or import flashcards", "data-tooltip": "Batch create" }, React.createElement(Icon, { name: "importExport", size: 18 })),
-                    topicSettings.enabled && !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setModal({ type: 'topic-settings', deckId: activeDeck.id }), title: `${topicSettings.label} settings`, "aria-label": `${topicSettings.label} settings`, "data-tooltip": `${topicSettings.label} settings` }, React.createElement(Icon, { name: "folder", size: 18 })),
-                    !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setModal({ type: 'deck-settings', deckId: activeDeck.id }), title: "Set settings", "aria-label": "Flashcard set settings", "data-tooltip": "Set settings" }, React.createElement(Icon, { name: "settings", size: 18 })),
-                    React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", disabled: !filtered.some(c => !inactiveSet.has(c.id)), onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics), title: "Study current selection", "aria-label": "Study current selection", "data-tooltip": "Study" }, React.createElement(Icon, { name: "cards", size: 18 })),
-                    React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setHideTerms(v => !v), title: hideTerms ? 'Show terms' : 'Hide terms', "aria-label": hideTerms ? 'Show terms' : 'Hide terms', "data-tooltip": hideTerms ? 'Show terms' : 'Hide terms' },
+                    !readOnly && React.createElement("button", { className: "btn btn-primary btn-sm compact-icon-btn sticky-create-action", onClick: () => setModal({ type: 'card', mode: 'create', deckId: activeDeck.id }), "aria-label": "Add card", "data-tooltip": "Add card" }, React.createElement(Icon, { name: "plus", size: 18 })),
+                    !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setModal({ type: 'card-io', deckId: activeDeck.id }), "aria-label": "Batch create or import flashcards", "data-tooltip": "Batch create / import" }, React.createElement(Icon, { name: "batch", size: 18 })),
+                                        !readOnly && React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn settings-primary", onClick: () => setModal({ type: 'deck-settings', deckId: activeDeck.id }), "aria-label": "Flashcard set settings", "data-tooltip": "Flashcard set settings" }, React.createElement(Icon, { name: "settings", size: 18 })),
+                    React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", disabled: !filtered.some(c => !inactiveSet.has(c.id)), onClick: () => launchStudy('flashcards', [activeDeck.id], selectedTags, selectedTopics), "aria-label": "Study current selection", "data-tooltip": "Study current selection" }, React.createElement(Icon, { name: "study", size: 18 })),
+                    React.createElement("button", { className: "btn btn-secondary btn-sm compact-icon-btn", onClick: () => setHideTerms(v => !v), "aria-label": hideTerms ? 'Show terms' : 'Hide terms', "data-tooltip": hideTerms ? 'Show terms' : 'Hide terms' },
                         React.createElement(Icon, { name: hideTerms ? 'eye' : 'eyeOff', size: 18 })),
                     !readOnly && !reorderMode && React.createElement("button", { className: `btn btn-secondary btn-sm compact-icon-btn ${selectionMode ? 'active' : ''}`, onClick: () => { setSelectionMode(v => !v); if (selectionMode)
-                            setSelectedCardIds([]); }, title: selectionMode ? 'Done selecting' : 'Select cards', "aria-label": selectionMode ? 'Done selecting' : 'Select cards', "data-tooltip": selectionMode ? 'Done selecting' : 'Select cards' },
-                        React.createElement(Icon, { name: selectionMode ? 'check' : 'cards', size: 18 })),
-                    !readOnly && React.createElement("button", { className: `btn btn-secondary btn-sm compact-icon-btn ${reorderMode ? 'active' : ''}`, onClick: toggleReorderMode, title: reorderMode ? 'Done arranging' : 'Rearrange cards', "aria-label": reorderMode ? 'Done arranging' : 'Rearrange cards', "data-tooltip": reorderMode ? 'Done arranging' : 'Rearrange cards' },
-                        React.createElement(Icon, { name: reorderMode ? 'check' : 'transfer', size: 18 })),
+                            setSelectedCardIds([]); }, "aria-label": selectionMode ? 'Done selecting' : 'Select cards', "data-tooltip": selectionMode ? 'Done selecting' : 'Select cards' },
+                        React.createElement(Icon, { name: selectionMode ? 'check' : 'selectCards', size: 18 })),
+                    !readOnly && React.createElement("button", { className: `btn btn-secondary btn-sm compact-icon-btn ${reorderMode ? 'active' : ''}`, onClick: toggleReorderMode, "aria-label": reorderMode ? 'Done arranging' : 'Rearrange cards', "data-tooltip": reorderMode ? 'Done arranging' : 'Rearrange cards' },
+                        React.createElement(Icon, { name: reorderMode ? 'check' : 'reorder', size: 18 })),
                     React.createElement("label", { className: "terms-sort" },
                         "Sort",
                         React.createElement("select", { value: sortMode, disabled: reorderMode, onChange: e => setSortMode(e.target.value) },
@@ -3599,18 +3613,18 @@ function DeckPage(p) {
                         React.createElement("button", { className: "btn btn-secondary btn-sm", onClick: selectAllCards }, "Select all"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm", onClick: selectAllVisible }, "Select visible"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm bulk-deactivate", disabled: !selectedCardIds.length, onClick: () => setSelectedActivation(false) },
-                            React.createElement(Icon, { name: "eyeOff", size: 16 }),
-                            "Deactivate"),
+                            React.createElement(Icon, { name: "studyOff", size: 16 }),
+                            "Exclude from study"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm bulk-reactivate", disabled: !selectedCardIds.length, onClick: () => setSelectedActivation(true) },
-                            React.createElement(Icon, { name: "eye", size: 16 }),
-                            "Reactivate"),
+                            React.createElement(Icon, { name: "studyOn", size: 16 }),
+                            "Include in study"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm", disabled: !selectedCardIds.length, onClick: () => setModal({ type: 'bulk-classify', deckId: activeDeck.id, cardIds: selectedCardIds }) }, "Assign tags / topic"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm", disabled: !selectedCardIds.length, onClick: () => setModal({ type: 'transfer-card', sourceDeckId: activeDeck.id, cardIds: selectedCardIds }) }, "Move / copy selected"),
                         React.createElement("button", { className: "btn btn-secondary btn-sm", disabled: !selectedCardIds.length, onClick: () => { setReorderSelectedIds(selectedCardIds); setSelectionMode(false); setReorderMode(true); } }, "Arrange selected"),
                         React.createElement("button", { className: "btn btn-ghost btn-sm", onClick: () => setSelectedCardIds([]) }, "Clear"))),
                 reorderMode ? React.createElement(React.Fragment, null,
                     React.createElement("div", { className: "reorder-help" },
-                        React.createElement(Icon, { name: "transfer", size: 18 }),
+                        React.createElement(Icon, { name: "reorder", size: 18 }),
                         React.createElement("span", null, "Tick multiple cards to move them together. Hold a drag handle and slide the selected group. Arrow buttons move the selected group one position at a time.")),
                     React.createElement("div", { className: "reorder-list" }, activeCards.map((card, index) => React.createElement(ReorderCardRow, { key: card.id, card: card, index: index, deck: activeDeck, deactivated: inactiveSet.has(card.id), selected: reorderSelectedIds.includes(card.id), onToggle: () => toggleReorderSelected(card.id), dragging: draggingCardId === card.id, dragOver: dragOverCardId === card.id, dragAfter: dragOverCardId === card.id && dragAfter, total: activeCards.length, onStart: startCardReorder, onStep: moveCardStep, setModal: setModal }))),
                     React.createElement("div", { className: `reorder-end-zone ${dragOverCardId === '__end__' ? 'active' : ''}`, "data-reorder-card-id": "__end__" }, "Drop here to move selected cards to the end")) : React.createElement(React.Fragment, null,
@@ -3708,25 +3722,24 @@ function DeckTermRow({ card, index, deck, setModal, duplicateCard, deleteCard, h
                 React.createElement(MathText, { text: card.back, wrapLatexText: true }),
                 backImages.length > 0 && React.createElement("div", { className: "term-image-grid" }, backImages.map(img => React.createElement("button", { type: "button", className: "term-image-button", key: img.id, onClick: () => openImage(img, 'Definition'), "aria-label": "Open definition image full screen" },
                     React.createElement("img", { src: img.src, loading: "lazy", decoding: "async", style: { maxWidth: `${img.width}%` }, alt: "Back attachment" })))),
-                React.createElement("div", { className: "term-tags" }, card.tags.map(t => React.createElement("span", { className: "tag color-tag", style: { '--tag-color': deckTagColor(deck, t) }, key: t },
+                deckFlashcardSettings(deck).showTagsInTerms && React.createElement("div", { className: "term-tags" }, card.tags.map(t => React.createElement("span", { className: "tag color-tag", style: { '--tag-color': deckTagColor(deck, t) }, key: t },
                     "#",
                     t))))),
         React.createElement("div", { className: "term-actions" },
-            !readOnly && React.createElement("button", { className: `deactivate-toggle ${deactivated ? 'active' : ''}`, onClick: () => toggleCardDeactivated(deck.id, card.id), "aria-label": deactivated ? 'Reactivate card for study' : 'Deactivate card and exclude from study', title: deactivated ? 'Reactivate for study' : 'Exclude from study' },
-                React.createElement(Icon, { name: deactivated ? 'eye' : 'eyeOff', size: 19 })),
-            React.createElement("button", { className: progress.starred ? 'starred' : '', onClick: () => toggleStar(card.id), "aria-label": progress.starred ? 'Unstar card' : 'Star card', title: progress.starred ? 'Unstar card' : 'Star card' },
+            !readOnly && React.createElement("button", { className: `deactivate-toggle ${deactivated ? 'active' : ''}`, onClick: () => toggleCardDeactivated(deck.id, card.id), "aria-label": deactivated ? 'Reactivate card for study' : 'Exclude card from study', "data-tooltip": deactivated ? 'Reactivate' : 'Exclude from study' },
+                React.createElement(Icon, { name: deactivated ? 'studyOn' : 'studyOff', size: 19 })),
+            React.createElement("button", { className: progress.starred ? 'starred' : '', onClick: () => toggleStar(card.id), "aria-label": progress.starred ? 'Unstar card' : 'Star card', "data-tooltip": progress.starred ? 'Unstar' : 'Star' },
                 React.createElement(Icon, { name: "star", size: 19 })),
-            React.createElement("button", { onClick: speak, "aria-label": "Read term and definition", title: "Read aloud" },
+            React.createElement("button", { onClick: speak, "aria-label": "Read term and definition aloud", "data-tooltip": "Read aloud" },
                 React.createElement(Icon, { name: "speaker", size: 19 })),
-            !readOnly && React.createElement(React.Fragment, null,
-                React.createElement("button", { onClick: () => setModal({ type: 'card', mode: 'edit', deckId: deck.id, card }), "aria-label": "Edit card", title: "Edit card" },
-                    React.createElement(Icon, { name: "edit", size: 18 })),
-                React.createElement("button", { onClick: () => duplicateCard(deck.id, card), "aria-label": "Duplicate inside this deck", title: "Duplicate card" },
-                    React.createElement(Icon, { name: "copy", size: 18 })),
-                React.createElement("button", { onClick: () => setModal({ type: 'transfer-card', sourceDeckId: deck.id, cardIds: [card.id] }), "aria-label": "Move or copy to another deck", title: "Move or copy" },
-                    React.createElement(Icon, { name: "transfer", size: 19 })),
-                React.createElement("button", { onClick: () => deleteCard(deck.id, card.id), "aria-label": "Delete card", title: "Delete card" },
-                    React.createElement(Icon, { name: "trash", size: 18 })))));
+            !readOnly && React.createElement("button", { onClick: () => setModal({ type: 'card', mode: 'edit', deckId: deck.id, card }), "aria-label": "Edit card", "data-tooltip": "Edit card" },
+                React.createElement(Icon, { name: "edit", size: 18 })),
+            !readOnly && React.createElement("details", { className: "term-more-menu" },
+                React.createElement("summary", { "aria-label": "More card actions" }, React.createElement(Icon, { name: "more", size: 20 })),
+                React.createElement("div", { className: "term-more-menu-panel" },
+                    React.createElement("button", { onClick: e => { e.currentTarget.closest('details')?.removeAttribute('open'); duplicateCard(deck.id, card); } }, React.createElement(Icon, { name: "copy", size: 17 }), "Duplicate card"),
+                    React.createElement("button", { onClick: e => { e.currentTarget.closest('details')?.removeAttribute('open'); setModal({ type: 'transfer-card', sourceDeckId: deck.id, cardIds: [card.id] }); } }, React.createElement(Icon, { name: "moveCopy", size: 18 }), "Move / copy to deck"),
+                    React.createElement("button", { className: "danger", onClick: e => { e.currentTarget.closest('details')?.removeAttribute('open'); deleteCard(deck.id, card.id); } }, React.createElement(Icon, { name: "trash", size: 17 }), "Delete card")))));
 }
 function CreatorStrip({ profile, deck, onOpen }) { return React.createElement("section", { className: "creator-strip" },
     React.createElement("button", { className: "creator-main", onClick: onOpen, "aria-label": "Open local profile" },
@@ -4142,23 +4155,47 @@ function ModalFrame({ title, children, footer, close, small = false, className =
 function ImageViewerModal({ modal, close }) { useEffect(() => { const key = e => e.key === 'Escape' && close(); window.addEventListener('keydown', key); return () => window.removeEventListener('keydown', key); }, []); return React.createElement("div", { className: "image-viewer-backdrop", role: "dialog", "aria-modal": "true", "aria-label": "Flashcard image viewer", onClick: e => e.currentTarget === e.target && close() },
     React.createElement("button", { className: "image-viewer-close", onClick: close, "aria-label": "Close image viewer" }, "\u00D7"),
     React.createElement("img", { src: modal.src, alt: modal.alt || 'Flashcard image', loading: "eager", fetchPriority: "high", decoding: "async" })); }
-function DeckSettingsModal({ data, modal, markDeckComplete, setModal, close }) {
+function DeckSettingsModal({ data, updateData, modal, markDeckComplete, setModal, close, toast }) {
     const deck = data.decks.find(d => d.id === modal.deckId);
-    if (!deck) return React.createElement(ModalFrame, { title: 'Set settings', close, small: true }, React.createElement('p', { className: 'muted' }, 'Flashcard set not found.'));
-    const stats = deckStats(deck);
-    return React.createElement(ModalFrame, { title: `${deck.name} settings`, close, small: true, footer: React.createElement('button', { className: 'btn btn-secondary', onClick: close }, 'Done') },
-        React.createElement('div', { className: 'deck-settings-stack' },
-            React.createElement('section', { className: 'deck-progress-settings' },
-                React.createElement('div', { className: 'deck-settings-progress-head' },
-                    React.createElement('div', null, React.createElement('strong', null, 'Study progress'), React.createElement('span', { className: 'muted' }, `${stats.known} of ${stats.total} cards known`)),
-                    React.createElement('b', null, `${stats.progress}%`)),
-                React.createElement('div', { className: 'progress' }, React.createElement('span', { style: { width: `${stats.progress}%` } }))),
-            React.createElement('section', { className: 'deck-settings-action-card complete' },
-                React.createElement('div', null, React.createElement('strong', null, 'Mark set completely studied'), React.createElement('span', null, 'Marks every card as Know so this set becomes 100% complete. Card content, images, tags, topics, and stars are unchanged.')),
-                React.createElement('button', { className: 'btn btn-success', onClick: () => { if (confirm('Mark every card in this set as Know and set progress to 100%?')) { markDeckComplete(deck.id); close(); } } }, React.createElement(Icon, { name: 'check', size: 17 }), 'Mark 100%')),
-            React.createElement('section', { className: 'deck-settings-action-card reset' },
-                React.createElement('div', null, React.createElement('strong', null, 'Reset progress'), React.createElement('span', null, 'Return cards to Not studied. The reset screen also lets you choose whether stars are kept.')),
-                React.createElement('button', { className: 'btn btn-danger', onClick: () => setModal({ type: 'reset-progress', deckId: deck.id }) }, React.createElement(Icon, { name: 'undo', size: 17 }), 'Reset progress'))));
+    if (!deck) return React.createElement(ModalFrame, { title: 'Flashcard set settings', close, small: true }, React.createElement('p', { className: 'muted' }, 'Flashcard set not found.'));
+    const initialTopic = deckTopicSettings(deck), initialStudy = deckFlashcardSettings(deck, data.preferences), stats = deckStats(deck), rawTopics = unique((deck.cards || []).map(c => normalizeTopic(c.topic)).filter(Boolean));
+    const [topicEnabled,setTopicEnabled] = useState(initialTopic.enabled), [topicLabel,setTopicLabel] = useState(initialTopic.label), [showTopicInTerms,setShowTopicInTerms] = useState(initialTopic.showInTerms), [topicOrder,setTopicOrder] = useState(() => [...initialTopic.order.filter(t=>rawTopics.includes(t)), ...rawTopics.filter(t=>!initialTopic.order.includes(t)).sort((a,b)=>a.localeCompare(b))]);
+    const [firstSide,setFirstSide] = useState(initialStudy.firstSide), [shuffleDefault,setShuffleDefault] = useState(initialStudy.shuffle), [showImages,setShowImages] = useState(initialStudy.showImages), [fitContent,setFitContent] = useState(initialStudy.fitContent), [showTopic,setShowTopic] = useState(initialStudy.showTopic), [showTags,setShowTags] = useState(initialStudy.showTags), [autoSpeak,setAutoSpeak] = useState(initialStudy.autoSpeak), [textAlignment,setTextAlignment] = useState(initialStudy.textAlignment), [imageAlignment,setImageAlignment] = useState(initialStudy.imageAlignment), [textPx,setTextPx] = useState(initialStudy.textPx), [flipSpeed,setFlipSpeed] = useState(initialStudy.flipSpeed), [swipeSensitivity,setSwipeSensitivity] = useState(initialStudy.swipeSensitivity), [showTagsInTerms,setShowTagsInTerms] = useState(initialStudy.showTagsInTerms), [draggingTopic,setDraggingTopic] = useState('');
+    const dragRef = useRef(null);
+    function save(){ const label=clean(topicLabel)||'Topic'; updateData(d=>({...d,decks:d.decks.map(x=>x.id!==deck.id?x:{...x,topicSettings:{enabled:topicEnabled,label,showInTerms:showTopicInTerms,order:topicOrder},flashcardSettings:{...(x.flashcardSettings||{}),firstSide,shuffle:shuffleDefault,showImages,fitContent,showTopic,showTags,autoSpeak,textAlignment,imageAlignment,textPx:clamp(Number(textPx)||38,18,64),flipSpeed:clamp(Number(flipSpeed)||680,150,2500),swipeSensitivity,showTagsInTerms},updatedAt:nowISO()})})); toast?.('Flashcard set settings saved'); close(); }
+    function setTopicColor(topic,color){ updateData(d=>({...d,decks:d.decks.map(x=>x.id!==deck.id?x:{...x,topicColors:{...(x.topicColors||{}),[topic]:color},updatedAt:nowISO()})})); }
+    function startDrag(event, topic){ event.preventDefault(); event.stopPropagation(); dragRef.current={topic,pointerId:event.pointerId}; event.currentTarget.setPointerCapture?.(event.pointerId); setDraggingTopic(topic); }
+    useEffect(()=>{ const move=event=>{ const drag=dragRef.current;if(!drag)return;const row=document.elementFromPoint(event.clientX,event.clientY)?.closest?.('[data-set-topic-drag]');if(!row)return;const target=row.dataset.setTopicDrag;if(!target||target===drag.topic)return;const rect=row.getBoundingClientRect(),after=event.clientY>rect.top+rect.height/2;setTopicOrder(current=>{const from=current.indexOf(drag.topic),targetIndex=current.indexOf(target);if(from<0||targetIndex<0)return current;const next=current.filter(t=>t!==drag.topic);let index=next.indexOf(target)+(after?1:0);next.splice(Math.max(0,Math.min(index,next.length)),0,drag.topic);return next;});}; const end=()=>{dragRef.current=null;setDraggingTopic('');};window.addEventListener('pointermove',move,{passive:true});window.addEventListener('pointerup',end);window.addEventListener('pointercancel',end);return()=>{window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',end);window.removeEventListener('pointercancel',end);};},[]);
+    const toggle=(checked,title,desc,setter)=>React.createElement('label',{className:'set-setting-tile'},React.createElement('span',null,React.createElement('strong',null,title),React.createElement('small',null,desc)),React.createElement('input',{type:'checkbox',checked,onChange:e=>setter(e.target.checked)}));
+    return React.createElement(ModalFrame,{title:`${deck.name} · Settings`,close,footer:React.createElement(React.Fragment,null,React.createElement('button',{className:'btn btn-ghost',onClick:close},'Cancel'),React.createElement('button',{className:'btn btn-primary',onClick:save},'Save settings'))},
+      React.createElement('div',{className:'unified-settings'},
+        React.createElement('section',{className:'settings-card'},
+          React.createElement('div',{className:'settings-card-head'},React.createElement('div',null,React.createElement('h3',null,'Study defaults'),React.createElement('p',null,'These defaults apply to this flashcard set and can still be adjusted during a study session.')),React.createElement(Icon,{name:'study',size:22})),
+          React.createElement('div',{className:'field'},React.createElement('label',null,'First side'),React.createElement('div',{className:'settings-segment'},React.createElement('button',{className:firstSide==='back'?'active':'',onClick:()=>setFirstSide('back')},'Definition first'),React.createElement('button',{className:firstSide==='front'?'active':'',onClick:()=>setFirstSide('front')},'Term first'))),
+          React.createElement('div',{className:'set-settings-grid'},
+            toggle(shuffleDefault,'Shuffle new sessions','Randomize the study queue without changing saved card order.',setShuffleDefault),
+            toggle(showImages,'Show card images','Display images during preview and study.',setShowImages),
+            toggle(fitContent,'Fit content automatically','Shrink text only when needed to keep the whole card visible.',setFitContent),
+            toggle(autoSpeak,'Auto read aloud','Read the visible card automatically while studying.',setAutoSpeak),
+            toggle(showTopic,`Show ${initialTopic.label} in study`,'Use the compact topic chip on flashcards.',setShowTopic),
+            toggle(showTags,'Show tags in study','Display the smaller tag labels beneath card content.',setShowTags)),
+          React.createElement('div',{className:'field'},React.createElement('label',null,'Study text size'),React.createElement('div',{className:'settings-range-row'},React.createElement('input',{type:'range',min:18,max:64,step:1,value:textPx,onChange:e=>setTextPx(Number(e.target.value))}),React.createElement('strong',null,`${textPx}px`))),
+          React.createElement('div',{className:'field'},React.createElement('label',null,'Flip animation speed'),React.createElement('div',{className:'settings-range-row'},React.createElement('input',{type:'range',min:150,max:2500,step:50,value:flipSpeed,onChange:e=>setFlipSpeed(Number(e.target.value)),'aria-label':'Default flip animation duration'}),React.createElement('strong',null,`${(flipSpeed/1000).toFixed(2)}s`))),
+          React.createElement('div',{className:'field'},React.createElement('label',null,'Swipe sensitivity'),React.createElement('select',{value:swipeSensitivity,onChange:e=>setSwipeSensitivity(e.target.value),'aria-label':'Swipe sensitivity'},React.createElement('option',{value:'easy'},'Easy — shorter swipe'),React.createElement('option',{value:'normal'},'Normal'),React.createElement('option',{value:'firm'},'Firm — longer swipe')),React.createElement('span',{className:'muted',style:{fontSize:12}},'Useful on phones: Easy needs less horizontal movement; Firm helps prevent accidental grading while scrolling.')),
+          React.createElement('div',{className:'field'},React.createElement('label',null,'Text alignment'),React.createElement('div',{className:'settings-segment'},['left','center','right','justify'].map(v=>React.createElement('button',{key:v,className:textAlignment===v?'active':'',onClick:()=>setTextAlignment(v)},v[0].toUpperCase()+v.slice(1))))),
+          React.createElement('div',{className:'field'},React.createElement('label',null,'Image alignment'),React.createElement('div',{className:'settings-segment'},['left','center','right'].map(v=>React.createElement('button',{key:v,className:imageAlignment===v?'active':'',onClick:()=>setImageAlignment(v)},v[0].toUpperCase()+v.slice(1)))))),
+        React.createElement('section',{className:'settings-card'},
+          React.createElement('div',{className:'settings-card-head'},React.createElement('div',null,React.createElement('h3',null,'Terms in this set'),React.createElement('p',null,'Control how the card list is organized without changing card content.')),React.createElement(Icon,{name:'cards',size:22})),
+          React.createElement('div',{className:'set-settings-grid'},toggle(showTagsInTerms,'Show tags in the term list','Hide tag chips from the list when you want a cleaner review layout.',setShowTagsInTerms),toggle(showTopicInTerms,`Show ${clean(topicLabel)||'Topic'} on each term`,'The topic panel still groups cards even when this label is hidden.',setShowTopicInTerms))),
+        React.createElement('section',{className:'settings-card'},
+          React.createElement('div',{className:'settings-card-head'},React.createElement('div',null,React.createElement('h3',null,'Topic organization'),React.createElement('p',null,'Grouping, category name, order, and panel colors are managed here.')),React.createElement(Icon,{name:'reorder',size:22})),
+          toggle(topicEnabled,'Use topic grouping','Turn off grouping without deleting existing topic assignments.',setTopicEnabled),
+          React.createElement('div',{className:'field'},React.createElement('label',null,'Category name'),React.createElement('input',{value:topicLabel,onChange:e=>setTopicLabel(e.target.value),maxLength:40,placeholder:'Topic'})),
+          topicOrder.length?React.createElement('div',{className:'settings-topic-grid'},React.createElement('span',{className:'muted',style:{fontSize:12}},'Drag topics to change panel order. Tap the color square to change a panel color.'),topicOrder.map(topic=>React.createElement('div',{className:`topic-order-row ${draggingTopic===topic?'dragging':''}`,key:topic,'data-set-topic-drag':topic},React.createElement('button',{type:'button',className:'topic-drag-handle',onPointerDown:e=>startDrag(e,topic),'aria-label':`Drag ${topic} to rearrange`},React.createElement(Icon,{name:'reorder',size:18})),React.createElement('span',{className:'topic-dot',style:{background:deckTopicColor(deck,topic)}}),React.createElement('span',{className:'topic-order-name'},topic),React.createElement('input',{type:'color',value:deckTopicColor(deck,topic),'aria-label':`Change color for ${topic}`,onChange:e=>setTopicColor(topic,e.target.value)})))):React.createElement('p',{className:'muted',style:{margin:0}},'No topics assigned yet. Add a topic while editing cards or through bulk assignment.')),
+        React.createElement('section',{className:'settings-card'},
+          React.createElement('div',{className:'settings-card-head'},React.createElement('div',null,React.createElement('h3',null,'Progress'),React.createElement('p',null,`${stats.known} of ${stats.total} cards known · ${stats.progress}% complete`)),React.createElement('strong',{style:{fontSize:22,color:'var(--primary)'}},`${stats.progress}%`)),
+          React.createElement('div',{className:'progress'},React.createElement('span',{style:{width:`${stats.progress}%`}})),
+          React.createElement('div',{className:'settings-progress-actions'},React.createElement('button',{className:'btn btn-success',onClick:()=>{if(confirm('Mark every card in this set as Know and set progress to 100%?')){markDeckComplete(deck.id);close();}}},React.createElement(Icon,{name:'check',size:17}),'Mark 100% studied'),React.createElement('button',{className:'btn btn-danger',onClick:()=>setModal({type:'reset-progress',deckId:deck.id})},React.createElement(Icon,{name:'undo',size:17}),'Reset progress')))));
 }
 function ResetProgressModal({ data, modal, resetDeckProgress, close }) { const deck = data.decks.find(d => d.id === modal.deckId), [clearStars, setClearStars] = useState(false); return React.createElement(ModalFrame, { title: "Reset progress", close: close, small: true, footer: React.createElement(React.Fragment, null,
         React.createElement("button", { className: "btn btn-ghost", onClick: close }, "Cancel"),
@@ -4700,7 +4737,7 @@ function StudyHeader({ title, subtitle, index, total, onExit, deckTitle, onSetti
                 React.createElement(Icon, { name: "close", size: 24 }))));
 }
 function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSession, clearFlashSession, launchStudy, data, updateData }) {
-    const resume = study.resume || {};
+    const resume = study.resume || {}, defaults = study.defaults || {};
     const [index, setIndex] = useState(() => clamp(Number(resume.index) || 0, 0, Math.max(0, study.cards.length - 1)));
     const [turns, setTurns] = useState(0);
     const [score, setScore] = useState(() => resume.score || { correct: 0, wrong: 0 });
@@ -4711,17 +4748,18 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
     const [trackProgress, setTrackProgress] = useState(resume.trackProgress !== false);
     const [showHelp, setShowHelp] = useState(Boolean(resume.showHelp));
     const [showSettings, setShowSettings] = useState(false);
-    const [flipSpeed, setFlipSpeed] = useState(() => clamp(Number(resume.flipSpeed || data.preferences.flipSpeed || 680), 150, 2500));
-    const [firstSide, setFirstSide] = useState(() => resume.firstSide || data.preferences.firstSide || 'back');
-    const [textAlign, setTextAlign] = useState(() => resume.textAlign || data.preferences.flashTextAlignment || 'left');
-    const [imageAlign, setImageAlign] = useState(() => resume.imageAlign || data.preferences.flashImageAlignment || 'center');
-    const [textPx, setTextPx] = useState(() => clamp(Number(resume.textPx || data.preferences.flashTextPx || 38), 18, 64));
-    const [showImages, setShowImages] = useState(() => (resume.showImages ?? data.preferences.flashShowImages) !== false);
-    const [fitContent, setFitContent] = useState(() => (resume.fitContent ?? data.preferences.flashFitContent) !== false);
-    const [showTopic, setShowTopic] = useState(() => (resume.showTopic ?? data.preferences.flashShowTopic) !== false);
-    const [showTags, setShowTags] = useState(() => (resume.showTags ?? data.preferences.flashShowTags) !== false);
-    const [autoSpeak, setAutoSpeak] = useState(() => Boolean(resume.autoSpeak ?? data.preferences.flashAutoSpeak));
-    const [shuffleOn, setShuffleOn] = useState(() => Boolean(resume.shuffleOn ?? data.preferences.shuffle));
+    const [flipSpeed, setFlipSpeed] = useState(() => clamp(Number(resume.flipSpeed || defaults.flipSpeed || data.preferences.flipSpeed || 680), 150, 2500));
+    const [swipeSensitivity, setSwipeSensitivity] = useState(() => ['easy','normal','firm'].includes(resume.swipeSensitivity || defaults.swipeSensitivity) ? (resume.swipeSensitivity || defaults.swipeSensitivity) : 'normal');
+    const [firstSide, setFirstSide] = useState(() => resume.firstSide || defaults.firstSide || data.preferences.firstSide || 'back');
+    const [textAlign, setTextAlign] = useState(() => resume.textAlign || defaults.textAlignment || data.preferences.flashTextAlignment || 'left');
+    const [imageAlign, setImageAlign] = useState(() => resume.imageAlign || defaults.imageAlignment || data.preferences.flashImageAlignment || 'center');
+    const [textPx, setTextPx] = useState(() => clamp(Number(resume.textPx || defaults.textPx || data.preferences.flashTextPx || 38), 18, 64));
+    const [showImages, setShowImages] = useState(() => (resume.showImages ?? defaults.showImages ?? data.preferences.flashShowImages) !== false);
+    const [fitContent, setFitContent] = useState(() => (resume.fitContent ?? defaults.fitContent ?? data.preferences.flashFitContent) !== false);
+    const [showTopic, setShowTopic] = useState(() => (resume.showTopic ?? defaults.showTopic ?? data.preferences.flashShowTopic) !== false);
+    const [showTags, setShowTags] = useState(() => (resume.showTags ?? defaults.showTags ?? data.preferences.flashShowTags) !== false);
+    const [autoSpeak, setAutoSpeak] = useState(() => Boolean(resume.autoSpeak ?? defaults.autoSpeak ?? data.preferences.flashAutoSpeak));
+    const [shuffleOn, setShuffleOn] = useState(() => Boolean(resume.shuffleOn ?? defaults.shuffle ?? data.preferences.shuffle));
     const [history, setHistory] = useState([]);
     const [focusMode, setFocusMode] = useState(false);
     const [actionMessage, setActionMessage] = useState('');
@@ -4748,13 +4786,13 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
     const firstFace = card ? (firstSide === 'back' ? { text: card.back, images: sideImages(card, 'back'), label: 'definition', isDefinition: true } : { text: card.front, images: sideImages(card, 'front'), label: 'term', isDefinition: false }) : null;
     const secondFace = card ? (firstSide === 'back' ? { text: card.front, images: sideImages(card, 'front'), label: 'term', isDefinition: false } : { text: card.back, images: sideImages(card, 'back'), label: 'definition', isDefinition: true }) : null;
     const visibleFace = flipped ? secondFace : firstFace;
-    const snapshot = () => ({ cardIds: study.cards.map(c => c.id), index, score, wrongIds, completedIds, trackProgress, flipSpeed, firstSide, textAlign, imageAlign, layoutVersion: 3, textPx, showImages, fitContent, showTopic, showTags, autoSpeak, showHelp, shuffleOn, complete: false });
+    const snapshot = () => ({ cardIds: study.cards.map(c => c.id), index, score, wrongIds, completedIds, trackProgress, flipSpeed, firstSide, textAlign, imageAlign, layoutVersion: 3, textPx, showImages, fitContent, showTopic, showTags, autoSpeak, showHelp, shuffleOn, swipeSensitivity, complete: false });
     latestSnapshotRef.current = snapshot();
     useEffect(() => { if (data.preferences.flashLayoutVersion !== 4 || data.preferences.flashTextAlignment !== textAlign || data.preferences.flashImageAlignment !== imageAlign) {
         updateData(d => ({ ...d, preferences: { ...d.preferences, flashLayoutVersion: 4, flashTextAlignment: textAlign || 'left', flashImageAlignment: imageAlign || 'center' } }));
     } }, []);
     useEffect(() => { if (!study.sessionKey || done)
-        return; clearTimeout(sessionSaveTimer.current); sessionSaveTimer.current = setTimeout(() => saveFlashSession(study.sessionKey, latestSnapshotRef.current || snapshot()), 320); return () => clearTimeout(sessionSaveTimer.current); }, [index, score.correct, score.wrong, wrongIds.join('|'), completedIds.join('|'), trackProgress, flipSpeed, firstSide, textAlign, imageAlign, textPx, showImages, fitContent, showTopic, showTags, autoSpeak, showHelp, shuffleOn, study.cards]);
+        return; clearTimeout(sessionSaveTimer.current); sessionSaveTimer.current = setTimeout(() => saveFlashSession(study.sessionKey, latestSnapshotRef.current || snapshot()), 320); return () => clearTimeout(sessionSaveTimer.current); }, [index, score.correct, score.wrong, wrongIds.join('|'), completedIds.join('|'), trackProgress, flipSpeed, firstSide, textAlign, imageAlign, textPx, showImages, fitContent, showTopic, showTags, autoSpeak, showHelp, shuffleOn, swipeSensitivity, study.cards]);
     useEffect(() => { const flush = () => { clearTimeout(sessionSaveTimer.current); if (study.sessionKey && latestSnapshotRef.current)
         saveFlashSession(study.sessionKey, { ...latestSnapshotRef.current, complete: doneRef.current || Boolean(latestSnapshotRef.current?.complete) }); }; const visibility = () => document.visibilityState === 'hidden' && flush(); window.addEventListener('pagehide', flush); document.addEventListener('visibilitychange', visibility); return () => { window.removeEventListener('pagehide', flush); document.removeEventListener('visibilitychange', visibility); flush(); }; }, [study.sessionKey]);
     useEffect(() => { const sync = () => setFocusMode(Boolean(document.fullscreenElement)); document.addEventListener('fullscreenchange', sync); return () => { document.removeEventListener('fullscreenchange', sync); clearTimeout(actionTimer.current); clearTimeout(gradeTimer.current); }; }, []);
@@ -4786,7 +4824,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
         return; const timer = setTimeout(() => speak(false), Math.min(700, Math.max(260, flipSpeed * .55))); return () => clearTimeout(timer); }, [autoSpeak, index, flipped, firstSide, showSettings]);
     function announce(message) { setActionMessage(message); clearTimeout(actionTimer.current); actionTimer.current = setTimeout(() => setActionMessage(''), 1900); }
     function resetToFirstSide() { setTurns(t => t % 2 ? t + 1 : t); }
-    function savePreference(key, value) { updateData(d => ({ ...d, preferences: { ...d.preferences, [key]: value } })); }
+    function savePreference(key, value) { const map = { firstSide:'firstSide', flipSpeed:'flipSpeed', swipeSensitivity:'swipeSensitivity', flashTextAlignment:'textAlignment', flashImageAlignment:'imageAlignment', flashTextPx:'textPx', flashShowImages:'showImages', flashFitContent:'fitContent', flashShowTopic:'showTopic', flashShowTags:'showTags', flashAutoSpeak:'autoSpeak', shuffle:'shuffle' }, deckKey = map[key]; if (study.deckIds?.length === 1 && deckKey) { updateData(d => ({ ...d, decks: d.decks.map(deck => deck.id === study.deckIds[0] ? { ...deck, flashcardSettings: { ...(deck.flashcardSettings || {}), [deckKey]: value }, updatedAt: nowISO() } : deck) })); return; } updateData(d => ({ ...d, preferences: { ...d.preferences, [key]: value } })); }
     function changeFlipSpeed(value) { const next = clamp(Number(value) || 680, 150, 2500); setFlipSpeed(next); savePreference('flipSpeed', next); }
     function changeFirstSide(value) { setFirstSide(value); resetToFirstSide(); savePreference('firstSide', value); announce(value === 'back' ? 'Definition will appear first' : 'Term will appear first'); }
     function changeTextAlignment(value) { setTextAlign(value); savePreference('flashTextAlignment', value); savePreference('flashLayoutVersion', 4); announce(`${value[0].toUpperCase() + value.slice(1)} text alignment selected`); }
@@ -4850,7 +4888,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
     function move(e) { const g = gesture.current; if (!g.active || g.pointerId !== e.pointerId)
         return; const x = e.clientX - g.startX; const moved = g.moved || Math.abs(x) > 8; gesture.current = { ...g, x, moved }; setDrag({ active: true, x, moved }); }
     function end(e) { const g = gesture.current; if (!g.active)
-        return; e.currentTarget.releasePointerCapture?.(g.pointerId); gesture.current = { active: false, startX: 0, x: 0, moved: false, pointerId: null }; if (Math.abs(g.x) >= 140) {
+        return; e.currentTarget.releasePointerCapture?.(g.pointerId); gesture.current = { active: false, startX: 0, x: 0, moved: false, pointerId: null }; if (Math.abs(g.x) >= (swipeSensitivity === 'easy' ? 95 : swipeSensitivity === 'firm' ? 170 : 140)) {
         setDrag({ active: false, x: 0, moved: false });
         finish(g.x > 0);
         return;
@@ -4883,9 +4921,10 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
             const g = touch;
             touch = null;
             const width = Math.max(280, el.getBoundingClientRect().width || 360);
-            const threshold = Math.min(118, Math.max(68, width * .20));
+            const swipeConfig = swipeSensitivity === 'easy' ? { factor:.14, min:52, max:92, flick:42, velocity:.38 } : swipeSensitivity === 'firm' ? { factor:.27, min:82, max:150, flick:68, velocity:.58 } : { factor:.20, min:68, max:118, flick:54, velocity:.48 };
+            const threshold = Math.min(swipeConfig.max, Math.max(swipeConfig.min, width * swipeConfig.factor));
             const elapsed = Math.max(1, performance.now() - g.startedAt), velocity = Math.abs(g.x) / elapsed;
-            const gradeSwipe = g.horizontal && (Math.abs(g.x) >= threshold || (Math.abs(g.x) >= 54 && velocity >= .48));
+            const gradeSwipe = g.horizontal && (Math.abs(g.x) >= threshold || (Math.abs(g.x) >= swipeConfig.flick && velocity >= swipeConfig.velocity));
             setDrag({ active: false, x: 0, moved: false });
             if (gradeSwipe) { event.preventDefault(); finishRef.current?.(g.x > 0); return; }
             if (!g.moved) setTurns(t => t + 1);
@@ -5131,7 +5170,13 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, saveFlashSe
                             " ms)."),
                         React.createElement("div", { className: "flip-speed-row" },
                             React.createElement("input", { type: "range", min: "150", max: "2500", step: "50", value: flipSpeed, onChange: e => changeFlipSpeed(e.target.value), "aria-label": "Flip duration in milliseconds" }),
-                            React.createElement("input", { type: "number", min: "150", max: "2500", step: "50", value: flipSpeed, onChange: e => changeFlipSpeed(e.target.value), "aria-label": "Flip duration milliseconds" })))),
+                            React.createElement("input", { type: "number", min: "150", max: "2500", step: "50", value: flipSpeed, onChange: e => changeFlipSpeed(e.target.value), "aria-label": "Flip duration milliseconds" }))),
+                    React.createElement("label", null,
+                        "Swipe sensitivity",
+                        React.createElement("select", { value: swipeSensitivity, onChange: e => { const next=e.target.value; setSwipeSensitivity(next); savePreference('swipeSensitivity',next); announce(`Swipe sensitivity: ${next}`); }, "aria-label": "Swipe sensitivity" },
+                            React.createElement("option", { value: "easy" }, "Easy — shorter swipe"),
+                            React.createElement("option", { value: "normal" }, "Normal"),
+                            React.createElement("option", { value: "firm" }, "Firm — longer swipe")))),
                 React.createElement("div", { className: "settings-section" },
                     React.createElement("div", { className: "settings-section-title" }, "Display and audio"),
                     React.createElement("label", { className: "flash-text-size-setting" },
