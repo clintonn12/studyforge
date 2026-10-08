@@ -1,0 +1,22 @@
+StudyForge PWA v1.11.8 validation
+
+v1.11.7 named functions retained: 655/655
+Current named functions: 667
+
+PASS — v1.11.8 marker
+PASS — storage key studyforge.v4
+PASS — data version 12
+PASS — flip does not use React state
+PASS — no swipe drag React state
+PASS — both card faces remain mounted
+PASS — current images fully decoded before Study mount
+PASS — rolling next-card decode
+PASS — study isolated from background progress renders
+PASS — Android hardware back
+PASS — open all topics
+PASS — close all topics
+PASS — unified study selection
+PASS — no database deletion
+PASS — all v1.11.7 named functions retained
+
+Important limitation: a sandbox cannot reproduce every PC/Android GPU/Chrome combination. The code path that caused flip/swipe rerenders was removed, both faces now remain mounted, and image decoding is completed for the visible card before Study mounts. Physical-device verification is still recommended after GitHub deployment.

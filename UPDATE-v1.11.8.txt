@@ -1,0 +1,23 @@
+StudyForge v1.11.8 changes
+
+PERFORMANCE / STABILITY
+- Zero-React-render flip path: tap/keyboard flip changes only the flash-card transform.
+- Both faces are mounted at the same time and remain ready throughout the rotation.
+- Removed React drag-state updates from swipe start/end; gesture frames are DOM + requestAnimationFrame only.
+- Current front/back images are decoded before mounting Study.
+- Rolling next-card image decode remains low-concurrency to avoid Android memory/CPU spikes.
+- StudyRouter is memo-isolated from progress data updates during an active session.
+- Removed containment/overflow combinations known to destabilize transformed 3D faces; inner content now owns scrolling.
+
+NAVIGATION
+- Android hardware Back uses browser history/popstate to navigate inside StudyForge.
+
+TOPICS / STUDY FILTER
+- Open all topic panels icon.
+- Close all topic panels icon.
+- Unified Study selection modal for all cards, selected topics, tags, started and starred filters.
+
+DATA
+- studyforge.v4 unchanged.
+- data version 12 unchanged.
+- no local database deletion added.
