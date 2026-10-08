@@ -1,0 +1,18 @@
+StudyForge PWA v1.11.9 — validation summary
+
+Validated in this build:
+- Every inline JavaScript block passes Node syntax checking.
+- Service worker passes Node syntax checking.
+- manifest.webmanifest parses as JSON and all three required icon files exist.
+- All named functions from v1.11.8 are retained (no missing named functions).
+- Storage key remains studyforge.v4 and library version remains 12.
+- No indexedDB.deleteDatabase call is present.
+- Android/system Back navigation logic from v1.11.8 is retained.
+- Unified Study selection UI from v1.11.8 is retained.
+- The v1.11.8 180 ms grade-navigation wait and 700 ms previous/next wait are removed.
+- Study progress writes are queued and batch-flushed on idle/background/exit.
+- Flip faces remain mounted and the final visible face is controlled independently from backface culling.
+- A headless Chromium flip-handoff simulation was run in both directions using the same rotateY easing and compositor-timed face gate; at sampled points a visible face was always present and the final face was correct.
+
+Important limitation:
+The sandbox cannot open the complete GitHub-hosted PWA through its real HTTPS origin or emulate the exact GPU/driver of the user's physical Android phone. Final physical-device verification is still required after GitHub deployment.

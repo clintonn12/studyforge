@@ -950,7 +950,7 @@
 
     /* v1.8 performance + transition + layout hardening */
     .flash-card.swapping-card{transition:none!important;pointer-events:none!important}
-    .flash-card.swapping-card .flash-face{visibility:hidden!important;opacity:0}
+    .flash-card.swapping-card .flash-face{visibility:hidden!important;opacity:0!important}
     .flash-drag.grade-correct,.flash-drag.grade-wrong{animation-duration:.18s!important}
 
     /* Contain long text and LaTeX inside each Terms-in-this-set column. */
@@ -1243,6 +1243,15 @@
     .srs-study .flash-face,.classic-study .flash-face{backface-visibility:hidden;transform:translateZ(0);contain:layout paint style}
     .srs-auto-save-note strong{font-size:13px}.srs-auto-save-note span{font-size:12px;text-transform:none;letter-spacing:0}
     @media(max-width:780px){.srs-study .mobile-flash-progress{width:100%!important;margin:0 0 12px!important;height:5px!important;flex-basis:5px!important}.classic-grade-status{padding-left:2px;padding-right:2px}}
+
+
+    /* StudyForge PWA v1.11.8 — stability-first study renderer */
+    .quiz-flash-stage{perspective:1400px!important;contain:none!important}
+    .quiz-flash-stage .flash-drag{contain:none!important;will-change:transform;transform:translate3d(0,0,0);-webkit-backface-visibility:visible!important;backface-visibility:visible!important}
+    .quiz-flash-stage .flash-card{contain:none!important;transform-style:preserve-3d!important;-webkit-transform-style:preserve-3d!important;-webkit-backface-visibility:visible!important;backface-visibility:visible!important;will-change:transform}
+    .quiz-flash-stage .flash-face{contain:layout style!important;-webkit-backface-visibility:hidden!important;backface-visibility:hidden!important;transform:translateZ(.05px)!important;visibility:visible!important;opacity:1!important}
+    .quiz-flash-stage .flash-back{transform:rotateY(180deg) translateZ(.05px)!important;visibility:visible!important;opacity:1!important}
+    .flash-card.resetting-card .flash-back,.flash-card.swapping-card .flash-face{visibility:visible!important;opacity:1!important}
     .fast-study-text{width:100%;height:100%;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;line-height:1.24;overflow:hidden;text-align:var(--card-text-align,center);overflow-wrap:anywhere;word-break:normal}
     .content-left .fast-study-text{justify-content:flex-start}.content-right .fast-study-text{justify-content:flex-end}.content-justify .fast-study-text{text-align:justify}
     .fast-study-text>.rich-text{width:100%;max-width:100%;min-width:0}.fast-study-text .katex-display,.fast-study-text .math-block{max-width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}.fast-study-text .katex-display::-webkit-scrollbar,.fast-study-text .math-block::-webkit-scrollbar{display:none}
@@ -1253,33 +1262,14 @@
     @media(max-width:780px){.study-selection-tools{grid-template-columns:1fr!important;gap:8px!important}.study-selection-summary{width:100%}.study-selection-status{justify-content:flex-start}.study-selection-tools .deck-location-control{width:100%}.study-filter-choice-grid{grid-template-columns:1fr}.study-selection-copy small{white-space:normal}.terms-heading-actions .compact-icon-btn{flex:0 0 40px!important;width:40px!important;min-width:40px!important}}
 
 
-
-    /* StudyForge PWA v1.11.9 — flip correctness + performance hotfix */
-    /* The transform animation stays exactly rotateY with the existing easing. The two
-       faces remain mounted. Opacity handoff is compositor-timed around the edge-on
-       point so Chrome/Android cannot expose a mirrored front face if backface culling
-       glitches under load. */
-    .quiz-flash-stage{perspective:1400px!important;contain:none!important}
-    .quiz-flash-stage .flash-drag{contain:none!important;transform:translate3d(0,0,0)!important;will-change:transform!important;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}
-    .quiz-flash-stage .flash-card{contain:none!important;isolation:auto!important;transform:rotateY(0deg);transform-style:preserve-3d!important;-webkit-transform-style:preserve-3d!important;will-change:transform!important;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}
-    .quiz-flash-stage .flash-face{contain:none!important;overflow:hidden!important;-webkit-backface-visibility:hidden!important;backface-visibility:hidden!important;will-change:opacity!important;visibility:visible!important;pointer-events:none!important;transition:none!important;animation:none}
-    .quiz-flash-stage .flash-front{transform:rotateY(0deg)!important}
-    .quiz-flash-stage .flash-back{transform:rotateY(180deg)!important}
-    .quiz-flash-stage .flash-face>.card-face-content{width:100%;height:100%;min-width:0;min-height:0;overflow:auto!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateZ(0)}
+    /* v1.11.8 final — zero-rerender flip path + Chrome/Android 3D stability */
+    .quiz-flash-stage .flash-card{transform:rotateY(0deg);transform-style:preserve-3d!important;-webkit-transform-style:preserve-3d!important;will-change:transform;isolation:isolate}
+    .quiz-flash-stage .flash-face{contain:none!important;overflow:hidden!important;-webkit-backface-visibility:hidden!important;backface-visibility:hidden!important;transform:rotateY(0deg) translateZ(1px)!important;will-change:auto}
+    .quiz-flash-stage .flash-back{transform:rotateY(180deg) translateZ(1px)!important}
+    .quiz-flash-stage .flash-face>.card-face-content{width:100%;height:100%;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
     .quiz-flash-stage .flash-face>.card-face-content::-webkit-scrollbar{width:5px;height:5px}
-    .quiz-flash-stage .flash-card[data-target-face="front"] .flash-front{opacity:1}
-    .quiz-flash-stage .flash-card[data-target-face="front"] .flash-back{opacity:0}
-    .quiz-flash-stage .flash-card[data-target-face="back"] .flash-front{opacity:0}
-    .quiz-flash-stage .flash-card[data-target-face="back"] .flash-back{opacity:1}
-    @keyframes sfFrontOut{0%,14%{opacity:1}14.01%,100%{opacity:0}}
-    @keyframes sfBackIn{0%,12%{opacity:0}12.01%,100%{opacity:1}}
-    @keyframes sfBackOut{0%,14%{opacity:1}14.01%,100%{opacity:0}}
-    @keyframes sfFrontIn{0%,12%{opacity:0}12.01%,100%{opacity:1}}
-    .quiz-flash-stage .flash-card[data-flipping="true"][data-target-face="back"] .flash-front{animation:sfFrontOut var(--sf-flip-duration,320ms) linear both}
-    .quiz-flash-stage .flash-card[data-flipping="true"][data-target-face="back"] .flash-back{animation:sfBackIn var(--sf-flip-duration,320ms) linear both}
-    .quiz-flash-stage .flash-card[data-flipping="true"][data-target-face="front"] .flash-back{animation:sfBackOut var(--sf-flip-duration,320ms) linear both}
-    .quiz-flash-stage .flash-card[data-flipping="true"][data-target-face="front"] .flash-front{animation:sfFrontIn var(--sf-flip-duration,320ms) linear both}
-    @media(max-width:780px){.quiz-flash-stage{perspective:1100px!important}.quiz-flash-stage .flash-card{transform-origin:50% 50%!important}}
+    .quiz-flash-stage .flash-drag{transform:translate3d(0,0,0);will-change:transform}
+    @media(max-width:780px){.quiz-flash-stage .flash-card{transform-origin:50% 50%}.quiz-flash-stage .flash-face{transform:rotateY(0deg) translateZ(.5px)!important}.quiz-flash-stage .flash-back{transform:rotateY(180deg) translateZ(.5px)!important}}
 </style>
 </head>
 <body>
@@ -1909,7 +1899,7 @@ const studyImageCache = new Map();
 const studyImagePreloadQueue = [];
 const studyImageQueued = new Set();
 let studyImagePreloadActive = 0;
-function studyImagePreloadLimit() { const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || ''); const cores = Math.max(1, Number(navigator.hardwareConcurrency) || 2); return mobile ? 2 : (cores <= 4 ? 2 : 3); }
+function studyImagePreloadLimit() { const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || ''); const cores = Math.max(1, Number(navigator.hardwareConcurrency) || 2); return mobile || cores <= 4 ? 1 : 2; }
 function trimStudyImageCache() { const limit = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || '') ? 44 : 72; if (studyImageCache.size <= limit) return; for (const [src, entry] of studyImageCache) { if (studyImageCache.size <= limit) break; if (!entry?.ready || studyImageQueued.has(src)) continue; studyImageCache.delete(src); } }
 function preloadImageSource(src) {
     if (!src) return Promise.resolve(false);
@@ -3191,7 +3181,7 @@ function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, se
             React.createElement("button", { className: "rail-logo", onClick: openHome, "aria-label": "StudyForge home" },
                 React.createElement(BrandMark, null),
                 React.createElement("span", null, "StudyForge")),
-            React.createElement("span", { className: "rail-version" }, "PWA v1.11.9")),
+            React.createElement("span", { className: "rail-version" }, "PWA v1.11.8")),
         React.createElement("div", { className: "rail-profile-card" },
             React.createElement("span", { className: "rail-profile-avatar" }, profile.avatar ? React.createElement("img", { src: profile.avatar, alt: "" }) : profileInitials(profile)),
             React.createElement("button", { className: "rail-profile-copy", onClick: () => setModal({ type: 'edit-profile' }), "aria-label": "Edit creator profile" },
@@ -4911,9 +4901,6 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     const swipeSurface = useRef(null);
     const cardFlipRef = useRef(null);
     const flippedRef = useRef(false);
-    const flipCleanupTimerRef = useRef(null);
-    const pendingStudyWritesRef = useRef([]);
-    const pendingStudyWriteHandleRef = useRef(null);
     const swipeUnderlayRef = useRef(null);
     const dragRafRef = useRef(0);
     const finishRef = useRef(null);
@@ -4938,14 +4925,14 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         return; clearTimeout(sessionSaveTimer.current); sessionSaveTimer.current = setTimeout(() => saveFlashSession(study.sessionKey, latestSnapshotRef.current || snapshot()), 1800); return () => clearTimeout(sessionSaveTimer.current); }, [index, score.correct, score.wrong, wrongIds.join('|'), completedIds.join('|'), trackProgress, flipSpeed, firstSide, textAlign, imageAlign, textPx, showImages, fitContent, showTopic, showTags, autoSpeak, showHelp, shuffleOn, swipeSensitivity, study.cards]);
     useEffect(() => { const flush = () => { clearTimeout(sessionSaveTimer.current); if (study.sessionKey && latestSnapshotRef.current)
         saveFlashSession(study.sessionKey, { ...latestSnapshotRef.current, complete: doneRef.current || Boolean(latestSnapshotRef.current?.complete) }); }; const visibility = () => document.visibilityState === 'hidden' && flush(); window.addEventListener('pagehide', flush); document.addEventListener('visibilitychange', visibility); return () => { window.removeEventListener('pagehide', flush); document.removeEventListener('visibilitychange', visibility); flush(); }; }, [study.sessionKey]);
-    useEffect(() => { const sync = () => setFocusMode(Boolean(document.fullscreenElement)); document.addEventListener('fullscreenchange', sync); return () => { document.removeEventListener('fullscreenchange', sync); clearTimeout(actionTimer.current); clearTimeout(gradeTimer.current); clearTimeout(flipCleanupTimerRef.current); if (pendingStudyWriteHandleRef.current) { if ('cancelIdleCallback' in window) cancelIdleCallback(pendingStudyWriteHandleRef.current); else clearTimeout(pendingStudyWriteHandleRef.current); pendingStudyWriteHandleRef.current = null; } }; }, []);
+    useEffect(() => { const sync = () => setFocusMode(Boolean(document.fullscreenElement)); document.addEventListener('fullscreenchange', sync); return () => { document.removeEventListener('fullscreenchange', sync); clearTimeout(actionTimer.current); clearTimeout(gradeTimer.current); }; }, []);
     useEffect(() => { if (!showSettings)
         return; const close = e => e.key === 'Escape' && setShowSettings(false); window.addEventListener('keydown', close); return () => window.removeEventListener('keydown', close); }, [showSettings]);
-    useEffect(() => { window.__studyforgeStudyActive = true; standalonePostMessage({ type: 'studyforge:study-mode', active: true }, location.origin); const flush = () => flushPendingStudyWrites(); const visibility = () => { if (document.visibilityState === 'hidden') flush(); }; window.addEventListener('pagehide', flush); document.addEventListener('visibilitychange', visibility); return () => { flush(); window.removeEventListener('pagehide', flush); document.removeEventListener('visibilitychange', visibility); window.__studyforgeStudyActive = false; standalonePostMessage({ type: 'studyforge:study-mode', active: false }, location.origin); }; }, []);
+    useEffect(() => { window.__studyforgeStudyActive = true; standalonePostMessage({ type: 'studyforge:study-mode', active: true }, location.origin); return () => { window.__studyforgeStudyActive = false; standalonePostMessage({ type: 'studyforge:study-mode', active: false }, location.origin); }; }, []);
     useEffect(() => {
         if (preloadHandle.current) { if ('cancelIdleCallback' in window) cancelIdleCallback(preloadHandle.current); else clearTimeout(preloadHandle.current); }
-        primeStudyImages(study.cards, index + 1, Math.min(12, Math.max(0, study.cards.length - 1)));
-        const run = () => primeStudyImages(study.cards, index + 13, Math.min(6, Math.max(0, study.cards.length - 13)));
+        primeStudyImages(study.cards, index + 1, Math.min(8, Math.max(0, study.cards.length - 1)));
+        const run = () => primeStudyImages(study.cards, index + 9, Math.min(6, Math.max(0, study.cards.length - 9)));
         preloadHandle.current = 'requestIdleCallback' in window ? requestIdleCallback(run, { timeout: 650 }) : setTimeout(run, 120);
         return () => { if (!preloadHandle.current) return; if ('cancelIdleCallback' in window) cancelIdleCallback(preloadHandle.current); else clearTimeout(preloadHandle.current); };
     }, [index, study.cards]);
@@ -4956,19 +4943,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         flippedRef.current = Boolean(nextFlipped);
         const el = cardFlipRef.current;
         if (!el) return;
-        clearTimeout(flipCleanupTimerRef.current);
-        const targetFace = flippedRef.current ? 'back' : 'front';
-        const duration = animate ? Math.max(1, Number(flipSpeed) || 320) : 0;
-        el.style.transitionDuration = `${duration}ms`;
-        el.style.setProperty('--sf-flip-duration', `${duration}ms`);
-        el.dataset.targetFace = targetFace;
-        if (animate && duration > 1) {
-            el.dataset.flipping = 'true';
-            const expected = el;
-            flipCleanupTimerRef.current = setTimeout(() => {
-                if (cardFlipRef.current === expected && expected.dataset.targetFace === targetFace) delete expected.dataset.flipping;
-            }, duration + 48);
-        } else delete el.dataset.flipping;
+        el.style.transitionDuration = animate ? `${flipSpeed}ms` : '0ms';
         el.style.transform = `rotateY(${flippedRef.current ? 180 : 0}deg)`;
         el.dataset.flipped = flippedRef.current ? 'true' : 'false';
         const shown = flippedRef.current ? secondFace : firstFace, hidden = flippedRef.current ? firstFace : secondFace;
@@ -4984,13 +4959,9 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     }
     function resetToFirstSide(animate = false) { applyFlipVisual(false, animate); }
     React.useLayoutEffect(() => {
-        clearTimeout(flipCleanupTimerRef.current);
         flippedRef.current = false;
         const el = cardFlipRef.current;
         if (!el) return;
-        el.dataset.targetFace = 'front';
-        delete el.dataset.flipping;
-        el.style.setProperty('--sf-flip-duration', `${flipSpeed}ms`);
         el.style.transitionDuration = '0ms';
         el.style.transform = 'rotateY(0deg)';
         el.dataset.flipped = 'false';
@@ -5008,27 +4979,11 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     function changeShowTopic(value) { setShowTopic(value); savePreference('flashShowTopic', value); announce(value ? 'Topic shown' : 'Topic hidden'); }
     function changeShowTags(value) { setShowTags(value); savePreference('flashShowTags', value); announce(value ? 'Tags shown' : 'Tags hidden'); }
     function changeAutoSpeak(value) { setAutoSpeak(value); savePreference('flashAutoSpeak', value); announce(value ? 'Automatic read-aloud enabled' : 'Automatic read-aloud disabled'); }
-    function flushPendingStudyWrites() {
-        if (pendingStudyWriteHandleRef.current) {
-            if ('cancelIdleCallback' in window) cancelIdleCallback(pendingStudyWriteHandleRef.current);
-            else clearTimeout(pendingStudyWriteHandleRef.current);
-            pendingStudyWriteHandleRef.current = null;
-        }
-        if (!pendingStudyWritesRef.current.length) return;
-        const writes = pendingStudyWritesRef.current.splice(0);
-        const run = () => { for (const write of writes) { try { write(); } catch (error) { console.warn('Deferred study progress write failed', error); } } };
-        if (typeof React.startTransition === 'function') React.startTransition(run); else run();
-    }
-    function scheduleStudyWriteFlush() {
-        if (pendingStudyWriteHandleRef.current) return;
-        const run = () => { pendingStudyWriteHandleRef.current = null; flushPendingStudyWrites(); };
-        if ('requestIdleCallback' in window) pendingStudyWriteHandleRef.current = requestIdleCallback(run, { timeout: 8000 });
-        else pendingStudyWriteHandleRef.current = setTimeout(run, 4500);
-    }
     function commitStudyDataUpdate(fn) {
-        if (typeof fn !== 'function') return;
-        pendingStudyWritesRef.current.push(fn);
-        scheduleStudyWriteFlush();
+        // Progress writes must never block the pointer/flip frame. React transitions keep
+        // the card animation responsive while the durable deck state catches up.
+        if (typeof React.startTransition === 'function') React.startTransition(fn);
+        else setTimeout(fn, 0);
     }
     function applyDragVisual(x, active = true) { const el = swipeSurface.current, under = swipeUnderlayRef.current; if (!el) return; cancelAnimationFrame(dragRafRef.current); dragRafRef.current = requestAnimationFrame(() => { const px = Number(x) || 0; el.style.transition = active ? 'none' : ''; el.style.transform = active && px ? `translate3d(${px}px,0,0) rotate(${clamp(px / 18, -10, 10)}deg)` : ''; if (under) { if (active && Math.abs(px) > 6) { const positive = px >= 0; under.className = `swipe-underlay ${positive ? 'right' : 'left'}`; under.textContent = studyType === 'spaced' ? (positive ? 'Okay' : 'Repeat') : (positive ? 'Know' : 'Still learning'); under.style.opacity = String(Math.min(.95, .22 + Math.abs(px) / 220)); } else { under.style.opacity = '0'; } } }); }
     function finish(correct) {
@@ -5063,10 +5018,12 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         // Session persistence is debounced while the user is actively studying; it is
         // still flushed immediately on pause/background/exit by the lifecycle handler.
         clearTimeout(gradeTimer.current);
-        if (!isComplete) { primeStudyImages(study.cards, nextIndex, Math.min(5, study.cards.length)); ensureCardImagesReady(study.cards[nextIndex], 0).catch(() => false); }
-        setSuppressFlipTransition(true);
-        resetToFirstSide(false);
-        requestAnimationFrame(() => { setGradeAnimation(null); if (isComplete) setDone(true); else setIndex(nextIndex); requestAnimationFrame(() => { setSuppressFlipTransition(false); setIsGrading(false); gradingLock.current = false; }); });
+        const nextCard = study.cards[nextIndex], nextReady = isComplete || cardImagesAlreadyReady(nextCard) ? Promise.resolve(true) : ensureCardImagesReady(nextCard, 180);
+        nextReady.then(() => {
+            setSuppressFlipTransition(true);
+            resetToFirstSide(false);
+            requestAnimationFrame(() => { setGradeAnimation(null); if (isComplete) setDone(true); else setIndex(nextIndex); requestAnimationFrame(() => { setSuppressFlipTransition(false); setIsGrading(false); gradingLock.current = false; }); });
+        });
     }
     function finishSrs(rating) {
         if (!card || gradingLock.current) return;
@@ -5075,8 +5032,8 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         const nextScore = { ...score, [positive ? 'correct' : 'wrong']: score[positive ? 'correct' : 'wrong'] + 1 }, nextWrong = positive ? wrongIds.filter(id => id !== card.id) : unique([...wrongIds, card.id]), nextCompleted = unique([...completedIds, card.id]), isComplete = nextCompleted.length >= study.cards.length, nextIndex = isComplete ? index : Math.min(index + 1, study.cards.length - 1);
         setHistory(h => [...h.slice(-24), before]); commitStudyDataUpdate(() => gradeCardSpaced(card.id, rating, card.sourceDeckId, srsSettings)); setScore(nextScore); setWrongIds(nextWrong); setCompletedIds(nextCompleted); gesture.current = { active:false,startX:0,x:0,moved:false,pointerId:null }; applyDragVisual(0,false);
         const nextSnapshot = { ...snapshot(), index: nextIndex, score: nextScore, wrongIds: nextWrong, completedIds: nextCompleted, complete: isComplete, studyType: 'spaced' }; latestSnapshotRef.current = nextSnapshot;
-        if (!isComplete) { primeStudyImages(study.cards, nextIndex, Math.min(5, study.cards.length)); ensureCardImagesReady(study.cards[nextIndex], 0).catch(() => false); }
-        setSuppressFlipTransition(true); resetToFirstSide(false); requestAnimationFrame(() => { setGradeAnimation(null); if (isComplete) setDone(true); else setIndex(nextIndex); requestAnimationFrame(() => { setSuppressFlipTransition(false); setIsGrading(false); gradingLock.current=false; }); });
+        const nextCard = study.cards[nextIndex], nextReady = isComplete || cardImagesAlreadyReady(nextCard) ? Promise.resolve(true) : ensureCardImagesReady(nextCard, 180);
+        nextReady.then(() => { setSuppressFlipTransition(true); resetToFirstSide(false); requestAnimationFrame(() => { setGradeAnimation(null); if (isComplete) setDone(true); else setIndex(nextIndex); requestAnimationFrame(() => { setSuppressFlipTransition(false); setIsGrading(false); gradingLock.current=false; }); }); });
     }
     finishRef.current = studyType === 'spaced' ? (correct => finishSrs(correct ? 'okay' : 'repeat')) : finish;
     function gradeFromButton(correct, e) { e?.preventDefault?.(); e?.stopPropagation?.(); finish(correct); }
@@ -5156,16 +5113,16 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         e.stopPropagation();
         finish(true);
     } }; window.addEventListener('keydown', handler, true); return () => window.removeEventListener('keydown', handler, true); }, [showSettings, isGrading, index, card?.id, score.correct, score.wrong, wrongIds.join('|'), completedIds.join('|'), trackProgress, keybinds.flip.join('|'), keybinds.stillLearning.join('|'), keybinds.know.join('|'), studyType]);
-    function previous() { if (isGrading)
+    async function previous() { if (isGrading)
         return; if (index <= 0) {
         announce('You are already on the first card');
         return;
-    } const target = index - 1; primeStudyImages(study.cards, target, Math.min(4, study.cards.length)); ensureCardImagesReady(study.cards[target], 0).catch(() => false); gradingLock.current = false; setIndex(target); resetToFirstSide(); setDone(false); announce('Previous card'); }
-    function next() { if (isGrading)
+    } const target = index - 1; await ensureCardImagesReady(study.cards[target], 700); gradingLock.current = false; setIndex(target); resetToFirstSide(); setDone(false); announce('Previous card'); }
+    async function next() { if (isGrading)
         return; if (index >= study.cards.length - 1) {
         announce('You are already on the last card');
         return;
-    } const target = index + 1; primeStudyImages(study.cards, target, Math.min(4, study.cards.length)); ensureCardImagesReady(study.cards[target], 0).catch(() => false); gradingLock.current = false; setIndex(target); resetToFirstSide(); announce('Next card'); }
+    } const target = index + 1; await ensureCardImagesReady(study.cards[target], 700); gradingLock.current = false; setIndex(target); resetToFirstSide(); announce('Next card'); }
     function speak(withMessage = true) { const visibleFace = currentVisibleFace(); if (!card || !visibleFace)
         return; if (!('speechSynthesis' in window)) {
         announce('Text-to-speech is not supported in this browser');
@@ -5247,7 +5204,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         announce(focusMode ? 'Focus mode closed' : 'Focus mode enabled');
     } }
     function exit() { if (document.fullscreenElement)
-        document.exitFullscreen?.().catch(() => { }); flushPendingStudyWrites(); const latest = latestSnapshotRef.current || snapshot(), finalSnapshot = { ...latest, complete: done || Boolean(latest.complete) }; clearTimeout(sessionSaveTimer.current); study.sessionKey && saveFlashSession(study.sessionKey, finalSnapshot); setStudy(null); }
+        document.exitFullscreen?.().catch(() => { }); const latest = latestSnapshotRef.current || snapshot(), finalSnapshot = { ...latest, complete: done || Boolean(latest.complete) }; clearTimeout(sessionSaveTimer.current); study.sessionKey && saveFlashSession(study.sessionKey, finalSnapshot); setStudy(null); }
     function restart() { study.sessionKey && clearFlashSession(study.sessionKey); gradingLock.current = false; setShowSettings(false); setStudy(s => ({ ...s, resume: null, key: uid('study') })); }
     function reviewMissed() { const missed = study.cards.filter(c => wrongIds.includes(c.id)); if (!missed.length)
         return; setStudy(s => ({ ...s, cards: missed, originalCardIds: missed.map(c => c.id), sessionKey: `${s.sessionKey}:missed:${Date.now()}`, resume: null, key: uid('study') })); }
@@ -5270,7 +5227,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
                 studyType === 'spaced' && React.createElement("span", { className: `srs-card-badge ${srsCardStateLabel(card).toLowerCase()}` }, srsCardStateLabel(card)),
                 studyType === 'spaced' && React.createElement("button", { type: "button", className: "srs-card-speaker", onPointerDown: e => e.stopPropagation(), onClick: e => { e.stopPropagation(); speak(); }, "aria-label": 'Read current card side aloud' }, React.createElement(Icon, { name: "speaker", size: 25 })),
                 React.createElement("div", { ref: swipeSurface, className: `flash-drag ${gradeAnimation ? `grade-${gradeAnimation}` : ''}`, onPointerDown: down, onPointerMove: move, onPointerUp: end, onPointerCancel: end, onWheel: e => { e.preventDefault(); e.stopPropagation(); } },
-                    React.createElement("div", { ref: cardFlipRef, key: card.id, className: `flash-card ${suppressFlipTransition ? 'resetting-card' : ''}`, "data-target-face": "front", style: { transitionDuration: suppressFlipTransition ? '0ms' : `${flipSpeed}ms`, '--sf-flip-duration': `${flipSpeed}ms` }, role: "button", tabIndex: "0", "aria-label": `Flashcard ${index + 1}. ${firstFace.label} shown; activate to show ${secondFace.label}` },
+                    React.createElement("div", { ref: cardFlipRef, key: card.id, className: `flash-card ${suppressFlipTransition ? 'resetting-card' : ''}`, style: { transitionDuration: suppressFlipTransition ? '0ms' : `${flipSpeed}ms` }, role: "button", tabIndex: "0", "aria-label": `Flashcard ${index + 1}. ${firstFace.label} shown; activate to show ${secondFace.label}` },
                         renderFace(firstFace, 'flash-front'),
                         renderFace(secondFace, 'flash-back')))),
             showHelp && React.createElement("div", { className: "study-help" },

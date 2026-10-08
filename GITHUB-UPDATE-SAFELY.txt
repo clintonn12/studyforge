@@ -1,4 +1,4 @@
-StudyForge v1.11.7 — Safe GitHub Pages Update
+StudyForge v1.11.9 — Safe GitHub Pages Update
 =============================================
 
 1. Open your CURRENT StudyForge and export a Complete JSON Backup.

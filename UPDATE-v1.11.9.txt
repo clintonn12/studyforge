@@ -1,0 +1,14 @@
+StudyForge PWA v1.11.9 — flip/performance emergency hotfix
+
+Most important fixes
+- Eliminates the mirrored/reversed flashcard face regression introduced by v1.11.8.
+- Keeps front and back mounted throughout the same rotateY flip animation.
+- Uses compositor-timed face handoff around the card edge, so a busy JavaScript thread cannot expose the wrong face.
+- Removes intentional 180 ms / 700 ms navigation waits after grading and next/previous.
+- Batches progress writes during idle time and flushes them on background/exit.
+- Warms more upcoming images and modestly increases bounded decode concurrency.
+
+Data safety
+- Storage key remains studyforge.v4.
+- Library version remains 12.
+- No site-data clearing or database deletion was added.
