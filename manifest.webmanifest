@@ -2,7 +2,7 @@
   "id": "./",
   "name": "StudyForge",
   "short_name": "StudyForge",
-  "description": "Local-first flashcard study with Classic and spaced-repetition modes, stability-first instant-ready images, LaTeX, topics, tags, progress, folders, bulk editing, and offline PWA support.",
+  "description": "Local-first StudyForge flashcards with no-scroll auto-fit cards, compositor-only swipe grading, instant-ready images, Classic and spaced-repetition modes, LaTeX, topics, tags, progress, and offline PWA support.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -1,0 +1,11 @@
+StudyForge PWA v1.11.10 — Mobile Fit + Swipe Performance
+
+- Restores visible left/right card swipe motion on PC and Android.
+- Swipe drag and exit animation are transform/opacity only; React does not re-render per drag frame.
+- Removes internal flashcard scrolling and scrollbars in Study mode.
+- Replaces length-only text sizing with measured, cached auto-fit sizing for the mounted front and back faces.
+- Shrinks text/LaTeX as needed so it stays inside the card, including cards with images.
+- Keeps both faces mounted and retains the v1.11.9 flip correctness handoff.
+- Keeps the same studyforge.v4 storage key and library version 12.
+
+Update the same GitHub Pages origin. Do not clear browser/PWA site data. Make a Complete JSON Backup before updating.

@@ -1254,18 +1254,18 @@
 
 
 
-    /* StudyForge PWA v1.11.10 — flip correctness + performance hotfix */
+    /* StudyForge PWA v1.11.9 — flip correctness + performance hotfix */
     /* The transform animation stays exactly rotateY with the existing easing. The two
        faces remain mounted. Opacity handoff is compositor-timed around the edge-on
        point so Chrome/Android cannot expose a mirrored front face if backface culling
        glitches under load. */
     .quiz-flash-stage{perspective:1400px!important;contain:none!important}
-    .quiz-flash-stage .flash-drag{contain:none!important;transform:none;will-change:transform!important;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}
+    .quiz-flash-stage .flash-drag{contain:none!important;transform:translate3d(0,0,0)!important;will-change:transform!important;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}
     .quiz-flash-stage .flash-card{contain:none!important;isolation:auto!important;transform:rotateY(0deg);transform-style:preserve-3d!important;-webkit-transform-style:preserve-3d!important;will-change:transform!important;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}
     .quiz-flash-stage .flash-face{contain:none!important;overflow:hidden!important;-webkit-backface-visibility:hidden!important;backface-visibility:hidden!important;will-change:opacity!important;visibility:visible!important;pointer-events:none!important;transition:none!important;animation:none}
     .quiz-flash-stage .flash-front{transform:rotateY(0deg)!important}
     .quiz-flash-stage .flash-back{transform:rotateY(180deg)!important}
-    .quiz-flash-stage .flash-face>.card-face-content{width:100%;height:100%;min-width:0;min-height:0;overflow:hidden!important;overscroll-behavior:none;transform:translateZ(0)}
+    .quiz-flash-stage .flash-face>.card-face-content{width:100%;height:100%;min-width:0;min-height:0;overflow:auto!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;transform:translateZ(0)}
     .quiz-flash-stage .flash-face>.card-face-content::-webkit-scrollbar{width:5px;height:5px}
     .quiz-flash-stage .flash-card[data-target-face="front"] .flash-front{opacity:1}
     .quiz-flash-stage .flash-card[data-target-face="front"] .flash-back{opacity:0}
@@ -1280,49 +1280,6 @@
     .quiz-flash-stage .flash-card[data-flipping="true"][data-target-face="front"] .flash-back{animation:sfBackOut var(--sf-flip-duration,320ms) linear both}
     .quiz-flash-stage .flash-card[data-flipping="true"][data-target-face="front"] .flash-front{animation:sfFrontIn var(--sf-flip-duration,320ms) linear both}
     @media(max-width:780px){.quiz-flash-stage{perspective:1100px!important}.quiz-flash-stage .flash-card{transform-origin:50% 50%!important}}
-
-    /* StudyForge PWA v1.11.10 — no-scroll auto-fit + compositor-only swipe restoration */
-    .quiz-flash-stage .flash-drag{
-      transform:none;
-      opacity:1;
-      will-change:transform,opacity!important;
-      touch-action:pan-y!important;
-    }
-    .quiz-flash-stage .flash-face,
-    .quiz-flash-stage .flash-face>.card-face-content,
-    .quiz-flash-stage .card-face-text,
-    .quiz-flash-stage .fast-study-text,
-    .quiz-flash-stage .fast-study-text>.rich-text{
-      overflow:hidden!important;
-      overscroll-behavior:none!important;
-      scrollbar-width:none!important;
-    }
-    .quiz-flash-stage .flash-face::-webkit-scrollbar,
-    .quiz-flash-stage .flash-face>.card-face-content::-webkit-scrollbar,
-    .quiz-flash-stage .card-face-text::-webkit-scrollbar,
-    .quiz-flash-stage .fast-study-text::-webkit-scrollbar,
-    .quiz-flash-stage .fast-study-text>.rich-text::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
-    .quiz-flash-stage .measured-study-text{width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;display:flex!important;align-items:center!important;justify-content:center!important;line-height:1.22!important}
-    .quiz-flash-stage .measured-study-text>.rich-text{width:100%!important;max-width:100%!important;max-height:100%!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important}
-    .quiz-flash-stage .measured-study-text .math-inline{max-width:100%!important;overflow:hidden!important;white-space:nowrap!important}
-    .quiz-flash-stage .measured-study-text .math-block,
-    .quiz-flash-stage .measured-study-text .katex-display{max-width:100%!important;overflow:hidden!important}
-    .quiz-flash-stage .card-face-tags{overflow:hidden!important;max-height:72px!important;scrollbar-width:none!important}
-    .quiz-flash-stage .card-face-tags::-webkit-scrollbar{display:none!important}
-    .centered-flash-stage .classic-card-face.text-media{grid-template-rows:minmax(0,38%) minmax(0,1fr) auto!important}
-    .centered-flash-stage .classic-card-face.text-media.text-medium{grid-template-rows:minmax(0,46%) minmax(0,1fr) auto!important}
-    .centered-flash-stage .classic-card-face.text-media.text-heavy{grid-template-rows:minmax(0,56%) minmax(0,1fr) auto!important}
-    .centered-flash-stage .classic-card-face .card-face-text{min-height:0!important;max-height:none!important}
-    .centered-flash-stage .classic-card-face .card-face-media.classic{min-height:0!important}
-    @media(max-width:780px){
-      .quiz-flash-stage .flash-face>.card-face-content{overflow:hidden!important;-webkit-overflow-scrolling:auto!important}
-      .centered-flash-stage .card-face-content.classic-card-face{padding:16px 14px!important;gap:8px!important}
-      .centered-flash-stage .classic-card-face.text-media{grid-template-rows:minmax(0,40%) minmax(0,1fr) auto!important}
-      .centered-flash-stage .classic-card-face.text-media.text-medium{grid-template-rows:minmax(0,48%) minmax(0,1fr) auto!important}
-      .centered-flash-stage .classic-card-face.text-media.text-heavy{grid-template-rows:minmax(0,58%) minmax(0,1fr) auto!important}
-      .centered-flash-stage .classic-card-face .rich-text{line-height:1.2!important}
-      .centered-flash-stage .classic-card-face .card-face-topic{max-width:92%!important}
-    }
 </style>
 </head>
 <body>
@@ -2279,63 +2236,11 @@ function CardMediaFlow({ images = [], align = 'center', priority = false }) {
     return React.createElement("div", { className: `classic-card-images ${list.length > 1 ? 'multiple' : 'single'} align-${align}` }, list.map((img, index) => React.createElement("div", { className: "classic-card-image-wrap", key: img.id || index, style: { '--image-width': `${clamp(Number(img.width) || 100, 20, 100)}%` } },
         React.createElement("img", { src: img.src, loading: priority ? 'eager' : 'lazy', decoding: 'async', fetchPriority: priority ? 'high' : 'auto', alt: `Card attachment ${index + 1}` }))));
 }
-const STUDY_TEXT_FIT_CACHE = new Map();
-const FastStudyMathText = React.memo(function FastStudyMathText({ text = '', maxPx = 38, minPx = 8 }) {
-    const ref = useRef(null);
-    React.useLayoutEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        let raf = 0, ro = null, disposed = false, lastW = -1, lastH = -1;
-        const fitNow = () => {
-            if (disposed || !el.isConnected) return;
-            const content = el.querySelector('.rich-text') || el.firstElementChild;
-            const w = el.clientWidth, h = el.clientHeight;
-            if (!content || w < 4 || h < 4) return;
-            const bucketW = Math.round(w / 4) * 4, bucketH = Math.round(h / 4) * 4;
-            const key = `${text}\u0000${maxPx}\u0000${minPx}\u0000${bucketW}x${bucketH}`;
-            const cached = STUDY_TEXT_FIT_CACHE.get(key);
-            if (cached) {
-                el.style.fontSize = `${cached}px`;
-                return;
-            }
-            const fits = size => {
-                el.style.fontSize = `${size}px`;
-                const vertical = content.scrollHeight <= el.clientHeight + 1;
-                const horizontal = content.scrollWidth <= el.clientWidth + 1;
-                const mathFits = Array.from(content.querySelectorAll('.math-inline,.math-block,.katex-display')).every(node => node.scrollWidth <= el.clientWidth + 2 && node.scrollHeight <= el.clientHeight + 2);
-                return vertical && horizontal && mathFits;
-            };
-            let low = Math.max(6, Number(minPx) || 8), high = Math.max(low, Number(maxPx) || 38), best = low;
-            if (fits(high)) best = high;
-            else {
-                while (low <= high) {
-                    const mid = Math.floor((low + high) / 2);
-                    if (fits(mid)) { best = mid; low = mid + 1; }
-                    else high = mid - 1;
-                }
-            }
-            el.style.fontSize = `${best}px`;
-            if (STUDY_TEXT_FIT_CACHE.size > 500) STUDY_TEXT_FIT_CACHE.clear();
-            STUDY_TEXT_FIT_CACHE.set(key, best);
-        };
-        const schedule = () => {
-            cancelAnimationFrame(raf);
-            raf = requestAnimationFrame(fitNow);
-        };
-        // useLayoutEffect performs the first exact fit before the browser paints.
-        fitNow();
-        if ('ResizeObserver' in window) {
-            ro = new ResizeObserver(() => {
-                const w = el.clientWidth, h = el.clientHeight;
-                if (Math.abs(w - lastW) < 3 && Math.abs(h - lastH) < 3) return;
-                lastW = w; lastH = h; schedule();
-            });
-            ro.observe(el);
-        }
-        document.fonts?.ready?.then(schedule).catch?.(() => {});
-        return () => { disposed = true; cancelAnimationFrame(raf); ro?.disconnect(); };
-    }, [text, maxPx, minPx]);
-    return React.createElement("div", { ref: ref, className: "fast-study-text measured-study-text", style: { fontSize: `${maxPx}px` } }, React.createElement(MathText, { text: text }));
+const FastStudyMathText = React.memo(function FastStudyMathText({ text = '', maxPx = 38, minPx = 11 }) {
+    const plain = clean(stripMath(text)) || clean(text), length = plain.length, displayMath = (String(text).match(/\$\$|\\\[|\\begin\{/g) || []).length;
+    let ratio = 1; if (length > 520) ratio = .46; else if (length > 360) ratio = .54; else if (length > 240) ratio = .64; else if (length > 150) ratio = .74; else if (length > 90) ratio = .86; if (displayMath > 1) ratio *= .9;
+    const px = clamp(Math.round(maxPx * ratio), minPx, maxPx);
+    return React.createElement("div", { className: "fast-study-text", style: { fontSize: `${px}px` } }, React.createElement(MathText, { text: text }));
 });
 function CardFaceContent({ text = '', images = [], fit = true, maxPx = 38, minPx = 11, textAlign = 'center', imageAlign = 'center', showImages = true, tags = [], topic = '', topicLabel = 'Topic', deck = null, priorityImages = false, performanceMode = false }) {
     const normalized = (showImages ? images : []).map(normalizeImageItem).filter(Boolean), rawText = clean(text), plain = clean(stripMath(text)) || rawText, hasText = Boolean(rawText), topicEnabled = deckTopicSettings(deck).enabled;
@@ -3286,7 +3191,7 @@ function SideRail({ screen, navOpen, setNavOpen, openHome, openLibrary, data, se
             React.createElement("button", { className: "rail-logo", onClick: openHome, "aria-label": "StudyForge home" },
                 React.createElement(BrandMark, null),
                 React.createElement("span", null, "StudyForge")),
-            React.createElement("span", { className: "rail-version" }, "PWA v1.11.10")),
+            React.createElement("span", { className: "rail-version" }, "PWA v1.11.9")),
         React.createElement("div", { className: "rail-profile-card" },
             React.createElement("span", { className: "rail-profile-avatar" }, profile.avatar ? React.createElement("img", { src: profile.avatar, alt: "" }) : profileInitials(profile)),
             React.createElement("button", { className: "rail-profile-copy", onClick: () => setModal({ type: 'edit-profile' }), "aria-label": "Edit creator profile" },
@@ -5010,7 +4915,6 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     const pendingStudyWritesRef = useRef([]);
     const pendingStudyWriteHandleRef = useRef(null);
     const swipeUnderlayRef = useRef(null);
-    const swipeAnimatingRef = useRef(false);
     const dragRafRef = useRef(0);
     const finishRef = useRef(null);
     const gradingLock = useRef(false);
@@ -5071,7 +4975,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         el.setAttribute('aria-label', `Flashcard ${index + 1}. ${shown?.label || 'side'} shown; activate to show ${hidden?.label || 'other side'}`);
     }
     function flipCard() {
-        if (!card || isGrading || swipeAnimatingRef.current) return;
+        if (!card || isGrading) return;
         applyFlipVisual(!flippedRef.current, true);
         if (autoSpeak && !showSettings) {
             clearTimeout(actionTimer.current);
@@ -5126,74 +5030,13 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         pendingStudyWritesRef.current.push(fn);
         scheduleStudyWriteFlush();
     }
-    function applyDragVisual(x, active = true) {
-        const el = swipeSurface.current, under = swipeUnderlayRef.current;
-        if (!el) return;
-        cancelAnimationFrame(dragRafRef.current);
-        dragRafRef.current = requestAnimationFrame(() => {
-            const px = Number(x) || 0;
-            el.style.opacity = '1';
-            el.style.transition = active ? 'none' : 'transform 150ms cubic-bezier(.22,.78,.22,1), opacity 150ms ease';
-            el.style.transform = active && px ? `translate3d(${px}px,0,0) rotate(${clamp(px / 18, -10, 10)}deg)` : 'translate3d(0,0,0) rotate(0deg)';
-            if (under) {
-                if (active && Math.abs(px) > 6) {
-                    const positive = px >= 0;
-                    under.className = `swipe-underlay ${positive ? 'right' : 'left'}`;
-                    under.textContent = studyType === 'spaced' ? (positive ? 'Okay' : 'Repeat') : (positive ? 'Know' : 'Still learning');
-                    under.style.opacity = String(Math.min(.95, .22 + Math.abs(px) / 220));
-                } else under.style.opacity = '0';
-            }
-        });
-    }
-    function resetSwipeSurfaceImmediate() {
-        const el = swipeSurface.current, under = swipeUnderlayRef.current;
-        if (!el) return;
-        cancelAnimationFrame(dragRafRef.current);
-        el.style.transition = 'none';
-        el.style.transform = 'translate3d(0,0,0) rotate(0deg)';
-        el.style.opacity = '1';
-        if (under) under.style.opacity = '0';
-        swipeAnimatingRef.current = false;
-        requestAnimationFrame(() => { if (swipeSurface.current === el) el.style.transition = ''; });
-    }
-    function animateSwipeExit(direction, commit, fromX = 0) {
-        const el = swipeSurface.current, under = swipeUnderlayRef.current;
-        if (!el || swipeAnimatingRef.current || gradingLock.current || isGrading) return;
-        swipeAnimatingRef.current = true;
-        cancelAnimationFrame(dragRafRef.current);
-        const sign = direction >= 0 ? 1 : -1;
-        const width = Math.max(320, el.getBoundingClientRect().width || 0);
-        const target = sign * Math.max(width * 1.15, Math.min(window.innerWidth || width, 1100) * .82);
-        if (fromX) el.style.transform = `translate3d(${fromX}px,0,0) rotate(${clamp(fromX / 18, -10, 10)}deg)`;
-        el.style.opacity = '1';
-        el.style.transition = 'transform 185ms cubic-bezier(.2,.78,.2,1), opacity 185ms ease';
-        if (under) {
-            under.className = `swipe-underlay ${sign > 0 ? 'right' : 'left'}`;
-            under.textContent = studyType === 'spaced' ? (sign > 0 ? 'Okay' : 'Repeat') : (sign > 0 ? 'Know' : 'Still learning');
-            under.style.opacity = '.86';
-        }
-        let finished = false;
-        const done = () => {
-            if (finished) return;
-            finished = true;
-            el.removeEventListener('transitionend', onEnd);
-            try { commit?.(); } finally { swipeAnimatingRef.current = false; }
-        };
-        const onEnd = event => { if (event.target === el && event.propertyName === 'transform') done(); };
-        el.addEventListener('transitionend', onEnd);
-        requestAnimationFrame(() => {
-            if (swipeSurface.current !== el) return done();
-            el.style.transform = `translate3d(${target}px,0,0) rotate(${sign * 9}deg)`;
-            el.style.opacity = '.04';
-        });
-        setTimeout(done, 240);
-    }
-    React.useLayoutEffect(() => { resetSwipeSurfaceImmediate(); }, [card?.id, index]);
+    function applyDragVisual(x, active = true) { const el = swipeSurface.current, under = swipeUnderlayRef.current; if (!el) return; cancelAnimationFrame(dragRafRef.current); dragRafRef.current = requestAnimationFrame(() => { const px = Number(x) || 0; el.style.transition = active ? 'none' : ''; el.style.transform = active && px ? `translate3d(${px}px,0,0) rotate(${clamp(px / 18, -10, 10)}deg)` : ''; if (under) { if (active && Math.abs(px) > 6) { const positive = px >= 0; under.className = `swipe-underlay ${positive ? 'right' : 'left'}`; under.textContent = studyType === 'spaced' ? (positive ? 'Okay' : 'Repeat') : (positive ? 'Know' : 'Still learning'); under.style.opacity = String(Math.min(.95, .22 + Math.abs(px) / 220)); } else { under.style.opacity = '0'; } } }); }
     function finish(correct) {
         if (!card || gradingLock.current)
             return;
         gradingLock.current = true;
         setIsGrading(true);
+        setGradeAnimation(correct ? 'correct' : 'wrong');
         announce(correct ? 'Marked as known' : 'Marked as still learning');
         const before = { index, score, wrongIds, completedIds, cardId: card.id, correct, trackProgress };
         const nextScore = { ...score, [correct ? 'correct' : 'wrong']: score[correct ? 'correct' : 'wrong'] + 1 };
@@ -5227,24 +5070,24 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     }
     function finishSrs(rating) {
         if (!card || gradingLock.current) return;
-        gradingLock.current = true; setIsGrading(true); const positive = rating === 'okay' || rating === 'easy'; announce(`${rating === 'repeat' ? 'Repeat' : rating[0].toUpperCase()+rating.slice(1)} · next review scheduled`);
+        gradingLock.current = true; setIsGrading(true); const positive = rating === 'okay' || rating === 'easy'; setGradeAnimation(positive ? 'correct' : 'wrong'); announce(`${rating === 'repeat' ? 'Repeat' : rating[0].toUpperCase()+rating.slice(1)} · next review scheduled`);
         const before = { index, score, wrongIds, completedIds, cardId: card.id, correct: positive, trackProgress: true, srs: true, rating, previousProgress: normalizeProgress(card), sourceDeckId: card.sourceDeckId };
         const nextScore = { ...score, [positive ? 'correct' : 'wrong']: score[positive ? 'correct' : 'wrong'] + 1 }, nextWrong = positive ? wrongIds.filter(id => id !== card.id) : unique([...wrongIds, card.id]), nextCompleted = unique([...completedIds, card.id]), isComplete = nextCompleted.length >= study.cards.length, nextIndex = isComplete ? index : Math.min(index + 1, study.cards.length - 1);
-        setHistory(h => [...h.slice(-24), before]); commitStudyDataUpdate(() => gradeCardSpaced(card.id, rating, card.sourceDeckId, srsSettings)); setScore(nextScore); setWrongIds(nextWrong); setCompletedIds(nextCompleted); gesture.current = { active:false,startX:0,x:0,moved:false,pointerId:null };
+        setHistory(h => [...h.slice(-24), before]); commitStudyDataUpdate(() => gradeCardSpaced(card.id, rating, card.sourceDeckId, srsSettings)); setScore(nextScore); setWrongIds(nextWrong); setCompletedIds(nextCompleted); gesture.current = { active:false,startX:0,x:0,moved:false,pointerId:null }; applyDragVisual(0,false);
         const nextSnapshot = { ...snapshot(), index: nextIndex, score: nextScore, wrongIds: nextWrong, completedIds: nextCompleted, complete: isComplete, studyType: 'spaced' }; latestSnapshotRef.current = nextSnapshot;
         if (!isComplete) { primeStudyImages(study.cards, nextIndex, Math.min(5, study.cards.length)); ensureCardImagesReady(study.cards[nextIndex], 0).catch(() => false); }
         setSuppressFlipTransition(true); resetToFirstSide(false); requestAnimationFrame(() => { setGradeAnimation(null); if (isComplete) setDone(true); else setIndex(nextIndex); requestAnimationFrame(() => { setSuppressFlipTransition(false); setIsGrading(false); gradingLock.current=false; }); });
     }
     finishRef.current = studyType === 'spaced' ? (correct => finishSrs(correct ? 'okay' : 'repeat')) : finish;
-    function gradeFromButton(correct, e) { e?.preventDefault?.(); e?.stopPropagation?.(); if (swipeAnimatingRef.current || isGrading) return; animateSwipeExit(correct ? 1 : -1, () => finish(correct)); }
+    function gradeFromButton(correct, e) { e?.preventDefault?.(); e?.stopPropagation?.(); finish(correct); }
     const dragTransform = '';
-    function down(e) { if (e.pointerType === 'touch' || isGrading || swipeAnimatingRef.current || (e.button !== undefined && e.button !== 0))
+    function down(e) { if (e.pointerType === 'touch' || isGrading || (e.button !== undefined && e.button !== 0))
         return; gesture.current = { active: true, startX: e.clientX, x: 0, moved: false, pointerId: e.pointerId }; e.currentTarget.setPointerCapture?.(e.pointerId); applyDragVisual(0,true); }
     function move(e) { const g = gesture.current; if (!g.active || g.pointerId !== e.pointerId)
         return; const x = e.clientX - g.startX; const moved = g.moved || Math.abs(x) > 8; gesture.current = { ...g, x, moved }; applyDragVisual(x,true); }
     function end(e) { const g = gesture.current; if (!g.active)
-        return; e.currentTarget.releasePointerCapture?.(g.pointerId); gesture.current = { active: false, startX: 0, x: 0, moved: false, pointerId: null }; if (Math.abs(g.x) >= (swipeSensitivity === 'easy' ? 95 : swipeSensitivity === 'firm' ? 170 : 140)) {
-        animateSwipeExit(g.x > 0 ? 1 : -1, () => finishRef.current?.(g.x > 0), g.x);
+        return; e.currentTarget.releasePointerCapture?.(g.pointerId); gesture.current = { active: false, startX: 0, x: 0, moved: false, pointerId: null }; if (Math.abs(g.x) >= (swipeSensitivity === 'easy' ? 95 : swipeSensitivity === 'firm' ? 170 : 140)) { applyDragVisual(0,false);
+        finishRef.current?.(g.x > 0);
         return;
     } applyDragVisual(0,false); if (!g.moved)
         flipCard(); }
@@ -5254,7 +5097,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
         let touch = null;
         const reset = () => { touch = null; applyDragVisual(0,false); };
         const start = event => {
-            if (isGrading || swipeAnimatingRef.current || event.touches.length !== 1) return;
+            if (isGrading || event.touches.length !== 1) return;
             const point = event.touches[0];
             touch = { startX: point.clientX, startY: point.clientY, x: 0, y: 0, moved: false, horizontal: false, startedAt: performance.now() }; applyDragVisual(0,true);
         };
@@ -5277,9 +5120,8 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
             const swipeConfig = swipeSensitivity === 'easy' ? { factor:.14, min:52, max:92, flick:42, velocity:.38 } : swipeSensitivity === 'firm' ? { factor:.27, min:82, max:150, flick:68, velocity:.58 } : { factor:.20, min:68, max:118, flick:54, velocity:.48 };
             const threshold = Math.min(swipeConfig.max, Math.max(swipeConfig.min, width * swipeConfig.factor));
             const elapsed = Math.max(1, performance.now() - g.startedAt), velocity = Math.abs(g.x) / elapsed;
-            const gradeSwipe = g.horizontal && (Math.abs(g.x) >= threshold || (Math.abs(g.x) >= swipeConfig.flick && velocity >= swipeConfig.velocity));
-            if (gradeSwipe) { event.preventDefault(); animateSwipeExit(g.x > 0 ? 1 : -1, () => finishRef.current?.(g.x > 0), g.x); return; }
-            applyDragVisual(0,false);
+            const gradeSwipe = g.horizontal && (Math.abs(g.x) >= threshold || (Math.abs(g.x) >= swipeConfig.flick && velocity >= swipeConfig.velocity)); applyDragVisual(0,false);
+            if (gradeSwipe) { event.preventDefault(); finishRef.current?.(g.x > 0); return; }
             if (!g.moved) flipCard();
         };
         const cancel = () => reset();
@@ -5299,7 +5141,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     }, [isGrading, card?.id, index, swipeSensitivity, studyType]);
     useEffect(() => { const handler = e => { if (showSettings || isGrading || e.repeat || e.isComposing || e.ctrlKey || e.metaKey || e.altKey)
         return; const target = e.target, tag = target?.tagName?.toLowerCase?.(); if (target?.isContentEditable || ['input', 'textarea', 'select', 'button'].includes(tag))
-        return; if (studyType === 'spaced' && ['1','2','3','4'].includes(e.key)) { e.preventDefault(); e.stopPropagation(); const rating=({1:'repeat',2:'hard',3:'okay',4:'easy'})[e.key], positive=rating==='okay'||rating==='easy'; animateSwipeExit(positive?1:-1,()=>finishSrs(rating)); return; } if (eventMatchesBinding(e, keybinds.flip)) {
+        return; if (studyType === 'spaced' && ['1','2','3','4'].includes(e.key)) { e.preventDefault(); e.stopPropagation(); finishSrs(({1:'repeat',2:'hard',3:'okay',4:'easy'})[e.key]); return; } if (eventMatchesBinding(e, keybinds.flip)) {
         e.preventDefault();
         e.stopPropagation();
         flipCard();
@@ -5307,12 +5149,12 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     } if (studyType === 'classic' && eventMatchesBinding(e, keybinds.stillLearning)) {
         e.preventDefault();
         e.stopPropagation();
-        animateSwipeExit(-1, () => finish(false));
+        finish(false);
         return;
     } if (studyType === 'classic' && eventMatchesBinding(e, keybinds.know)) {
         e.preventDefault();
         e.stopPropagation();
-        animateSwipeExit(1, () => finish(true));
+        finish(true);
     } }; window.addEventListener('keydown', handler, true); return () => window.removeEventListener('keydown', handler, true); }, [showSettings, isGrading, index, card?.id, score.correct, score.wrong, wrongIds.join('|'), completedIds.join('|'), trackProgress, keybinds.flip.join('|'), keybinds.stillLearning.join('|'), keybinds.know.join('|'), studyType]);
     function previous() { if (isGrading)
         return; if (index <= 0) {
@@ -5414,7 +5256,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
     const sources = unique(study.cards.map(c => c.sourceDeckName)).join(' + ') || 'Flashcard set';
     const faceClass = `content-${textAlign}`;
     const renderFace = (face, sideClass) => React.createElement("div", { className: `flash-face ${sideClass} ${faceClass} fit-card-content` },
-        React.createElement(MemoCardFaceContent, { text: face.text, images: face.images || [], fit: true, maxPx: textPx, minPx: 8, textAlign: textAlign, imageAlign: imageAlign, showImages: showImages, priorityImages: true, performanceMode: true, topic: showTopic ? (card.topic || '') : '', topicLabel: deckTopicSettings(currentDeck).label, tags: showTags && face.isDefinition ? (card.tags || []) : [], deck: currentDeck }));
+        React.createElement(MemoCardFaceContent, { text: face.text, images: face.images || [], fit: true, maxPx: textPx, minPx: 10, textAlign: textAlign, imageAlign: imageAlign, showImages: showImages, priorityImages: true, performanceMode: true, topic: showTopic ? (card.topic || '') : '', topicLabel: deckTopicSettings(currentDeck).label, tags: showTags && face.isDefinition ? (card.tags || []) : [], deck: currentDeck }));
     return React.createElement("div", { ref: studyRoot, className: `study-shell quiz-study ${studyType === 'spaced' ? 'srs-study' : 'classic-study'} ${focusMode ? 'focus-mode' : ''}` },
         React.createElement(StudyHeader, { title: "Flashcards", deckTitle: sources, index: index, displayIndex: studyType === 'spaced' ? completedIds.length : null, total: study.cards.length, onExit: exit, onSettings: () => setShowSettings(true) }),
         React.createElement("main", { className: "quiz-study-main centered-study-main flash-study-main" },
@@ -5440,7 +5282,7 @@ function FlashcardStudy({ study, setStudy, gradeCard, undoGradeCard, gradeCardSp
                 keybinds.know.map(keybindLabel).join(' / '),
                 ". Swipe and the on-screen buttons also work.")),
             studyType === 'spaced' && React.createElement("div", { className: "srs-rating-wrap" },
-                React.createElement("div", { className: "srs-rating-buttons" }, ['repeat','hard','okay','easy'].map(rating => React.createElement("button", { key: rating, type: "button", disabled: isGrading, className: `srs-rating-btn ${rating}`, onPointerDown: e => e.stopPropagation(), onClick: e => { e.preventDefault(); e.stopPropagation(); const positive=rating==='okay'||rating==='easy'; animateSwipeExit(positive?1:-1,()=>finishSrs(rating)); } }, React.createElement("strong", null, rating === 'repeat' ? 'Repeat' : rating[0].toUpperCase()+rating.slice(1)), React.createElement("small", null, srsRatingPreview(card, srsSettings)[rating]))))),
+                React.createElement("div", { className: "srs-rating-buttons" }, ['repeat','hard','okay','easy'].map(rating => React.createElement("button", { key: rating, type: "button", disabled: isGrading, className: `srs-rating-btn ${rating}`, onPointerDown: e => e.stopPropagation(), onClick: e => { e.preventDefault(); e.stopPropagation(); finishSrs(rating); } }, React.createElement("strong", null, rating === 'repeat' ? 'Repeat' : rating[0].toUpperCase()+rating.slice(1)), React.createElement("small", null, srsRatingPreview(card, srsSettings)[rating]))))),
             React.createElement("div", { className: `quiz-study-controls centered-study-controls ${studyType === 'spaced' ? 'srs-utility-row' : ''}` },
                 studyType === 'classic' && React.createElement("label", { className: "track-toggle" },
                     React.createElement("span", null, "Track progress"),

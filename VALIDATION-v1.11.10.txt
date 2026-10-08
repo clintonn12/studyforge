@@ -1,0 +1,18 @@
+StudyForge PWA v1.11.10 validation
+
+Automated/static checks completed:
+- All 8 embedded JavaScript blocks pass `node --check`.
+- sw.js passes `node --check`.
+- All named functions from v1.11.9 are retained; v1.11.10 adds resetSwipeSurfaceImmediate() and animateSwipeExit().
+- Storage key remains studyforge.v4.
+- Library data version remains 12.
+- No IndexedDB/localStorage delete or site-data clearing was added.
+- The v1.11.9 internal `overflow:auto` study-face rule was removed and the final study-card rules use overflow:hidden/no internal scrollbars.
+- The v1.11.9 transform !important that prevented live swipe transforms was removed.
+- Swipe movement is driven through requestAnimationFrame and compositor transform/opacity only.
+- Synthetic Chromium layout test at 1440x900: long text+image fit at 36px with content scrollHeight 220 <= container 224; overflow hidden.
+- Synthetic Chromium layout test at 412x915: long text+image fit at 23px with content scrollHeight 252 <= container 253; overflow hidden.
+- Synthetic Chromium transform test confirmed the swipe layer animates using a transform matrix on both desktop and mobile-sized viewports.
+
+Important limitation:
+The sandbox cannot reproduce the user's exact physical Android GPU/browser environment. The package therefore cannot honestly guarantee identical behavior on every device, but the specific code paths that caused the missing swipe motion and internal study-card scrolling have been corrected and syntax/regression checked.
